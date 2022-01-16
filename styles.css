@@ -49,7 +49,6 @@ nav li {
   font-size: 20px;
   display: block;
   margin-left: 80px;
-  border: 1px solid orange;
 }
 
 nav {
@@ -65,14 +64,6 @@ nav {
 nav li,
 .logo {
   padding: 3px;
-}
-
-header a {
-  border: 1px solid red;
-}
-
-.fas {
-  border: 1px solid green;
 }
 
 .nav-icons {
@@ -349,119 +340,3 @@ footer img {
     align-items: center;
   }
 }
-
-/*  IKKE I BRUK 12. JANUAR KL 1820
-
-@media (max-width: 415px) {
-  .intro h1,
-  .bottom-picture p {
-    font-size: 36px;
-  }
-
-  header {
-    display: inline-block;
-    height: auto;
-  }
-
-  .logo {
-    font-size: 25px;
-  }
-  .fas {
-    font-size: 1.5em;
-  }
-
-  .fa-bars {
-    margin-left: 10px;
-  }
-
-  .nav-icons {
-    letter-spacing: 0px;
-    margin-right: 10px;
-    display: inline;
-  }
-
-  .intro {
-    height: 560px;
-  }
-
-  .intro-button {
-    font-size: 35px;
-  }
-
-  .best-selling h2 {
-    font-size: 15px;
-    letter-spacing: 0.3;
-  }
-
-  .jackets {
-    height: 300px;
-  }
-
-  .blue-man {
-    width: 300px;
-  }
-
-  .news {
-    height: auto;
-    width: auto;
-  }
-
-  .bottom-picture {
-    height: 400px;
-  }
-
-  footer {
-    display: inline-block;
-    text-align: center;
-  }
-
-  footer h2 {
-    font-size: 20px;
-  }
-
-  footer ul {
-    font-size: 17px;
-    line-height: ;
-  }
-
-  .footer-list {
-    line-height: 27px;
-  }
-}
-
-@media (max-width: 768px) {
-  .pic-slide {
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .blue-jacket-container {
-    text-align: center;
-  }
-
-  @media (min-width: 768px) and (max-width: 1000px) {
-    .pic-slide {
-      flex-direction: column;
-      gap: 40px;
-    }
-
-    .blue-jacket-container {
-      text-align: center;
-    }
-
-    footer {
-      display: inline-block;
-      text-align: center;
-    }
-
-    .footer-info {
-      display: flex;
-    }
-  }
-
-  @media (min-width: 1001px) {
-    footer {
-      text-align: inherit;
-    }
-  }
-} */
