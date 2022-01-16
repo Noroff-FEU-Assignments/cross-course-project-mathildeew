@@ -41,7 +41,7 @@ header {
 
 .logo {
   font-family: "DIN Condensed";
-  font-size: 29px;
+  font-size: 30px;
   letter-spacing: 4.7px;
   padding: 10px;
 }
@@ -50,7 +50,7 @@ nav li {
   font-family: "DIN Alternate";
   font-size: 20px;
   display: block;
-  margin-left: 80px;
+  margin-left: 20px;
 }
 
 nav {
@@ -65,11 +65,15 @@ nav {
 .fas,
 nav li,
 .logo {
-  padding: 10px;
+  padding: 3px;
 }
 
 .nav-icons {
-  margin-right: 50px;
+  margin-right: 20px;
+}
+
+.fa-search {
+  margin-right: 10px;
 }
 
 .fa-bars {
@@ -131,17 +135,17 @@ h1 {
   text-align: center;
 }
 
-.best-selling h2 {
-  color: #fff;
-  font-family: "DIN Alternate", sans-serif;
-  font-size: 30px;
-  text-align: center;
-  letter-spacing: 3px;
-}
-
 .best-selling p,
 .best-selling h3 {
   font-family: "Source Sans Pro";
+}
+
+.best-selling h2 {
+  color: #fff;
+  font-family: "DIN Alternate", sans-serif;
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: 3px;
 }
 
 .blue-man {
@@ -258,7 +262,7 @@ footer img {
 }
 
 .fab {
-  padding: 20px;
+  padding: 10px;
   
 }
 
@@ -341,6 +345,7 @@ footer img {
 
   nav li {
     display: inline-block;
+    padding: 0px;
   }
 
   .fa-bars {
