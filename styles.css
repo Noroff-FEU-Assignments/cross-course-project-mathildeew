@@ -46,7 +46,7 @@ header {
 }
 
 nav li {
-  font: 20px, "DIN Alternate";
+  font: 20px "DIN Alternate";
   display: block;
   margin-left: 20px;
 }
@@ -260,6 +260,7 @@ footer img {
   .jackets {
     height: 400px;
   }
+
   .blue-man {
     width: 400px;
   }
@@ -310,7 +311,7 @@ footer img {
   }
 }
 
-@media (min-width: 1017px) {
+@media (min-width: 1025px) {
   header {
     background-color: #fff;
   }
@@ -333,6 +334,7 @@ footer img {
   .jackets {
     height: 500px;
   }
+
   .blue-man {
     width: 500px;
   }
