@@ -40,15 +40,13 @@ header {
 }
 
 .logo {
-  font-family: "DIN Condensed";
-  font-size: 30px;
+  font: 30px "DIN Condensed", sans-serif;
   letter-spacing: 4.7px;
   padding: 10px;
 }
 
 nav li {
-  font-family: "DIN Alternate";
-  font-size: 20px;
+  font: 20px, "DIN Alternate";
   display: block;
   margin-left: 20px;
 }
@@ -104,24 +102,17 @@ nav li,
 }
 
 h1 {
-  font-family: "DIN Alternate", sans-serif;
   color: #ff9f00;
-  font-size: 60px;
+  font: 60px "DIN Alternate", sans-serif;
 }
 
 .intro-button {
   color: #fff;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 45px;
+  font: 45px "Source Sans Pro", sans-serif;
 }
 
 .intro-text {
-  left: 200px;
   text-align: center;
-}
-
-.intro i {
-  color: #fff;
 }
 
 /* PICTURE SLIDE
@@ -137,13 +128,12 @@ h1 {
 
 .best-selling p,
 .best-selling h3 {
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .best-selling h2 {
   color: #fff;
-  font-family: "DIN Alternate", sans-serif;
-  font-size: 25px;
+  font: 25px "DIN Alternate", sans-serif;
   text-align: center;
   letter-spacing: 3px;
 }
@@ -185,8 +175,6 @@ h1 {
 
 .newstext {
   background-image: url("images/michael-dolejs-ksVsSchgwRc-unsplash-darkened-downsized.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
   background-position-x: left;
   background-position-y: bottom;
   height: 70%;
@@ -198,20 +186,19 @@ h1 {
 
 .news h2 {
   color: #ff9f00;
-  font-family: "DIN Alternate", sans-serif;
-  font-size: 95px;
+  font: 95px "DIN Alternate", sans-serif;
 }
 
 .news p {
   color: #fff;
-  font-family: "Source Sans Pro", sans-serif;
+  font: 20px "Source Sans Pro", sans-serif;
   text-transform: uppercase;
 }
 
 /* BOTTOM PICTURE STYLING
 ------------------------ */
 .bottom-picture {
-  background: url("images/bottompicture.png") no-repeat;
+  background: url("images/bottompicture.png") no-repeat; /* Needs adjustment on bigger screens*/
   height: 500px;
   width: auto;
   background-position: center;
@@ -222,8 +209,7 @@ h1 {
 
 .bottom-picture p {
   color: #ff9f00;
-  font-family: "DIN Alternate", sans-serif;
-  font-size: 35px;
+  font: 35px "DIN Alternate", sans-serif;
 }
 
 /* FOOTER STYLING
@@ -236,15 +222,13 @@ footer {
 }
 
 footer h2 {
-  font-family: "DIN Alternate", sans-serif;
-  font-size: 29px;
+  font: 29px "DIN Alternate", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 footer a {
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 18px;
+  font: 18px "Source Sans Pro", sans-serif;
   letter-spacing: 0.8px;
   line-height: 2;
 }
@@ -263,7 +247,6 @@ footer img {
 
 .fab {
   padding: 10px;
-  
 }
 
 /* MEDIA QUIERES 
@@ -275,10 +258,10 @@ footer img {
   }
 
   .jackets {
-    height: 500px;
+    height: 400px;
   }
   .blue-man {
-    width: 500px;
+    width: 400px;
   }
 
   .bottom-picture p {
@@ -296,10 +279,11 @@ footer img {
 
   footer a {
     line-height: 1.5;
-}
+  }
 
-.friends {
-  text-align: center;
+  .friends {
+    text-align: center;
+  }
 }
 
 @media (min-width: 875px) {
@@ -319,12 +303,6 @@ footer img {
   .pic-slide {
     flex-direction: row;
   }
-  .jackets {
-    height: 400px;
-  }
-  .blue-man {
-    width: 400px;
-  }
 
   .fa-angle-left,
   .fa-angle-right {
@@ -332,7 +310,7 @@ footer img {
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1020px) {
   header {
     background-color: #fff;
   }
@@ -350,6 +328,13 @@ footer img {
 
   .fa-bars {
     display: none;
+  }
+
+  .jackets {
+    height: 500px;
+  }
+  .blue-man {
+    width: 500px;
   }
 
   .intro h1,
