@@ -1,0 +1,467 @@
+/* BASE STYLE ELEMENTS ----------*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.fas,
+.fab {
+  font-size: 35px;
+}
+
+/* NAVIGATION BAR STYLING----------*/
+header {
+  color: #000;
+  background-color: #ff9f00;
+  height: 80px;
+  width: 100%;
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "DIN Condensed";
+  font-size: 29px;
+  letter-spacing: 4.7px;
+  padding: 10px;
+}
+
+nav li {
+  font-family: "DIN Alternate";
+  font-size: 20px;
+  display: block;
+  margin-left: 80px;
+  border: 1px solid orange;
+}
+
+nav {
+  display: none;
+  position: fixed;
+  top: 120px;
+  background-color: #fff;
+  z-index: 1000;
+  left: 0px;
+}
+
+.fas,
+nav li,
+.logo {
+  padding: 3px;
+}
+
+header a {
+  border: 1px solid red;
+}
+
+.fas {
+  border: 1px solid green;
+}
+
+.nav-icons {
+  margin-right: 50px;
+}
+
+.fa-bars {
+  margin-left: 20px;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#hamburger-menu:checked ~ nav {
+  display: block;
+}
+
+/* PUSHING THE COMFORT ZONE PICTURE ----------*/
+.intro {
+  background: url("images/angela-356V-ooP184-unsplash_resized.jpg") no-repeat;
+  background-size: cover;
+  background-position-x: left;
+  background-position-y: top;
+  height: 500px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: "DIN Alternate", sans-serif;
+  color: #fff;
+  font-size: 60px;
+}
+
+.intro-button {
+  color: #ff9f00;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 45px;
+}
+
+.intro-text {
+  left: 200px;
+  text-align: center;
+}
+
+.intro i {
+  color: #ff9f00;
+}
+
+/* PICTURE SLIDE ----------*/
+.best-selling {
+  background-color: #d1cec8;
+  width: auto;
+  text-transform: uppercase;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.best-selling h2 {
+  color: #fff;
+  font-family: "DIN Alternate", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.best-selling p,
+.best-selling h3 {
+  font-family: "Source Sans Pro";
+}
+
+.blue-man {
+  width: 300px;
+  object-fit: cover;
+}
+
+.jackets {
+  height: 300px;
+}
+
+.pic-slide {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.fa-angle-left,
+.fa-angle-right {
+  display: none;
+}
+
+/* NEWS ---------- */
+.news {
+  background-color: #e6e4df;
+  height: 600px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newstext {
+  background-image: url("images/michael-dolejs-ksVsSchgwRc-unsplash-darkened-downsized.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: bottom;
+  height: 70%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.news h2 {
+  color: #ff9f00;
+  font-family: "DIN Alternate", sans-serif;
+  font-size: 95px;
+}
+
+.news a {
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+  text-transform: uppercase;
+}
+
+/* BOTTOM PICTURE STYLING --------------- */
+.bottom-picture {
+  background: url("images/bottompicture.png") no-repeat;
+  height: 500px;
+  width: auto;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-picture p {
+  color: #ff9f00;
+  font-family: "DIN Alternate", sans-serif;
+  font-size: 35px;
+}
+
+/* FOOTER STYLING ---------------  */
+footer {
+  background-color: #ff9f00;
+  color: #000;
+  width: 100%;
+  text-align: center;
+}
+
+footer h2 {
+  font-family: "DIN Alternate", sans-serif;
+  font-size: 29px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+footer a {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+}
+
+footer li {
+  list-style: none;
+}
+
+footer img {
+  height: 100px;
+}
+
+/* MEDIA QUIERES ---------------  */
+@media (min-width: 750px) {
+  .intro,
+  .bottom-picture {
+    height: 670px;
+  }
+
+  .jackets {
+    height: 500px;
+  }
+  .blue-man {
+    width: 500px;
+  }
+
+  .bottom-picture p {
+    font-size: 70px;
+  }
+  footer {
+    display: inline-block;
+  }
+
+  .footer-info {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+  }
+}
+
+@media (min-width: 875px) {
+  .intro h1 {
+    font-size: 70px;
+  }
+
+  .blue-jacket-container {
+    text-align: left;
+  }
+
+  .blue-jacket-container p,
+  .blue-jacket-container h3 {
+    margin-left: 90px;
+  }
+
+  .pic-slide {
+    flex-direction: row;
+  }
+  .jackets {
+    height: 400px;
+  }
+  .blue-man {
+    width: 400px;
+  }
+
+  .fa-angle-left,
+  .fa-angle-right {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1000px) {
+  header {
+    background-color: #fff;
+  }
+
+  nav {
+    display: inherit;
+    position: inherit;
+    z-index: inherit;
+  }
+
+  nav li {
+    display: inline-block;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  .intro h1,
+  .bottom-picture p {
+    font-size: 90px;
+  }
+
+  .intro a {
+    text-align: left;
+  }
+
+  .newstext {
+    width: 980px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+/*  IKKE I BRUK 12. JANUAR KL 1820
+
+@media (max-width: 415px) {
+  .intro h1,
+  .bottom-picture p {
+    font-size: 36px;
+  }
+
+  header {
+    display: inline-block;
+    height: auto;
+  }
+
+  .logo {
+    font-size: 25px;
+  }
+  .fas {
+    font-size: 1.5em;
+  }
+
+  .fa-bars {
+    margin-left: 10px;
+  }
+
+  .nav-icons {
+    letter-spacing: 0px;
+    margin-right: 10px;
+    display: inline;
+  }
+
+  .intro {
+    height: 560px;
+  }
+
+  .intro-button {
+    font-size: 35px;
+  }
+
+  .best-selling h2 {
+    font-size: 15px;
+    letter-spacing: 0.3;
+  }
+
+  .jackets {
+    height: 300px;
+  }
+
+  .blue-man {
+    width: 300px;
+  }
+
+  .news {
+    height: auto;
+    width: auto;
+  }
+
+  .bottom-picture {
+    height: 400px;
+  }
+
+  footer {
+    display: inline-block;
+    text-align: center;
+  }
+
+  footer h2 {
+    font-size: 20px;
+  }
+
+  footer ul {
+    font-size: 17px;
+    line-height: ;
+  }
+
+  .footer-list {
+    line-height: 27px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pic-slide {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .blue-jacket-container {
+    text-align: center;
+  }
+
+  @media (min-width: 768px) and (max-width: 1000px) {
+    .pic-slide {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .blue-jacket-container {
+      text-align: center;
+    }
+
+    footer {
+      display: inline-block;
+      text-align: center;
+    }
+
+    .footer-info {
+      display: flex;
+    }
+  }
+
+  @media (min-width: 1001px) {
+    footer {
+      text-align: inherit;
+    }
+  }
+} */
