@@ -86,6 +86,10 @@ nav li,
   display: block;
 }
 
+/* --------------
+HOME PAGE STYLING
+---------------*/
+
 /* PUSHING THE COMFORT ZONE PICTURE
 ------------------------------------*/
 .intro {
@@ -212,6 +216,101 @@ h1 {
   font: 35px "DIN Alternate", sans-serif;
 }
 
+/* --------------
+SHOP PAGE STYLING
+---------------*/
+.shop {
+  width: 100%;
+  height: auto;
+  border: 2px solid blue;
+}
+
+.intro-shop {
+  margin: 10px;
+  text-align: center;
+}
+
+.intro-shop h1 {
+  color: #ff9f00;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+.intro-shop p {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #9b9b9b;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+/* JACKETS GRID STYLING ----------------*/
+.shop-jackets-grid {
+  width: auto;
+  display: grid;
+  place-items: center;
+  grid-gap: 80px;
+  border: 2px solid red;
+}
+
+.shop-jackets-text {
+  font-family: "DIN Alternate", sans-serif;
+  line-height: 25px;
+  margin-left: 50px;
+}
+
+.shop-jackets-grid h2 {
+  font-size: 23px;
+  letter-spacing: 0.5px;
+}
+
+.shop-jackets-grid p {
+  color: #939191;
+  font-size: 14px;
+}
+
+/* --------------
+ABOUT PAGE STYLING
+---------------*/
+.our-story {
+  background: url("images/johannes-andersson-8XQbEDaCbDM-unsplash_Downsized.jpg") no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+}
+
+.about-text p {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.about-intro {
+  font-size: 14px;
+  text-align: center;
+  line-height: 25px;
+  margin: 10px 40px;
+}
+
+.about-comfortzone {
+  background: url("images/bottompicture.png") no-repeat;
+  background-position: center;
+  height: 170px;
+  width: 275px;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+.column-text {
+  margin: 10px 45px;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+/* --------------
+CONTACT PAGE STYLING
+---------------*/
+
 /* FOOTER STYLING
 ---------------  */
 footer {
@@ -252,22 +351,7 @@ footer img {
 /* MEDIA QUIERES 
 ------------------ */
 @media (min-width: 750px) {
-  .intro,
-  .bottom-picture {
-    height: 670px;
-  }
-
-  .jackets {
-    height: 400px;
-  }
-
-  .blue-man {
-    width: 400px;
-  }
-
-  .bottom-picture p {
-    font-size: 70px;
-  }
+  /* GLOBAL STYLES */
   footer {
     display: inline-block;
   }
@@ -285,9 +369,45 @@ footer img {
   .friends {
     text-align: center;
   }
+  /* HOME PAGE STYLES */
+  .intro,
+  .bottom-picture {
+    height: 670px;
+  }
+
+  .jackets {
+    height: 400px;
+  }
+
+  .blue-man {
+    width: 400px;
+  }
+
+  .bottom-picture p {
+    font-size: 70px;
+  }
+  /* SHOP STYLES*/
+  .intro-shop {
+    text-align: left;
+    margin-left: 50px;
+  }
+
+  .shop-jackets-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 50px;
+    column-gap: 0px;
+  }
 }
 
 @media (min-width: 875px) {
+  /* GLOBAL STYLES */
+  .fa-angle-left,
+  .fa-angle-right {
+    display: inline-block;
+  }
+
+  /* HOME PAGE STYLES */
   .intro h1 {
     font-size: 70px;
   }
@@ -305,13 +425,15 @@ footer img {
     flex-direction: row;
   }
 
-  .fa-angle-left,
-  .fa-angle-right {
-    display: inline-block;
+  /* SHOP STYLES*/
+  .shop-jackets-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
   }
 }
 
 @media (min-width: 1025px) {
+  /* GLOBAL STYLES */
   header {
     background-color: #fff;
   }
@@ -331,6 +453,17 @@ footer img {
     display: none;
   }
 
+  footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .footer-list {
+    margin-left: 40px;
+  }
+
+  /* HOME PAGE STYLES */
   .jackets {
     height: 500px;
   }
@@ -352,13 +485,17 @@ footer img {
     width: 980px;
   }
 
-  footer {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
+  /* SHOP STYLES*/
+}
 
-  .footer-list {
-    margin-left: 40px;
+@media (min-width: 1400px) {
+  /* SHOP STYLES*/
+  .shop-jackets-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 50px;
+    column-gap: 0px;
+    margin-left: 100px;
+    margin-right: 100px;
   }
 }
