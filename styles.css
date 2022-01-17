@@ -284,6 +284,10 @@ ABOUT PAGE STYLING
   font-family: "Source Sans Pro", sans-serif;
 }
 
+.column-text {
+  font-size: 12px;
+}
+
 .about-intro {
   font-size: 14px;
   text-align: center;
@@ -430,6 +434,11 @@ footer img {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
   }
+
+  /* ABOUT STYLES */
+  .about-text {
+    margin: auto 80px;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -485,7 +494,9 @@ footer img {
     width: 980px;
   }
 
-  /* SHOP STYLES*/
+  /* SHOP STYLES */
+
+  /* ABOUT STYLES */
 }
 
 @media (min-width: 1400px) {
