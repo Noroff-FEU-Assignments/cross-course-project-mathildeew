@@ -26,9 +26,9 @@
       <a href="index.html" class="logo">Rainydays</a>
       <nav>
         <ul class="menu">
-          <li><a class="hover" href="shop/shop.html">Shop</a></li>
-          <li><a class="hover" href="about/about.html">About</a></li>
-          <li><a class="hover" href="contact/contact.html">Contact</a></li>
+          <li><a class="hover" href="shop.html">Shop</a></li>
+          <li><a class="hover" href="about.html">About</a></li>
+          <li><a class="hover" href="contact.html">Contact</a></li>
         </ul>
       </nav>
       <div class="nav-icons">
@@ -37,6 +37,29 @@
       </div>
     </header>
 
+    <section class="contact-text">
+      <h1>Head office</h1>
+      <div class="contact-info">
+        <p>P: 987 65 432</p>
+        <p>E: hello@rainydays.com</p>
+      </div>
+      <div class="contact-adress">
+        <p>Rainy Road 11</p>
+        <p>1100 Oslo</p>
+        <p>Norway</p>
+      </div>
+    </section>
+
+    <section class="contact-form">
+      <form action="action_page.php" method="post">
+        <input type="text" id="name" name="name" placeholder="Your name" />
+        <input type="text" id="tel" name="tel" placeholder="Your phone" />
+        <input type="text" id="email" name="email" placeholder="Your email" />
+        <textarea id="message" name="message" placeholder="Your message" style="height: 200px"></textarea>
+
+        <input type="submit" value="Send message" />
+      </form>
+    </section>
 
     <footer>
       <img class="footer-list" src="images/footerlogo.png" alt="Rainydays logo with mountains" />
@@ -50,7 +73,7 @@
             <li><a href="about.html">About (our story)</a></li>
           </ul>
         </div>
-        <div class="shop footer-list">
+        <div class="footer-shop footer-list">
           <h2>Shop</h2>
           <ul>
             <li><a href="#">Shop all</a></li>

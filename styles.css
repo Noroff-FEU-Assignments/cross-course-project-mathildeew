@@ -284,15 +284,17 @@ ABOUT PAGE STYLING
   font-family: "Source Sans Pro", sans-serif;
 }
 
-.column-text {
-  font-size: 12px;
-}
-
 .about-intro {
-  font-size: 14px;
+  font-size: 20px;
   text-align: center;
   line-height: 25px;
-  margin: 10px 40px;
+  margin: 30px 40px;
+}
+
+.column-text {
+  font-size: 15px;
+  line-height: 20px;
+  margin: 20px 30px;
 }
 
 .about-comfortzone {
@@ -300,20 +302,34 @@ ABOUT PAGE STYLING
   background-position: center;
   height: 170px;
   width: 275px;
+  margin: 10px auto;
   display: flex;
   justify-content: center;
   place-items: center;
 }
 
-.column-text {
-  margin: 10px 45px;
-  font-size: 12px;
-  line-height: 17px;
-}
-
 /* --------------
 CONTACT PAGE STYLING
 ---------------*/
+.contact-text {
+  margin: 30px auto;
+}
+
+.contact-text h1 {
+  color: #000;
+  font-size: 40px;
+}
+
+.contact-info,
+.contact-adress {
+  margin: 30px auto;
+  text-align: left;
+  border: 2px solid red;
+}
+
+.contact-form {
+  display: block;
+}
 
 /* FOOTER STYLING
 ---------------  */
@@ -402,6 +418,23 @@ footer img {
     grid-gap: 50px;
     column-gap: 0px;
   }
+
+  /* ABOUT STYLES*/
+  .about-text {
+    margin: auto 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 50px;
+  }
+
+  .about-intro {
+    margin: 300px auto;
+  }
+
+  .column-text {
+    margin: 30px auto;
+  }
 }
 
 @media (min-width: 875px) {
@@ -437,7 +470,16 @@ footer img {
 
   /* ABOUT STYLES */
   .about-text {
-    margin: auto 80px;
+    display: inline-block;
+    margin: 20px 50px;
+  }
+
+  .about-intro {
+    margin: 20px auto;
+  }
+
+  .column-text {
+    display: flex;
   }
 }
 
