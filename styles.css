@@ -25,6 +25,18 @@ a {
   font-size: 35px;
 }
 
+/* ANIMATION AND TRANSISTIONS 
+----------------------------- */
+.fa-long-arrow-alt-right {
+  transition: slide;
+  transition-duration: 3s;
+  position: relative;
+}
+
+.fa-long-arrow-alt-right:hover {
+  color: #ff9f00;
+}
+
 /* NAVIGATION BAR STYLING
 --------------------------*/
 header {
@@ -311,8 +323,19 @@ ABOUT PAGE STYLING
 /* --------------
 CONTACT PAGE STYLING
 ---------------*/
+.open-img {
+  background: url("images/craig-whitehead-E1SID6pKht8-unsplash1-downsized.jpg") no-repeat;
+  background-size: cover;
+  background-position-y: 25%;
+  width: 100%;
+  height: 215px;
+}
+
 .contact-text {
-  margin: 30px auto;
+  margin: 30px auto auto auto;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
 }
 
 .contact-text h1 {
@@ -320,15 +343,46 @@ CONTACT PAGE STYLING
   font-size: 40px;
 }
 
+.contact-text p {
+  font: 15px "Source Sans Pro", sans-serif;
+  text-align: left;
+}
+
 .contact-info,
 .contact-adress {
-  margin: 30px auto;
-  text-align: left;
   border: 2px solid red;
 }
 
-.contact-form {
-  display: block;
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+textarea {
+  color: #000;
+  font: 15px "Source Sans Pro", sans-serif;
+  border: 1px solid #707070;
+  margin: 15px auto;
+  padding: 10px;
+  width: 80%;
+}
+
+::placeholder {
+  color: #000;
+  margin: 20px;
+}
+
+.cta {
+  color: #000;
+  background: #fff;
+  font: 17px "Source Sans Pro", sans-serif;
+  font-weight: bolder;
+  border: 1px solid #000;
+  text-align: center;
+  text-transform: uppercase;
+  margin: auto 30px 30px;
+  padding: 100px auto;
 }
 
 /* FOOTER STYLING
