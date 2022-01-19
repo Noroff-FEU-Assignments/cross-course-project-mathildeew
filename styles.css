@@ -21,6 +21,16 @@ a {
   color: inherit;
 }
 
+h1 {
+  color: #fff;
+  font: 30px "DIN Alternate", sans-serif;
+}
+
+h2 {
+  color: #ff9f00;
+  font: 25px "Source Sans Pro", sans-serif;
+}
+
 /* ICONS */
 .header-icons {
   height: auto;
@@ -125,25 +135,28 @@ nav li,
   display: block;
 }
 
-/* --------------
-HOME PAGE STYLING
----------------*/
-
-/* PUSHING THE COMFORT ZONE PICTURE
-------------------------------------*/
-h1 {
-  color: #fff;
-  font: 30px "DIN Alternate", sans-serif;
-}
-
-h2 {
-  color: #ff9f00;
-  font: 25px "Source Sans Pro", sans-serif;
-  margin-right: 10px;
-}
-
+/* TOP PICTURE ON EVERY PAGE
+--------------------------*/
 .intro {
   background: url("images/angela-356V-ooP184-unsplash_resized.jpg") no-repeat;
+}
+
+.introshop-img {
+  background: url("images/johannes-andersson-8XQbEDaCbDM-unsplash_Downsized.jpg") no-repeat;
+}
+
+.our-story-img {
+  background: url("images/johannes-andersson-8XQbEDaCbDM-unsplash_Downsized.jpg") no-repeat;
+}
+
+.open-img {
+  background: url("images/craig-whitehead-E1SID6pKht8-unsplash1-downsized.jpg") no-repeat;
+}
+
+.intro,
+.introshop-img,
+.our-story-img,
+.open-img {
   background-size: cover;
   background-position-x: left;
   background-position-y: top;
@@ -156,12 +169,22 @@ h2 {
   text-align: center;
 }
 
-.intro-button {
+.intro-button,
+.intro-shop,
+.our-story,
+.contact-us {
   background-color: rgba(0, 0, 0, 0.4);
+  padding: 40px 10px;
 }
 
-.intro-text {
-  padding: 40px 10px;
+/* --------------
+HOME PAGE STYLING
+---------------*/
+
+/* PUSHING THE COMFORT ZONE PICTURE
+------------------------------------*/
+.intro h2 {
+  margin-right: 10px;
 }
 
 .text-arrow {
@@ -273,25 +296,8 @@ h2 {
 /* --------------
 SHOP PAGE STYLING
 ---------------*/
-.intro-shop-img {
-  background: url("images/johannes-andersson-8XQbEDaCbDM-unsplash_Downsized.jpg") no-repeat;
-  background-size: cover;
-  background-position-x: left;
-  background-position-y: top;
-  height: 500px;
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .intro-shop {
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.4);
   width: 90%;
-  padding: 40px 10px;
 }
 
 .intro-shop p {
@@ -302,7 +308,6 @@ SHOP PAGE STYLING
   line-height: 18px;
   margin-top: 10px;
 }
-
 /* .shop {
   width: 100%;
   height: auto;
@@ -322,12 +327,17 @@ SHOP PAGE STYLING
  */
 
 /* JACKETS GRID STYLING ----------------*/
+.jacket-background {
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+}
 .shop-jackets-grid {
   width: auto;
   display: grid;
   place-items: center;
-  grid-gap: 80px;
+  grid-gap: 60px;
   border: 2px solid red;
+  padding: 20px 0;
 }
 
 .shop-jackets-text {
@@ -349,25 +359,6 @@ SHOP PAGE STYLING
 /* --------------
 ABOUT PAGE STYLING
 ---------------*/
-.our-story-img {
-  background: url("images/johannes-andersson-8XQbEDaCbDM-unsplash_Downsized.jpg") no-repeat;
-  background-size: cover;
-  background-position-x: left;
-  background-position-y: top;
-  height: 500px;
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.our-story {
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 40px 10px;
-}
-
 .about-text p {
   font-family: "Source Sans Pro", sans-serif;
 }
@@ -401,25 +392,6 @@ ABOUT PAGE STYLING
 /* --------------
 CONTACT PAGE STYLING
 ---------------*/
-.open-img {
-  background: url("images/craig-whitehead-E1SID6pKht8-unsplash1-downsized.jpg") no-repeat;
-  background-size: cover;
-  background-position-x: left;
-  background-position-y: top;
-  height: 500px;
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.contact-us {
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 40px 10px;
-}
-
 .contact-text {
   margin: 10px auto;
   display: flex;
@@ -600,10 +572,6 @@ footer img {
     font-size: 70px;
   }
   /* SHOP STYLES*/
-  .intro-shop {
-    text-align: left;
-    margin-left: 50px;
-  }
 
   .shop-jackets-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -613,6 +581,9 @@ footer img {
   }
 
   /* ABOUT STYLES*/
+  .intro-shop {
+    width: 70%;
+  }
   .column-text {
     margin: 0px 20px;
   }
