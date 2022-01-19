@@ -89,6 +89,8 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  z-index: 1000;
 }
 
 .logo {
@@ -336,7 +338,6 @@ SHOP PAGE STYLING
   display: grid;
   place-items: center;
   grid-gap: 60px;
-  border: 2px solid red;
   padding: 20px 0;
 }
 
@@ -518,6 +519,18 @@ footer img {
 
 @media (min-width: 750px) {
   /* GLOBAL STYLES */
+  .bars-icon {
+    margin-left: 50px;
+  }
+
+  .shopping-icon {
+    margin-right: 50px;
+  }
+
+  .header-icons {
+    padding: 10px;
+  }
+
   footer {
     display: inline-block;
   }
