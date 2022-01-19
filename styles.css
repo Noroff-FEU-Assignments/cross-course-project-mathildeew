@@ -1,5 +1,6 @@
-/* BASE STYLE ELEMENTS 
------------------------*/
+/*-------------------
+BASE STYLE ELEMENTS 
+--------------------*/
 html {
   box-sizing: border-box;
 }
@@ -20,6 +21,11 @@ a {
   color: inherit;
 }
 
+/* ICONS */
+.header-icons {
+  height: auto;
+}
+
 .fas,
 .fab {
   font-size: 35px;
@@ -27,6 +33,30 @@ a {
 
 /* ANIMATION AND TRANSISTIONS 
 ----------------------------- */
+.hover-middle {
+  display: inline-block;
+  position: relative;
+  color: inherit;
+}
+
+.hover-middle:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff9f00;
+  transform-origin: center;
+  transition: transform 0.25s ease-in-out;
+}
+
+.hover-middle:hover:after {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
 .fa-long-arrow-alt-right {
   transition: slide;
   transition-duration: 3s;
@@ -53,6 +83,7 @@ header {
 
 .logo {
   font: 30px "DIN Condensed", sans-serif;
+  text-align: center;
   letter-spacing: 4.7px;
   padding: 10px;
 }
@@ -72,22 +103,18 @@ nav {
   left: 0px;
 }
 
-.fas,
+.header-icons,
 nav li,
 .logo {
   padding: 3px;
 }
 
-.nav-icons {
-  margin-right: 20px;
+.bars-icon {
+  margin-left: 10px;
 }
 
-.fa-search {
+.shopping-icon {
   margin-right: 10px;
-}
-
-.fa-bars {
-  margin-left: 20px;
 }
 
 #hamburger-menu {
@@ -104,6 +131,17 @@ HOME PAGE STYLING
 
 /* PUSHING THE COMFORT ZONE PICTURE
 ------------------------------------*/
+h1 {
+  color: #fff;
+  font: 30px "DIN Alternate", sans-serif;
+}
+
+h2 {
+  color: #ff9f00;
+  font: 25px "Source Sans Pro", sans-serif;
+  margin-right: 10px;
+}
+
 .intro {
   background: url("images/angela-356V-ooP184-unsplash_resized.jpg") no-repeat;
   background-size: cover;
@@ -115,20 +153,24 @@ HOME PAGE STYLING
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-h1 {
-  color: #ff9f00;
-  font: 60px "DIN Alternate", sans-serif;
+  text-align: center;
 }
 
 .intro-button {
-  color: #fff;
-  font: 45px "Source Sans Pro", sans-serif;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .intro-text {
-  text-align: center;
+  padding: 40px 10px;
+}
+
+.text-arrow {
+  display: flex;
+  justify-content: center;
+}
+
+.fa-long-arrow-alt-right {
+  color: #ff9f00;
 }
 
 /* PICTURE SLIDE
@@ -231,7 +273,37 @@ h1 {
 /* --------------
 SHOP PAGE STYLING
 ---------------*/
-.shop {
+.intro-shop-img {
+  background: url("images/johannes-andersson-8XQbEDaCbDM-unsplash_Downsized.jpg") no-repeat;
+  background-size: cover;
+  background-position-x: left;
+  background-position-y: top;
+  height: 500px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.intro-shop {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 90%;
+  padding: 40px 10px;
+}
+
+.intro-shop p {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #ff9f00;
+  font-size: 13px;
+  text-align: left;
+  line-height: 18px;
+  margin-top: 10px;
+}
+
+/* .shop {
   width: 100%;
   height: auto;
   border: 2px solid blue;
@@ -247,15 +319,7 @@ SHOP PAGE STYLING
   font-size: 26px;
   letter-spacing: 1px;
 }
-
-.intro-shop p {
-  font-family: "Source Sans Pro", sans-serif;
-  color: #9b9b9b;
-  font-size: 13px;
-  line-height: 18px;
-  text-align: left;
-  margin-top: 10px;
-}
+ */
 
 /* JACKETS GRID STYLING ----------------*/
 .shop-jackets-grid {
@@ -285,11 +349,23 @@ SHOP PAGE STYLING
 /* --------------
 ABOUT PAGE STYLING
 ---------------*/
-.our-story {
+.our-story-img {
   background: url("images/johannes-andersson-8XQbEDaCbDM-unsplash_Downsized.jpg") no-repeat;
   background-size: cover;
-  height: 400px;
+  background-position-x: left;
+  background-position-y: top;
+  height: 500px;
   width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.our-story {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 40px 10px;
 }
 
 .about-text p {
@@ -300,13 +376,15 @@ ABOUT PAGE STYLING
   font-size: 20px;
   text-align: center;
   line-height: 25px;
-  margin: 30px 40px;
+  margin: 20px;
+  border: 2px solid blue;
 }
 
 .column-text {
   font-size: 15px;
   line-height: 20px;
-  margin: 20px 30px;
+  margin: 20px;
+  border: 2px solid red;
 }
 
 .about-comfortzone {
@@ -326,31 +404,49 @@ CONTACT PAGE STYLING
 .open-img {
   background: url("images/craig-whitehead-E1SID6pKht8-unsplash1-downsized.jpg") no-repeat;
   background-size: cover;
-  background-position-y: 25%;
+  background-position-x: left;
+  background-position-y: top;
+  height: 500px;
   width: 100%;
-  height: 215px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-us {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 40px 10px;
 }
 
 .contact-text {
-  margin: 30px auto auto auto;
+  margin: 10px auto;
   display: flex;
+  place-items: center;
   flex-direction: column;
   place-items: center;
 }
 
-.contact-text h1 {
+.contact-text h2 {
   color: #000;
   font-size: 40px;
+  margin-bottom: 20px;
 }
 
 .contact-text p {
   font: 15px "Source Sans Pro", sans-serif;
+  letter-spacing: 2px;
   text-align: left;
 }
 
-.contact-info,
-.contact-adress {
-  border: 2px solid red;
+.contactinfo {
+  width: 52%;
+  margin-bottom: 20px;
+}
+
+.contact-1 {
+  margin-bottom: 20px;
 }
 
 form {
@@ -373,17 +469,34 @@ textarea {
   margin: 20px;
 }
 
+textarea {
+  resize: none;
+  height: 200px;
+}
+
 .cta {
   color: #000;
   background: #fff;
   font: 17px "Source Sans Pro", sans-serif;
-  font-weight: bolder;
+  font-weight: bold;
   border: 1px solid #000;
   text-align: center;
   text-transform: uppercase;
-  margin: auto 30px 30px;
-  padding: 100px auto;
+  margin: 10px 30px 20px;
 }
+
+.cta a {
+  padding: 10px 0px;
+  display: inline-block;
+}
+
+.fa-envelope {
+  padding-left: 10px;
+}
+
+/* --------------
+JACKET SPECEFIC PAGE STYLING
+---------------*/
 
 /* FOOTER STYLING
 ---------------  */
@@ -395,6 +508,7 @@ footer {
 }
 
 footer h2 {
+  color: #000;
   font: 29px "DIN Alternate", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -424,6 +538,12 @@ footer img {
 
 /* MEDIA QUIERES 
 ------------------ */
+@media (max-width: 1025px) {
+  .hover-middle:after {
+    visibility: hidden;
+  }
+}
+
 @media (min-width: 750px) {
   /* GLOBAL STYLES */
   footer {
@@ -443,10 +563,29 @@ footer img {
   .friends {
     text-align: center;
   }
+
+  .cta {
+    margin: auto 150px;
+  }
+
+  .cta a {
+    padding: 10px 0px;
+    display: inline-block;
+  }
+
+  .fa-envelope {
+    padding-left: 10px;
+  }
+
   /* HOME PAGE STYLES */
   .intro,
   .bottom-picture {
     height: 670px;
+  }
+
+  .intro-text,
+  .our-story {
+    padding: 100px 150px;
   }
 
   .jackets {
@@ -474,20 +613,8 @@ footer img {
   }
 
   /* ABOUT STYLES*/
-  .about-text {
-    margin: auto 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 50px;
-  }
-
-  .about-intro {
-    margin: 300px auto;
-  }
-
   .column-text {
-    margin: 30px auto;
+    margin: 0px 20px;
   }
 }
 
@@ -501,6 +628,10 @@ footer img {
   /* HOME PAGE STYLES */
   .intro h1 {
     font-size: 70px;
+  }
+
+  .intro-text {
+    padding: 140px 40px;
   }
 
   .blue-jacket-container {
@@ -523,7 +654,8 @@ footer img {
   }
 
   /* ABOUT STYLES */
-  .about-text {
+
+  /* .about-text {
     display: inline-block;
     margin: 20px 50px;
   }
@@ -534,7 +666,7 @@ footer img {
 
   .column-text {
     display: flex;
-  }
+  } */
 }
 
 @media (min-width: 1025px) {
@@ -568,18 +700,24 @@ footer img {
     margin-left: 40px;
   }
 
+  /* CTA BUTTON */
+  .cta a:hover + i {
+    opacity: 1;
+  }
+
+  .cta a + i {
+    opacity: 0;
+  }
+  /* --------*/
+
   /* HOME PAGE STYLES */
+
   .jackets {
     height: 500px;
   }
 
   .blue-man {
     width: 500px;
-  }
-
-  .intro h1,
-  .bottom-picture p {
-    font-size: 90px;
   }
 
   .intro a {
