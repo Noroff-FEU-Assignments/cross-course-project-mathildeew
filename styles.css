@@ -201,7 +201,7 @@ HOME PAGE STYLING
 /* PICTURE SLIDE
 -----------------*/
 .best-selling {
-  background-color: #d1cec8;
+  background-color: #f2f3ef;
   width: auto;
   text-transform: uppercase;
   padding-top: 20px;
@@ -209,16 +209,17 @@ HOME PAGE STYLING
   text-align: center;
 }
 
-.best-selling p,
 .best-selling h3 {
-  font-family: "Source Sans Pro", sans-serif;
+  color: #5f6546;
+  font: 20px "DIN Alternate", sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: auto 10px;
 }
 
-.best-selling h2 {
-  color: #fff;
-  font: 25px "DIN Alternate", sans-serif;
-  text-align: center;
-  letter-spacing: 3px;
+.best-selling p,
+.best-selling h4 {
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .blue-man {
@@ -236,7 +237,7 @@ HOME PAGE STYLING
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 100px;
+  gap: 30px;
 }
 
 .fa-angle-left,
@@ -248,7 +249,7 @@ HOME PAGE STYLING
 ---------- */
 .news {
   background-color: #e6e4df;
-  height: 600px;
+  height: 500px;
   width: auto;
   display: flex;
   justify-content: center;
@@ -267,9 +268,9 @@ HOME PAGE STYLING
   align-items: center;
 }
 
-.news h2 {
+.news h1 {
   color: #ff9f00;
-  font: 95px "DIN Alternate", sans-serif;
+  font-size: 40px;
 }
 
 .news p {
@@ -284,15 +285,16 @@ HOME PAGE STYLING
   background: url("images/bottompicture.png") no-repeat; /* Needs adjustment on bigger screens*/
   height: 500px;
   width: auto;
-  background-position: center;
+  background-position-x: left;
+  background-position-y: bottom;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .bottom-picture p {
   color: #ff9f00;
   font: 35px "DIN Alternate", sans-serif;
+  margin-top: 150px;
 }
 
 /* --------------
@@ -519,6 +521,15 @@ footer img {
 
 @media (min-width: 750px) {
   /* GLOBAL STYLES */
+  h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
   .bars-icon {
     margin-left: 50px;
   }
@@ -573,17 +584,31 @@ footer img {
     padding: 100px 150px;
   }
 
+  .best-selling h3 {
+    font-size: 30px;
+  }
+
   .jackets {
-    height: 400px;
+    height: 500px;
   }
 
   .blue-man {
-    width: 400px;
+    width: 500px;
+  }
+
+  .bottom-picture {
+    background-position-x: center;
+    background-position-y: bottom;
+    align-items: center;
+    text-align: center;
   }
 
   .bottom-picture p {
-    font-size: 70px;
+    color: #ff9f00;
+    font: 35px "DIN Alternate", sans-serif;
+    margin-top: 0px;
   }
+
   /* SHOP STYLES*/
 
   .shop-jackets-grid {
@@ -610,12 +635,13 @@ footer img {
   }
 
   /* HOME PAGE STYLES */
-  .intro h1 {
-    font-size: 70px;
+
+  .jackets {
+    height: 400px;
   }
 
-  .intro-text {
-    padding: 140px 40px;
+  .blue-man {
+    width: 400px;
   }
 
   .blue-jacket-container {
@@ -623,12 +649,17 @@ footer img {
   }
 
   .blue-jacket-container p,
-  .blue-jacket-container h3 {
-    margin-left: 90px;
+  .blue-jacket-container h4 {
+    margin-left: 50px;
   }
 
   .pic-slide {
     flex-direction: row;
+    gap: 70px;
+  }
+
+  .circles {
+    display: none;
   }
 
   /* SHOP STYLES*/
@@ -636,33 +667,21 @@ footer img {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
   }
-
-  /* ABOUT STYLES */
-
-  /* .about-text {
-    display: inline-block;
-    margin: 20px 50px;
-  }
-
-  .about-intro {
-    margin: 20px auto;
-  }
-
-  .column-text {
-    display: flex;
-  } */
 }
 
 @media (min-width: 1025px) {
   /* GLOBAL STYLES */
   header {
     background-color: #fff;
+    justify-content: center;
   }
 
   nav {
-    display: inherit;
-    position: inherit;
-    z-index: inherit;
+    display: contents;
+  }
+
+  .menu {
+    margin: auto 10%;
   }
 
   nav li {
@@ -670,7 +689,7 @@ footer img {
     padding: 0px;
   }
 
-  .fa-bars {
+  .bars-icon {
     display: none;
   }
 
