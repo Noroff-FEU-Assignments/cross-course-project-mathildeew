@@ -1,17 +1,5 @@
-<<<<<<< Updated upstream
 /* BASE STYLE ELEMENTS 
 -----------------------*/
-=======
-/*-------------------
-BASE STYLE ELEMENTS 
---------------------*/
-
-/* IMPORTS ---------*/
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap");
-@import url("http://fonts.cdnfonts.com/css/din-alternate");
-@import url("https://use.typekit.net/ykg8cea.css");
-
->>>>>>> Stashed changes
 html {
   box-sizing: border-box;
 }
@@ -32,36 +20,6 @@ a {
   color: inherit;
 }
 
-<<<<<<< Updated upstream
-=======
-h1 {
-  color: #fff;
-  font: 30px "DIN Alternate", sans-serif;
-}
-
-h2 {
-  color: #ff9f00;
-  font: 25px "Source Sans Pro", sans-serif;
-}
-
-h3 {
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-h5 {
-  font-family: "DIN Alternate", sans-serif;
-}
-
-p {
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-/* ICONS */
-.header-icons {
-  height: auto;
-}
-
->>>>>>> Stashed changes
 .fas,
 .fab {
   font-size: 35px;
@@ -79,12 +37,6 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-<<<<<<< Updated upstream
-=======
-  position: fixed;
-  top: 0;
-  z-index: 1000;
->>>>>>> Stashed changes
 }
 
 .logo {
@@ -122,16 +74,8 @@ nav li,
   margin-right: 10px;
 }
 
-<<<<<<< Updated upstream
 .fa-bars {
   margin-left: 20px;
-=======
-.search-slidein {
-  display: none;
-  position: fixed;
-  top: 80px;
-  background-color: #fff;
->>>>>>> Stashed changes
 }
 
 #hamburger-menu {
@@ -266,286 +210,8 @@ h1 {
 .bottom-picture p {
   color: #ff9f00;
   font: 35px "DIN Alternate", sans-serif;
-<<<<<<< Updated upstream
 }
 
-=======
-  margin-top: 150px;
-}
-
-/* --------------
-SHOP PAGE STYLING
----------------*/
-.intro-shop {
-  width: 90%;
-}
-
-.intro-shop p {
-  font-family: "Source Sans Pro", sans-serif;
-  color: #ff9f00;
-  font-size: 13px;
-  text-align: left;
-  line-height: 18px;
-  margin-top: 10px;
-}
-/* .shop {
-  width: 100%;
-  height: auto;
-  border: 2px solid blue;
-}
-
-.intro-shop {
-  margin: 10px;
-  text-align: center;
-}
-
-.intro-shop h1 {
-  color: #ff9f00;
-  font-size: 26px;
-  letter-spacing: 1px;
-}
- */
-
-/* JACKETS GRID STYLING ----------------*/
-.jacket-background {
-  background-color: rgba(0, 0, 0, 0.03);
-  border-radius: 8px;
-}
-.shop-jackets-grid {
-  width: auto;
-  display: grid;
-  place-items: center;
-  grid-gap: 60px;
-  padding: 20px 0;
-}
-
-.shop-jackets-text {
-  font-family: "DIN Alternate", sans-serif;
-  line-height: 25px;
-  margin-left: 50px;
-}
-
-.shop-jackets-grid h2 {
-  font-size: 23px;
-  letter-spacing: 0.5px;
-}
-
-.shop-jackets-grid p {
-  color: #939191;
-  font-size: 14px;
-}
-
-/* --------------
-ABOUT PAGE STYLING
----------------*/
-.about-text {
-  width: 90%;
-  margin: 20px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  place-items: center;
-}
-
-.about-text p {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 300;
-  margin-bottom: 15px;
-}
-
-.about-intro {
-  font-size: 20px;
-  text-align: center;
-  line-height: 25px;
-}
-
-.column-text {
-  font-size: 15px;
-  line-height: 20px;
-}
-
-.columntext-pic1,
-.columntext-pic2 {
-  width: 100%;
-  height: auto;
-}
-
-#column-text p:nth-child(5),
-#column-text p:nth-child(10),
-#column-text p:nth-child(11) {
-  font-size: 25px;
-  text-align: center;
-  margin: 30px;
-  line-height: 30px;
-}
-
-/* --------------
-CONTACT PAGE STYLING
----------------*/
-.contact-text {
-  margin: 10px auto;
-  display: flex;
-  place-items: center;
-  flex-direction: column;
-  place-items: center;
-}
-
-.contact-text h2 {
-  color: #000;
-  font-size: 40px;
-  margin-bottom: 20px;
-}
-
-.contact-text p {
-  font: 15px "Source Sans Pro", sans-serif;
-  letter-spacing: 2px;
-  text-align: left;
-}
-
-.contactinfo {
-  width: 52%;
-  margin-bottom: 20px;
-}
-
-.contact-1 {
-  margin-bottom: 20px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-input[type="text"],
-textarea {
-  color: #000;
-  font: 15px "Source Sans Pro", sans-serif;
-  border: 1px solid #707070;
-  margin: 15px auto;
-  padding: 10px;
-  width: 80%;
-}
-
-::placeholder {
-  color: #000;
-  margin: 20px;
-}
-
-textarea {
-  resize: none;
-  height: 200px;
-}
-
-.cta {
-  color: #000;
-  background: #fff;
-  font: 17px "Source Sans Pro", sans-serif;
-  font-weight: bold;
-  border: 1px solid #000;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 10px 30px 20px;
-}
-
-.cta a {
-  padding: 10px 0px;
-  display: inline-block;
-}
-
-.fa-envelope {
-  padding-left: 10px;
-}
-
-/* --------------
-JACKET SPECEFIC PAGE STYLING
----------------*/
-
-.jacket-specific {
-  padding-top: 100px;
-}
-
-.jacket-specific-topcontent {
-  text-align: center;
-  place-content: center;
-}
-
-.jacket-specific h1,
-.jacket-specific h2 {
-  color: #000;
-}
-
-.jacket-specific-colors {
-  margin: 30px auto;
-}
-
-.description-details p {
-  text-align: left;
-}
-
-.jacket-specific-carousel {
-  background: url("images/nathan-dumlao-ySKhDjEgzUs-unsplash-downsized.jpg") no-repeat;
-  background-size: cover;
-  background-position-x: center;
-  background-position-y: bottom;
-  height: 330px;
-  width: 100%;
-}
-
-.jacket-specific .circles {
-  margin: 30px auto;
-}
-
-.jacket-specific h3 {
-  text-decoration: underline;
-}
-
-.description-details {
-  margin: auto 30px;
-}
-
-.description,
-.details {
-  margin: 30px auto;
-}
-
-.bulletpoints {
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-.fixed-menu {
-  width: 100%;
-  height: 130px;
-  display: inline-block;
-}
-
-.fixed-menu-headings {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  place-items: center;
-  border: 2px solid red;
-}
-
-.sizes {
-  background-color: #fff;
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-.sizes li {
-  margin-left: 30px;
-  list-style: none;
-}
-
-/* --------------
-CHECKOUT PAGE STYLING
----------------*/
-
-.checkout-jackets {
-  height: 200px;
-  width: auto;
-}
-
->>>>>>> Stashed changes
 /* FOOTER STYLING
 ---------------  */
 footer {
@@ -584,17 +250,7 @@ footer img {
 }
 
 /* MEDIA QUIERES 
-<<<<<<< Updated upstream
 ------------------ */
-=======
----------------------------- */
-@media (max-width: 1025px) {
-  .hover-middle:after {
-    visibility: hidden;
-  }
-}
-
->>>>>>> Stashed changes
 @media (min-width: 750px) {
   .intro,
   .bottom-picture {
@@ -629,72 +285,6 @@ footer img {
   .friends {
     text-align: center;
   }
-<<<<<<< Updated upstream
-=======
-
-  .cta {
-    margin: auto 150px;
-  }
-
-  .cta a {
-    padding: 10px 0px;
-    display: inline-block;
-  }
-
-  .fa-envelope {
-    padding-left: 10px;
-  }
-
-  /* HOME PAGE STYLES MIN 750PX*/
-  .intro,
-  .bottom-picture {
-    height: 670px;
-  }
-
-  .intro-text,
-  .our-story {
-    padding: 100px 150px;
-  }
-
-  .best-selling h3 {
-    font-size: 30px;
-  }
-
-  .jackets {
-    height: 500px;
-  }
-
-  .blue-man {
-    width: 500px;
-  }
-
-  .bottom-picture {
-    background-position-x: center;
-    background-position-y: bottom;
-    align-items: center;
-    text-align: center;
-  }
-
-  .bottom-picture p {
-    color: #ff9f00;
-    font: 35px "DIN Alternate", sans-serif;
-    margin-top: 0px;
-  }
-
-  /* SHOP STYLES min 750px*/
-
-  .shop-jackets-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-gap: 50px;
-    column-gap: 0px;
-  }
-
-  /* ABOUT STYLES min 750*/
-  .about-text {
-    width: 70%;
-  }
->>>>>>> Stashed changes
 }
 
 @media (min-width: 875px) {
@@ -718,11 +308,6 @@ footer img {
   .fa-angle-left,
   .fa-angle-right {
     display: inline-block;
-  }
-
-  /*ABOUT STYLES min 875px*/
-  .about-text {
-    width: 60%;
   }
 }
 
@@ -767,28 +352,13 @@ footer img {
     width: 980px;
   }
 
-<<<<<<< Updated upstream
   footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
-=======
-  /* SHOP STYLES min 1025*/
-
-  /* ABOUT STYLES min 1025*/
-  .about-text {
-    width: 650px;
-  }
-}
->>>>>>> Stashed changes
 
   .footer-list {
     margin-left: 40px;
-  }
-
-  /* ABOUT PAGE*/
-  .about-intro {
-    margin: 20px 10%;
   }
 }
