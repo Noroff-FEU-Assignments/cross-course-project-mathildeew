@@ -294,16 +294,20 @@ HOME PAGE STYLING
   background: url("images/bottompicture.png") no-repeat; /* Needs adjustment on bigger screens*/
   height: 500px;
   width: auto;
+  background-size: cover;
   background-position-x: left;
   background-position-y: bottom;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
-.bottom-picture p {
-  color: #ff9f00;
-  font: 35px "DIN Alternate", sans-serif;
-  margin-top: 150px;
+.bottom-picture h4 {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font: 25px "DIN Alternate", sans-serif;
+  text-align: center;
+  padding: 30px;
 }
 
 /* --------------
@@ -377,7 +381,6 @@ ABOUT PAGE STYLING
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
 }
 
 .about-text {
@@ -419,14 +422,23 @@ ABOUT PAGE STYLING
 CONTACT PAGE STYLING
 ---------------*/
 #contactus {
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
+  justify-content: center;
 }
 
 .contactus-content {
   width: 80%;
+}
+
+.contact-info {
+  border: 2px solid red;
+  width: fit-content;
+  margin: 0 auto;
+  display: block;
 }
 
 .contact-info h2 {
@@ -494,7 +506,7 @@ JACKET SPECEFIC PAGE STYLING
 /* FOOTER STYLING
 ---------------  */
 footer {
-  background-color: #ff9f00;
+  background-color: #f2f3ef;
   color: #000;
   width: 100%;
   text-align: center;
@@ -640,6 +652,15 @@ footer img {
   .about-text {
     width: 70%;
   }
+
+  /* CONTACT PAGE STYLES min: 750*/
+  .contactus-content {
+    width: 70%;
+  }
+
+  .contactus-content {
+    width: 70%;
+  }
 }
 
 @media (min-width: 875px) {
@@ -684,8 +705,9 @@ footer img {
   }
 
   /* ABOUT MIN 875*/
-  .about-text {
-    width: 600px;
+  .about-text,
+  .contactus-content {
+    width: 750px;
   }
 }
 
