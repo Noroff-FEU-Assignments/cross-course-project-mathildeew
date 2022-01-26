@@ -49,6 +49,28 @@ p {
   font-size: 35px;
 }
 
+/* BUTTONS
+----------------------------- */
+.cta {
+  color: #000;
+  background: #fff;
+  font: 17px "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  border: 1px solid #000;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10px 30px 20px;
+}
+
+.cta a {
+  padding: 10px 0px;
+  display: inline-block;
+}
+
+.fa-envelope {
+  padding-left: 10px;
+}
+
 /* ANIMATION AND TRANSISTIONS 
 ----------------------------- */
 .hover-middle {
@@ -143,6 +165,10 @@ nav li,
 
 #hamburger-menu:checked ~ nav {
   display: block;
+}
+
+#searchfield {
+  width: 100%;
 }
 
 /* TOP PICTURE ON EVERY PAGE
@@ -479,29 +505,111 @@ textarea {
   height: 200px;
 }
 
-.cta {
-  color: #000;
-  background: #fff;
-  font: 17px "Source Sans Pro", sans-serif;
-  font-weight: bold;
-  border: 1px solid #000;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 10px 30px 20px;
-}
-
-.cta a {
-  padding: 10px 0px;
-  display: inline-block;
-}
-
-.fa-envelope {
-  padding-left: 10px;
-}
-
 /* --------------
 JACKET SPECEFIC PAGE STYLING
 ---------------*/
+
+/* --------------
+CHECKOUT PAGE STYLING
+---------------*/
+.checkout-content {
+  padding-top: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-content h1 {
+  color: #000;
+}
+
+.checkout-content img {
+  height: 115px;
+  width: auto;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.cart-item p:nth-child(1) {
+  font-weight: bold;
+}
+
+hr {
+  margin: 20px 5%;
+}
+
+.quantity {
+  border: 1px solid #000;
+  width: 100px;
+  text-align: center;
+}
+
+.lines {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  width: 50%;
+  border: 2px solid red;
+}
+
+.lines p {
+  display: inline-block;
+}
+
+.lines p:nth-child(1) {
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+/* ORDER COMPLETE BUTTON & POPUP */
+
+.cta-ordercomplete {
+  transition: all 0.3s ease-out;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.order-complete {
+  background: #fff;
+  height: 220px;
+  margin: 50% 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.order-complete h1,
+.order-complete i {
+  color: #ff9f00;
+}
+
+.order-complete a {
+  font-family: "Source Sans Pro", sans-serif;
+  margin-top: 50px;
+}
 
 /* FOOTER STYLING
 ---------------  */
