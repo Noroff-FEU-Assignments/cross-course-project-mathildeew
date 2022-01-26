@@ -115,6 +115,7 @@ header {
   font: 30px "DIN Condensed", sans-serif;
   letter-spacing: 4.7px;
   padding: 10px;
+  text-align: center;
 }
 
 nav li {
@@ -212,23 +213,16 @@ nav li,
 .intro {
   background: url("images/angela-356V-ooP184-unsplash_resized.jpg") no-repeat;
 }
-
 .introshop-img {
   background: url("images/johannes-andersson-8XQbEDaCbDM-unsplash_Downsized.jpg") no-repeat;
 }
-
 .our-story-img {
   background: url("images/johannes-andersson-8XQbEDaCbDM-unsplash_Downsized.jpg") no-repeat;
 }
 
-.open-img {
-  background: url("images/craig-whitehead-E1SID6pKht8-unsplash1-downsized.jpg") no-repeat;
-}
-
 .intro,
 .introshop-img,
-.our-story-img,
-.open-img {
+.our-story-img {
   padding-top: 80px;
   background-size: cover;
   background-position-x: left;
@@ -244,8 +238,7 @@ nav li,
 
 .intro-button,
 .intro-shop,
-.our-story,
-.contact-us {
+.our-story {
   background-color: rgba(0, 0, 0, 0.4);
   padding: 40px 10px;
   width: 95%;
@@ -403,14 +396,27 @@ SHOP PAGE STYLING
 .jacket-background {
   background-color: rgba(0, 0, 0, 0.03);
   border-radius: 8px;
+  transition: all 0.1s ease-in-out;
+}
+
+.shop-jackets-grid a {
+  display: inline-flex;
+}
+
+.jacket-padding {
+  padding: 10px;
+}
+
+.jacket-background:hover {
+  transform: scale(1.1);
 }
 
 .shop-jackets-grid {
-  width: auto;
   display: grid;
   place-items: center;
-  grid-gap: 60px;
-  padding: 20px 0;
+  justify-content: center;
+  grid-gap: 40px;
+  margin: 20px auto;
 }
 
 .shop-jackets-text {
@@ -466,10 +472,12 @@ ABOUT PAGE STYLING
 /* --------------
 CONTACT PAGE STYLING
 ---------------*/
+.contactus {
+  padding-top: 80px;
+}
+
 .contact-info {
-  border: 2px solid red;
   width: fit-content;
-  margin: 0 auto;
   display: block;
 }
 
@@ -726,7 +734,8 @@ footer img {
   padding: 10px;
 }
 
-/* MEDIA QUIERES 
+/*----------------
+ MEDIA QUIERES 
 ------------------ */
 @media (max-width: 1025px) {
   .hover-middle:after {
@@ -735,7 +744,7 @@ footer img {
 }
 
 @media (min-width: 750px) {
-  /* GLOBAL STYLES */
+  /* BASE STYLES */
   h1 {
     font-size: 40px;
     margin-bottom: 20px;
@@ -788,6 +797,19 @@ footer img {
     padding-left: 10px;
   }
 
+  .shop-jackets-grid,
+  .about-text,
+  .contactus-content,
+  .jacket-specific-content {
+    width: 70%;
+  }
+
+  .shop-jackets-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    column-gap: 40px;
+  }
+
   /* HOME PAGE STYLES */
   .intro,
   .bottom-picture {
@@ -823,32 +845,23 @@ footer img {
     font: 35px "DIN Alternate", sans-serif;
     margin-top: 0px;
   }
-
-  /* BASE LAYOUT ABOUT, CONTACT, JACKET PAGE */
-  .shop-jackets-grid,
-  .about-text,
-  .contactus-content,
-  .jacket-specific-content {
-    width: 70%;
-  }
-
-  .shop-jackets-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-gap: 50px;
-    column-gap: 0px;
-  }
 }
 
 @media (min-width: 875px) {
-  /* GLOBAL STYLES */
+  /* BASE STYLES */
   .fa-angle-left,
   .fa-angle-right {
     display: inline-block;
   }
 
-  /* HOME PAGE STYLES */
+  .shop-jackets-grid,
+  .about-text,
+  .contactus-content,
+  .jacket-specific-content {
+    width: 750px;
+  }
 
+  /* HOME PAGE STYLES */
   .jackets {
     height: 400px;
   }
@@ -874,23 +887,17 @@ footer img {
   .circles {
     display: none;
   }
+}
 
-  /* SHOP STYLES*/
+@media (min-width: 970px) {
   .shop-jackets-grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
   }
-
-  .shop-jackets-grid,
-  .about-text,
-  .contactus-content,
-  .jacket-specific-content {
-    width: 750px;
-  }
 }
 
 @media (min-width: 1025px) {
-  /* GLOBAL STYLES */
+  /* BASE STYLES */
   header {
     background-color: #fff;
     justify-content: center;
@@ -933,7 +940,6 @@ footer img {
   }
 
   /* HOME PAGE STYLES */
-
   .jackets {
     height: 500px;
   }
@@ -942,23 +948,20 @@ footer img {
     width: 500px;
   }
 
-  .intro a {
-    text-align: left;
-  }
-
   .newstext {
     width: 980px;
   }
 }
 
-@media (min-width: 1400px) {
-  /* SHOP STYLES*/
+@media (min-width: 1310px) {
+  .shop-jackets-grid,
+  .about-text,
+  .jacket-specific-content {
+    width: 1248px;
+  }
+
   .shop-jackets-grid {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-gap: 50px;
-    column-gap: 0px;
-    margin-left: 100px;
-    margin-right: 100px;
   }
 }
