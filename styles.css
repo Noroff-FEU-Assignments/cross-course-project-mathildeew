@@ -1,7 +1,6 @@
 /*-------------------
 BASE STYLE ELEMENTS 
 --------------------*/
-/* @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap"); */
 @import url("http://fonts.cdnfonts.com/css/din-alternate");
 @import url("https://use.typekit.net/ykg8cea.css");
 
@@ -97,16 +96,6 @@ p {
   transform-origin: center;
 }
 
-.fa-long-arrow-alt-right {
-  transition: slide;
-  transition-duration: 3s;
-  position: relative;
-}
-
-.fa-long-arrow-alt-right:hover {
-  color: #ff9f00;
-}
-
 /* NAVIGATION BAR STYLING
 --------------------------*/
 header {
@@ -116,7 +105,6 @@ header {
   width: 100%;
   text-transform: uppercase;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   position: fixed;
@@ -125,7 +113,6 @@ header {
 
 .logo {
   font: 30px "DIN Condensed", sans-serif;
-  text-align: center;
   letter-spacing: 4.7px;
   padding: 10px;
 }
@@ -208,13 +195,9 @@ nav li,
 .search-content p {
   font-size: 12px;
   border: 1px solid #ff9f00;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-radius: 10px;
   padding: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 5px auto;
 }
 
 .searchwords {
@@ -265,6 +248,28 @@ nav li,
 .contact-us {
   background-color: rgba(0, 0, 0, 0.4);
   padding: 40px 10px;
+  width: 95%;
+}
+
+/* BASE LAYOUT FOR SHOP, ABOUT, CONTACT, JACKET SPECIFIC 
+--------------------------*/
+.shop,
+.about,
+.contactus,
+.jacket-specific {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop-jackets-grid,
+.about-text,
+.contactus-content,
+.jacket-specific-content {
+  width: 80%;
 }
 
 /* --------------
@@ -280,6 +285,7 @@ HOME PAGE STYLING
 .text-arrow {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .fa-long-arrow-alt-right {
@@ -392,41 +398,13 @@ HOME PAGE STYLING
 /* --------------
 SHOP PAGE STYLING
 ---------------*/
-.intro-shop {
-  width: 90%;
-}
-
-.intro-shop p {
-  font-family: "Source Sans Pro", sans-serif;
-  color: #ff9f00;
-  font-size: 13px;
-  text-align: left;
-  line-height: 18px;
-  margin-top: 10px;
-}
-/* .shop {
-  width: 100%;
-  height: auto;
-  border: 2px solid blue;
-}
-
-.intro-shop {
-  margin: 10px;
-  text-align: center;
-}
-
-.intro-shop h1 {
-  color: #ff9f00;
-  font-size: 26px;
-  letter-spacing: 1px;
-}
- */
 
 /* JACKETS GRID STYLING ----------------*/
 .jacket-background {
   background-color: rgba(0, 0, 0, 0.03);
   border-radius: 8px;
 }
+
 .shop-jackets-grid {
   width: auto;
   display: grid;
@@ -454,18 +432,6 @@ SHOP PAGE STYLING
 /* --------------
 ABOUT PAGE STYLING
 ---------------*/
-.about {
-  margin-top: 15px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.about-text {
-  width: 80%;
-}
-
 .about-intro {
   font-size: 25px;
   text-align: center;
@@ -500,19 +466,6 @@ ABOUT PAGE STYLING
 /* --------------
 CONTACT PAGE STYLING
 ---------------*/
-#contactus {
-  margin-top: 15px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-}
-
-.contactus-content {
-  width: 80%;
-}
-
 .contact-info {
   border: 2px solid red;
   width: fit-content;
@@ -561,22 +514,12 @@ textarea {
 /* --------------
 JACKET SPECEFIC PAGE STYLING
 ---------------*/
-.jacket-specific {
-  padding-top: 80px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .jacket-specific-content {
-  width: 80%;
   text-align: left;
 }
 
 .jacket-specific-jacket {
-  margin-top: 105px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -591,6 +534,12 @@ JACKET SPECEFIC PAGE STYLING
 .jacket-specific-jacket h2 {
   color: #000;
   font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.colors2 {
+  width: 50%;
+  margin: 20px auto;
 }
 
 .jacket-specific-slide {
@@ -622,6 +571,19 @@ JACKET SPECEFIC PAGE STYLING
 
 .technical {
   font-family: "Source Sans Pro", sans-serif;
+}
+
+.size-slideup {
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.slideup-text,
+.slideup-buttons {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 /* --------------
@@ -862,27 +824,19 @@ footer img {
     margin-top: 0px;
   }
 
-  /* SHOP STYLES*/
+  /* BASE LAYOUT ABOUT, CONTACT, JACKET PAGE */
+  .shop-jackets-grid,
+  .about-text,
+  .contactus-content,
+  .jacket-specific-content {
+    width: 70%;
+  }
 
   .shop-jackets-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-gap: 50px;
     column-gap: 0px;
-  }
-
-  /* ABOUT STYLES min: 750*/
-  .about-text {
-    width: 70%;
-  }
-
-  /* CONTACT PAGE STYLES min: 750*/
-  .contactus-content {
-    width: 70%;
-  }
-
-  .contactus-content {
-    width: 70%;
   }
 }
 
@@ -927,9 +881,10 @@ footer img {
     grid-template-rows: repeat(4, 1fr);
   }
 
-  /* ABOUT MIN 875*/
+  .shop-jackets-grid,
   .about-text,
-  .contactus-content {
+  .contactus-content,
+  .jacket-specific-content {
     width: 750px;
   }
 }
@@ -976,7 +931,6 @@ footer img {
   .cta a + i {
     opacity: 0;
   }
-  /* --------*/
 
   /* HOME PAGE STYLES */
 
@@ -995,10 +949,6 @@ footer img {
   .newstext {
     width: 980px;
   }
-
-  /* SHOP STYLES */
-
-  /* ABOUT STYLES */
 }
 
 @media (min-width: 1400px) {
