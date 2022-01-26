@@ -479,9 +479,6 @@ CONTACT PAGE STYLING
   padding-top: 120px;
 }
 
-.contact-info {
-}
-
 .contact-info h1 {
   color: #000;
   text-align: center;
@@ -549,6 +546,19 @@ JACKET SPECEFIC PAGE STYLING
 .colors2 {
   width: 50%;
   margin: 20px auto;
+}
+
+.sizes-button {
+  display: inline;
+}
+
+.sizes-button > button {
+  border: 1px solid black;
+  padding: 10px;
+  color: #000;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+  background: #fff;
 }
 
 .jacket-specific-slide {
@@ -985,6 +995,10 @@ footer img {
 
   .cta a + i {
     opacity: 0;
+  }
+
+  .size-slideup {
+    visibility: hidden;
   }
 
   /* HOME PAGE STYLES */
