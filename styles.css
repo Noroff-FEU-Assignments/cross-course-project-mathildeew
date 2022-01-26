@@ -167,8 +167,61 @@ nav li,
   display: block;
 }
 
-#searchfield {
-  width: 100%;
+.search-icon {
+  transition: all 0.3s ease-out;
+}
+
+.overlay0 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1000;
+}
+
+.overlay0:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.search-content {
+  background: #fff;
+  position: relative;
+  transition: all 5s ease-in-out;
+  padding: 50px;
+}
+
+.search-content img {
+  width: 30px;
+  height: auto;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 500ms ease-in-out;
+}
+
+.search-content p {
+  font-size: 12px;
+  border: 1px solid #ff9f00;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.searchwords {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 /* TOP PICTURE ON EVERY PAGE
