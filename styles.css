@@ -208,6 +208,10 @@ nav li,
   justify-content: space-between;
 }
 
+.overlay0 p {
+  visibility: hidden;
+}
+
 /* TOP PICTURE ON EVERY PAGE
 --------------------------*/
 .intro {
@@ -250,7 +254,6 @@ nav li,
 .about,
 .contactus,
 .jacket-specific {
-  margin-top: 15px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -473,21 +476,19 @@ ABOUT PAGE STYLING
 CONTACT PAGE STYLING
 ---------------*/
 .contactus {
-  padding-top: 80px;
+  padding-top: 120px;
 }
 
 .contact-info {
-  width: fit-content;
-  display: block;
 }
 
-.contact-info h2 {
+.contact-info h1 {
   color: #000;
   text-align: center;
 }
 
 .contact-info p {
-  text-align: left;
+  text-align: center;
 }
 
 .contact-info p:nth-child(3) {
@@ -812,6 +813,8 @@ footer img {
 
   /* HOME PAGE STYLES */
   .intro,
+  .our-story-img,
+  .introshop-img,
   .bottom-picture {
     height: 670px;
   }
@@ -890,6 +893,12 @@ footer img {
 }
 
 @media (min-width: 970px) {
+  .intro-button,
+  .our-story,
+  .intro-shop {
+    width: 930px;
+  }
+
   .shop-jackets-grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -918,6 +927,45 @@ footer img {
 
   .bars-icon {
     display: none;
+  }
+
+  .overlay0 {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1000;
+  }
+
+  .overlay0 p {
+    color: #ff9f00;
+    text-transform: none;
+  }
+
+  .overlay0:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .search-content {
+    background: transparent;
+    position: relative;
+    transition: all 5s ease-in-out;
+    padding: 50px;
+  }
+
+  .search-content img,
+  .searchwords {
+    visibility: hidden;
   }
 
   footer {
@@ -954,8 +1002,15 @@ footer img {
 }
 
 @media (min-width: 1310px) {
+  .our-story-img,
+  .introshop-img {
+    width: 1310px;
+    height: 670px;
+    margin: auto;
+  }
+
   .shop-jackets-grid,
-  .about-text,
+  /* .about-text, */
   .jacket-specific-content {
     width: 1248px;
   }
