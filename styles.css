@@ -575,6 +575,39 @@ JACKET SPECEFIC PAGE STYLING
   text-align: left;
 }
 
+.jacket-specific-jacket {
+  margin-top: 105px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.jacket-specific-jacket h1 {
+  color: #000;
+  font-size: 35px;
+}
+
+.jacket-specific-jacket h2 {
+  color: #000;
+  font-size: 20px;
+}
+
+.jacket-specific-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.picslide1 {
+  width: 100%;
+}
+
+.circles {
+  width: 25%;
+}
+
 .technical img {
   margin-top: 20px;
   width: 300px;
