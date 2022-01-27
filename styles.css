@@ -463,8 +463,8 @@ ABOUT PAGE STYLING
   height: auto;
 }
 
-#about p:nth-child(6),
-#about p:nth-child(10) {
+.column-text p:nth-child(6),
+.column-text p:nth-child(10) {
   font-size: 25px;
   font-weight: 100;
   text-align: center;
@@ -520,12 +520,16 @@ textarea {
 /* --------------
 JACKET SPECEFIC PAGE STYLING
 ---------------*/
+.jacket-specific {
+  padding-top: 80px;
+  margin-bottom: 20px;
+}
+
 .jacket-specific-content {
   text-align: left;
 }
 
 .jacket-specific-jacket {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -543,13 +547,18 @@ JACKET SPECEFIC PAGE STYLING
   margin-bottom: 20px;
 }
 
+.jacket-green {
+  height: 300px;
+}
+
 .colors2 {
   width: 50%;
-  margin: 20px auto;
+  margin-top: 20px;
 }
 
 .sizes-button {
   display: inline;
+  visibility: hidden;
 }
 
 .sizes-button > button {
@@ -559,6 +568,10 @@ JACKET SPECEFIC PAGE STYLING
   font-family: "Source Sans Pro", sans-serif;
   font-size: 20px;
   background: #fff;
+}
+
+.jacket-specific .cta {
+  display: none;
 }
 
 .jacket-specific-slide {
@@ -574,6 +587,7 @@ JACKET SPECEFIC PAGE STYLING
 
 .circles {
   width: 25%;
+  margin-top: 20px;
 }
 
 .technical img {
@@ -1012,6 +1026,18 @@ footer img {
 
   .newstext {
     width: 980px;
+  }
+
+  .sizes-button {
+    visibility: visible;
+  }
+
+  .size-slideup {
+    visibility: hidden;
+  }
+
+  .jacket-specific .cta {
+    display: initial;
   }
 }
 
