@@ -579,10 +579,11 @@ JACKET SPECEFIC PAGE STYLING
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .picslide1 {
-  width: 100%;
+  height: 320px;
 }
 
 .circles {
@@ -590,9 +591,18 @@ JACKET SPECEFIC PAGE STYLING
   margin-top: 20px;
 }
 
-.technical img {
+.techpic1 {
   margin-top: 20px;
   width: 300px;
+}
+
+.techpic2 {
+  display: none;
+}
+
+.techpic1,
+.techpic2 {
+  margin: auto;
 }
 
 .description-details p:nth-child(1),
@@ -604,6 +614,8 @@ JACKET SPECEFIC PAGE STYLING
 
 .technical {
   font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 .size-slideup {
@@ -643,9 +655,6 @@ JACKET SPECEFIC PAGE STYLING
 .slideup-text p {
   display: inline;
   margin: auto 43px;
-}
-
-.slideup-buttons {
 }
 
 /* --------------
@@ -838,10 +847,6 @@ footer img {
     text-align: center;
   }
 
-  .cta {
-    /* margin: auto 150px; */
-  }
-
   .cta a {
     padding: 10px 0px;
     display: inline-block;
@@ -900,6 +905,12 @@ footer img {
     color: #ff9f00;
     font: 35px "DIN Alternate", sans-serif;
     margin-top: 0px;
+  }
+
+  /* JACKET SPECIFIC */
+  .jacket-green,
+  .picslide1 {
+    height: 500px;
   }
 }
 
@@ -1073,6 +1084,17 @@ footer img {
 
   .jacket-green {
     width: 400px;
+    height: auto;
+  }
+
+  .techpic1,
+  .technical > ul {
+    display: none;
+  }
+
+  .techpic2 {
+    display: initial;
+    width: 880px;
     height: auto;
   }
 }
