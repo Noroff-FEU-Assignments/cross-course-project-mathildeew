@@ -24,6 +24,14 @@ a {
   color: inherit;
 }
 
+:root {
+  --bright-orange: #ff9f00;
+  --almost-white: #f2f3ef;
+  --light-grey: #939191;
+  --white: #fff;
+  --black: #000;
+}
+
 h1 {
   color: #fff;
   font: 30px "DIN Alternate", sans-serif;
@@ -34,6 +42,12 @@ h2 {
   font: 25px "Source Sans Pro", sans-serif;
 }
 
+h3 {
+  color: #5f6546;
+  font: 20px "DIN Alternate", sans-serif;
+}
+
+h4,
 p {
   font-family: "Source Sans Pro", sans-serif;
 }
@@ -94,6 +108,10 @@ p {
 .hover-middle:hover:after {
   transform: scaleX(1);
   transform-origin: center;
+}
+
+.jacket-background:hover {
+  transform: scale(1.1);
 }
 
 /* NAVIGATION BAR STYLING
@@ -285,31 +303,30 @@ HOME PAGE STYLING
 }
 
 .fa-long-arrow-alt-right {
-  color: #ff9f00;
+  color: var(--bright-orange);
 }
 
 /* PICTURE SLIDE
 -----------------*/
 .best-selling {
-  background-color: #f2f3ef;
-  width: auto;
+  background-color: var(--almost-white);
   text-transform: uppercase;
-  padding-top: 20px;
-  padding-bottom: 20px;
   text-align: center;
+  padding: 20px 0px;
 }
 
 .best-selling h3 {
-  color: #5f6546;
-  font: 20px "DIN Alternate", sans-serif;
   text-align: center;
   letter-spacing: 1px;
-  margin: auto 10px;
+  margin: 10px auto;
 }
 
-.best-selling p,
-.best-selling h4 {
-  font-family: "Source Sans Pro", sans-serif;
+.pic-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
 
 .blue-man {
@@ -321,15 +338,6 @@ HOME PAGE STYLING
   height: 300px;
 }
 
-.pic-slide {
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-}
-
 .fa-angle-left,
 .fa-angle-right {
   display: none;
@@ -339,12 +347,12 @@ HOME PAGE STYLING
 ---------- */
 .news {
   background-color: #e6e4df;
+  text-align: center;
   height: 500px;
   width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
 .newstext {
@@ -359,13 +367,13 @@ HOME PAGE STYLING
 }
 
 .news h1 {
-  color: #ff9f00;
+  color: var(--bright-orange);
   font-size: 40px;
 }
 
 .news p {
-  color: #fff;
-  font: 20px "Source Sans Pro", sans-serif;
+  color: var(--white);
+  font-size: 20px;
   text-transform: uppercase;
 }
 
@@ -381,12 +389,13 @@ HOME PAGE STYLING
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
-.bottom-picture h4 {
+.bottom-picture h1 {
   background-color: rgba(0, 0, 0, 0.4);
-  color: #fff;
-  font: 25px "DIN Alternate", sans-serif;
+  color: var(--white);
+  font-size: 25px;
   text-align: center;
   padding: 30px;
 }
@@ -402,16 +411,8 @@ SHOP PAGE STYLING
   transition: all 0.1s ease-in-out;
 }
 
-.shop-jackets-grid a {
-  display: inline-flex;
-}
-
 .jacket-padding {
   padding: 10px;
-}
-
-.jacket-background:hover {
-  transform: scale(1.1);
 }
 
 .shop-jackets-grid {
@@ -429,13 +430,13 @@ SHOP PAGE STYLING
 }
 
 .shop-jackets-grid h2 {
+  color: var(--black);
   font-size: 23px;
   letter-spacing: 0.5px;
 }
 
 .shop-jackets-grid p {
-  color: #939191;
-  font-size: 14px;
+  color: var(--light-grey);
 }
 
 /* --------------
@@ -445,10 +446,10 @@ ABOUT PAGE STYLING
   font-size: 25px;
   text-align: center;
   line-height: 25px;
+  margin-top: 20px;
 }
 
 .about p {
-  font-family: "Source Sans Pro", sans-serif;
   margin-bottom: 15px;
 }
 
@@ -499,7 +500,7 @@ form {
 
 input[type="text"],
 textarea {
-  color: #000;
+  color: var(--black);
   font: 15px "Source Sans Pro", sans-serif;
   border: 1px solid #707070;
   margin: 15px auto;
@@ -508,7 +509,7 @@ textarea {
 }
 
 ::placeholder {
-  color: #000;
+  color: var(--black);
   margin: 20px;
 }
 
@@ -586,10 +587,10 @@ JACKET SPECEFIC PAGE STYLING
   height: 320px;
 }
 
-.circles {
+/* .circles {
   width: 25%;
   margin-top: 20px;
-}
+} */
 
 .techpic1 {
   margin-top: 20px;
@@ -762,15 +763,15 @@ hr {
 /* FOOTER STYLING
 ---------------  */
 footer {
-  background-color: #f2f3ef;
-  color: #000;
-  width: 100%;
+  background-color: var(--almost-white);
+  color: var(--black);
   text-align: center;
+  width: 100%;
 }
 
 footer h2 {
   color: #000;
-  font: 29px "DIN Alternate", sans-serif;
+  font: 30px "DIN Alternate", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
