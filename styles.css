@@ -52,7 +52,8 @@ p {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-/* ICONS */
+/* ICONS
+----------------------------- */
 .header-icons {
   height: auto;
 }
@@ -173,7 +174,8 @@ nav li,
   display: block;
 }
 
-.search-icon {
+.search-icon,
+.shopping-icon {
   transition: all 0.3s ease-out;
 }
 
@@ -228,6 +230,34 @@ nav li,
 
 .overlay0 p {
   visibility: hidden;
+}
+
+.item-1,
+.item-2 {
+  display: flex;
+}
+
+.shoppingcart-overlay img {
+  height: 115px;
+  width: auto;
+}
+
+.shoppingcart-overlay {
+  background: var(--white);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1000;
+}
+
+.shoppingcart-overlay:target {
+  visibility: visible;
+  opacity: 1;
 }
 
 /* TOP PICTURE ON EVERY PAGE
@@ -586,11 +616,6 @@ JACKET SPECEFIC PAGE STYLING
 .picslide1 {
   height: 320px;
 }
-
-/* .circles {
-  width: 25%;
-  margin-top: 20px;
-} */
 
 .techpic1 {
   margin-top: 20px;
