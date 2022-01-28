@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://kit.fontawesome.com/428d654b67.js" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rainydays</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <label for="hamburger-menu"><img src="images/menu-icon.png" class="bars-icon header-icons" alt="" /></label>
+      <input type="checkbox" id="hamburger-menu" />
+      <a href="index.html" class="logo">Rainydays</a>
+      <nav>
+        <ul class="menu">
+          <li><a class="hover-middle" href="shop.html">Shop</a></li>
+          <li><a class="hover-middle" href="about.html">About</a></li>
+          <li><a class="hover-middle" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-icons">
+        <a href="#search-popup"><img src="images/search-icon.png" class="search-icon header-icons" alt="Search icon" /></a>
+        <div id="search-popup" class="overlay0">
+          <div class="search-content">
+            <a href="index.html"><img src="images/icon-cross.png" alt="" /></a>
+            <input type="text" placeholder="Search..." />
+            <div class="searchwords">
+              <p>Best Jacket</p>
+              <p>Blue</p>
+              <p>Long Jacket</p>
+              <p>Short Jacket</p>
+              <p>Sand</p>
+              <p>Rainjacket</p>
+              <p>News</p>
+            </div>
+          </div>
+        </div>
+        <a href="#"><img src="images/shopping-cart-icon.png" class="shopping-icon header-icons" alt="Shopping Cart icon" /></a>
+      </div>
+    </header>
+
+    <main class="contactus">
+      <section class="contactus-content">
+        <section class="contact-info">
+          <h1>Head office</h1>
+          <p>P: 987 65 432</p>
+          <p>E: hello@rainydays.com</p>
+          <p>Rainy Road 11</p>
+          <p>1100 Oslo</p>
+          <p>Norway</p>
+        </section>
+
+        <div class="contact-form">
+          <form action="action_page.php" method="post">
+            <input type="text" id="name" name="name" placeholder="Your name" />
+            <input type="text" id="tel" name="tel" placeholder="Your phone" />
+            <input type="text" id="email" name="email" placeholder="Your email" />
+            <textarea id="message" name="message" placeholder="Your message"></textarea>
+            <button class="cta">
+              <a href="#">Send message</a>
+              <i class="far fa-envelope"></i>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <img class="footer-list" src="images/footerlogo.png" alt="Rainydays logo with mountains" />
+      <div class="footer-info">
+        <div class="info footer-list">
+          <h2>Info</h2>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Shipping and returns</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="about.html">About (our story)</a></li>
+          </ul>
+        </div>
+        <div class="footer-shop footer-list">
+          <h2>Shop</h2>
+          <ul>
+            <li><a href="shop.html">Shop all</a></li>
+            <li><a href="#">Womens</a></li>
+            <li><a href="#">Mens</a></li>
+          </ul>
+        </div>
+        <div class="friends footer-list">
+          <h2>Lets be friends</h2>
+          <div class="footer-icons">
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,5 +1,9 @@
-/* BASE STYLE ELEMENTS 
------------------------*/
+/*-------------------
+BASE STYLE ELEMENTS 
+--------------------*/
+@import url("http://fonts.cdnfonts.com/css/din-alternate");
+@import url("https://use.typekit.net/ykg8cea.css");
+
 html {
   box-sizing: border-box;
 }
@@ -20,9 +24,97 @@ a {
   color: inherit;
 }
 
+:root {
+  --bright-orange: #ff9f00;
+  --almost-white: #f2f3ef;
+  --light-grey: #939191;
+  --white: #fff;
+  --black: #000;
+}
+
+h1 {
+  color: #fff;
+  font: 30px "DIN Alternate", sans-serif;
+}
+
+h2 {
+  color: #ff9f00;
+  font: 25px "Source Sans Pro", sans-serif;
+}
+
+h3 {
+  color: #5f6546;
+  font: 20px "DIN Alternate", sans-serif;
+}
+
+h4,
+p {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h5,
+h6 {
+  font-family: "DIN Alternate", sans-serif;
+  font-size: 25px;
+}
+
+/* ICONS
+----------------------------- */
+.header-icons {
+  height: auto;
+}
+
 .fas,
 .fab {
   font-size: 35px;
+}
+
+/* BUTTONS
+----------------------------- */
+.cta {
+  color: #000;
+  background: #fff;
+  font: 17px "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  border: 1px solid #000;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px 30px;
+  /* margin: 10px 30px 20px; */
+}
+
+.fa-envelope {
+  padding-left: 10px;
+}
+
+/* ANIMATION AND TRANSISTIONS 
+----------------------------- */
+.hover-middle {
+  display: inline-block;
+  position: relative;
+  color: inherit;
+}
+
+.hover-middle:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff9f00;
+  transform-origin: center;
+  transition: transform 0.25s ease-in-out;
+}
+
+.hover-middle:hover:after {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+.jacket-background:hover {
+  transform: scale(1.1);
 }
 
 /* NAVIGATION BAR STYLING
@@ -34,15 +126,17 @@ header {
   width: 100%;
   text-transform: uppercase;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  z-index: 1000;
 }
 
 .logo {
   font: 30px "DIN Condensed", sans-serif;
   letter-spacing: 4.7px;
   padding: 10px;
+  text-align: center;
 }
 
 nav li {
@@ -60,22 +154,18 @@ nav {
   left: 0px;
 }
 
-.fas,
+.header-icons,
 nav li,
 .logo {
   padding: 3px;
 }
 
-.nav-icons {
-  margin-right: 20px;
+.bars-icon {
+  margin-left: 10px;
 }
 
-.fa-search {
+.shopping-icon {
   margin-right: 10px;
-}
-
-.fa-bars {
-  margin-left: 20px;
 }
 
 #hamburger-menu {
@@ -86,10 +176,149 @@ nav li,
   display: block;
 }
 
-/* PUSHING THE COMFORT ZONE PICTURE
-------------------------------------*/
+.search-icon,
+.shopping-icon {
+  transition: all 0.3s ease-out;
+}
+
+.overlay0 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  transition: 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1000;
+  margin-top: 0px;
+}
+
+.overlay0:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.search-content {
+  background: #fff;
+  position: relative;
+  transition: all 500ms ease-in-out;
+  padding: 50px;
+}
+
+.search-content img {
+  width: 30px;
+  height: auto;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 500ms ease-in-out;
+}
+
+.search-content p,
+.search-content input[type="text"] {
+  font-size: 12px;
+  border: 1px solid #ff9f00;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px auto;
+}
+
+.search-content input[type="text"] {
+  font-size: 15px;
+  margin: 20px auto;
+}
+
+.overlay0 > p:first-child {
+  display: none;
+}
+
+.searchwords {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.item-1,
+.item-2 {
+  display: flex;
+}
+
+.item-text {
+  margin-left: 50px;
+}
+
+.item-text p:nth-child(4) {
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+.shoppingcart-overlay img {
+  height: 115px;
+  width: auto;
+}
+
+.shoppingcart-overlay {
+  background: var(--white);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shoppingcart-overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.shoppingcart-content {
+  margin-top: 50px;
+  width: 80%;
+}
+
+.cart-overlay-heading img:nth-child(1) {
+  width: 30px;
+  height: auto;
+}
+
+.cart-overlay-heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.overlay-subtotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+/* TOP PICTURE ON EVERY PAGE
+--------------------------*/
 .intro {
   background: url("images/angela-356V-ooP184-unsplash_resized.jpg") no-repeat;
+}
+.introshop-img {
+  background: url("images/johannes-andersson-8XQbEDaCbDM-unsplash_Downsized.jpg") no-repeat;
+}
+.our-story-img {
+  background: url("images/johannes-andersson-8XQbEDaCbDM-unsplash_Downsized.jpg") no-repeat;
+}
+
+.intro,
+.introshop-img,
+.our-story-img {
+  padding-top: 80px;
   background-size: cover;
   background-position-x: left;
   background-position-y: top;
@@ -99,43 +328,78 @@ nav li,
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-h1 {
-  color: #ff9f00;
-  font: 60px "DIN Alternate", sans-serif;
-}
-
-.intro-button {
-  color: #fff;
-  font: 45px "Source Sans Pro", sans-serif;
-}
-
-.intro-text {
   text-align: center;
+}
+
+.intro-button,
+.intro-shop,
+.our-story {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 40px 10px;
+  width: 95%;
+}
+
+/* BASE LAYOUT FOR SHOP, ABOUT, CONTACT, JACKET SPECIFIC 
+--------------------------*/
+.shop,
+.about,
+.contactus,
+.jacket-specific {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop-jackets-grid,
+.about-text,
+.contactus-content,
+.jacket-specific-content {
+  width: 80%;
+}
+
+/* --------------
+HOME PAGE STYLING
+---------------*/
+
+/* PUSHING THE COMFORT ZONE PICTURE
+------------------------------------*/
+.intro h2 {
+  margin-right: 10px;
+}
+
+.text-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-long-arrow-alt-right {
+  color: var(--bright-orange);
 }
 
 /* PICTURE SLIDE
 -----------------*/
 .best-selling {
-  background-color: #d1cec8;
-  width: auto;
+  background-color: var(--almost-white);
   text-transform: uppercase;
-  padding-top: 20px;
-  padding-bottom: 20px;
   text-align: center;
+  padding: 20px 0px;
 }
 
-.best-selling p,
 .best-selling h3 {
-  font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 10px auto;
 }
 
-.best-selling h2 {
-  color: #fff;
-  font: 25px "DIN Alternate", sans-serif;
-  text-align: center;
-  letter-spacing: 3px;
+.pic-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
 
 .blue-man {
@@ -147,15 +411,6 @@ h1 {
   height: 300px;
 }
 
-.pic-slide {
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 100px;
-}
-
 .fa-angle-left,
 .fa-angle-right {
   display: none;
@@ -165,12 +420,12 @@ h1 {
 ---------- */
 .news {
   background-color: #e6e4df;
-  height: 600px;
+  text-align: center;
+  height: 500px;
   width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
 .newstext {
@@ -184,14 +439,14 @@ h1 {
   align-items: center;
 }
 
-.news h2 {
-  color: #ff9f00;
-  font: 95px "DIN Alternate", sans-serif;
+.news h1 {
+  color: var(--bright-orange);
+  font-size: 40px;
 }
 
 .news p {
-  color: #fff;
-  font: 20px "Source Sans Pro", sans-serif;
+  color: var(--white);
+  font-size: 20px;
   text-transform: uppercase;
 }
 
@@ -201,28 +456,395 @@ h1 {
   background: url("images/bottompicture.png") no-repeat; /* Needs adjustment on bigger screens*/
   height: 500px;
   width: auto;
-  background-position: center;
+  background-size: cover;
+  background-position-x: left;
+  background-position-y: bottom;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.bottom-picture p {
+.bottom-picture h1 {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: var(--white);
+  font-size: 25px;
+  text-align: center;
+  padding: 30px;
+}
+
+/* --------------
+SHOP PAGE STYLING
+---------------*/
+
+/* JACKETS GRID STYLING ----------------*/
+.jacket-background {
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+  transition: all 0.1s ease-in-out;
+}
+
+.jacket-padding {
+  padding: 10px;
+}
+
+.shop-jackets-grid {
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  grid-gap: 40px;
+  margin: 20px auto;
+}
+
+.shop-jackets-text {
+  font-family: "DIN Alternate", sans-serif;
+  line-height: 25px;
+  margin-left: 50px;
+}
+
+.shop-jackets-grid h2 {
+  color: var(--black);
+  font-size: 23px;
+  letter-spacing: 0.5px;
+}
+
+.shop-jackets-grid p {
+  color: var(--light-grey);
+}
+
+/* --------------
+ABOUT PAGE STYLING
+---------------*/
+.about-intro {
+  font-size: 25px;
+  text-align: center;
+  line-height: 25px;
+  margin-top: 20px;
+}
+
+.about p {
+  margin-bottom: 15px;
+}
+
+.column-text {
+  font-size: 15px;
+  line-height: 20px;
+  text-align: left;
+}
+
+.about img {
+  width: 100%;
+  height: auto;
+}
+
+.column-text p:nth-child(6),
+.column-text p:nth-child(10) {
+  font-size: 25px;
+  font-weight: 100;
+  text-align: center;
+  line-height: 30px;
+  margin: 30px auto;
+}
+
+/* --------------
+CONTACT PAGE STYLING
+---------------*/
+.contactus {
+  padding-top: 120px;
+}
+
+.contact-info h1 {
+  color: #000;
+  text-align: center;
+}
+
+.contact-info p {
+  text-align: center;
+}
+
+.contact-info p:nth-child(3) {
+  margin-bottom: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+textarea {
+  color: var(--black);
+  font: 15px "Source Sans Pro", sans-serif;
+  border: 1px solid #707070;
+  margin: 15px auto;
+  padding: 10px;
+  width: 100%;
+}
+
+::placeholder {
+  color: var(--black);
+  margin: 20px;
+}
+
+textarea {
+  resize: none;
+  height: 200px;
+}
+
+/* --------------
+JACKET SPECEFIC PAGE STYLING
+---------------*/
+.jacket-specific {
+  padding-top: 80px;
+  margin-bottom: 20px;
+}
+
+.jacket-specific-content {
+  text-align: left;
+}
+
+.jacket-specific-jacket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.jacket-specific-jacket h1 {
+  color: #000;
+  font-size: 35px;
+}
+
+.jacket-specific-jacket h2 {
+  color: #000;
+  font-size: 20px;
+  /* margin-bottom: 20px; */
+}
+
+.colors-sizes-button h1,
+.colors-sizes-button h2 {
+  display: none;
+}
+
+.jacket-green {
+  height: 300px;
+}
+
+.colors2 {
+  height: 50px;
+  width: auto;
+  margin-top: 20px;
+}
+
+.sizes-button {
+  display: inline;
+  visibility: hidden;
+}
+
+.sizes-button > button {
+  border: 1px solid black;
+  padding: 10px;
+  color: #000;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+  background: #fff;
+}
+
+.jacket-specific .cta {
+  display: none;
+}
+
+.jacket-specific-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.picslide1 {
+  height: 320px;
+}
+
+.techpic1 {
+  margin-top: 20px;
+  width: 300px;
+}
+
+.techpic2 {
+  display: none;
+}
+
+.techpic1,
+.techpic2 {
+  margin: auto;
+}
+
+.description-details p:nth-child(1),
+.description-details p:nth-child(3) {
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: 20px;
+}
+
+.technical {
+  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.size-slideup {
+  background: #fff;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-jacketspecific {
+  text-align: center;
+}
+
+.cta-jacketspecific a {
+  font-size: 15px;
+}
+
+.cta-jacketspecific i {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.fas {
+  font-size: 20px;
+}
+
+.slideup-text {
+  margin-bottom: 10px;
+}
+
+.slideup-text p {
+  display: inline;
+  margin: auto 43px;
+}
+
+/* --------------
+CHECKOUT PAGE STYLING
+---------------*/
+.checkout-content {
+  padding-top: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-content h1 {
+  color: #000;
+}
+
+.checkout-content img {
+  height: 115px;
+  width: auto;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.cart-item p:nth-child(1) {
+  font-weight: bold;
+}
+
+hr {
+  margin: 20px 5%;
+}
+
+.quantity {
+  border: 1px solid #000;
+  width: 100px;
+  text-align: center;
+}
+
+.lines {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  width: 50%;
+  border: 2px solid red;
+}
+
+.lines p {
+  display: inline-block;
+}
+
+.lines p:nth-child(1) {
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+/* ORDER COMPLETE BUTTON & POPUP */
+
+.cta-ordercomplete {
+  transition: all 0.3s ease-out;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.order-complete {
+  background: #fff;
+  height: 220px;
+  margin: 50% 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.order-complete h1,
+.order-complete i {
   color: #ff9f00;
-  font: 35px "DIN Alternate", sans-serif;
+}
+
+.order-complete a {
+  font-family: "Source Sans Pro", sans-serif;
+  margin-top: 50px;
 }
 
 /* FOOTER STYLING
 ---------------  */
 footer {
-  background-color: #ff9f00;
-  color: #000;
-  width: 100%;
+  background-color: var(--almost-white);
+  color: var(--black);
   text-align: center;
+  width: 100%;
 }
 
 footer h2 {
-  font: 29px "DIN Alternate", sans-serif;
+  color: #000;
+  font: 30px "DIN Alternate", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -249,25 +871,45 @@ footer img {
   padding: 10px;
 }
 
-/* MEDIA QUIERES 
+/*----------------
+ MEDIA QUIERES 
 ------------------ */
+@media (max-width: 1025px) {
+  .hover-middle:after {
+    visibility: hidden;
+  }
+}
+
 @media (min-width: 750px) {
-  .intro,
-  .bottom-picture {
-    height: 670px;
+  /* BASE STYLES */
+  h1 {
+    font-size: 40px;
+    /* margin-bottom: 20px; */
   }
 
-  .jackets {
-    height: 400px;
+  h2 {
+    font-size: 35px;
   }
 
-  .blue-man {
-    width: 400px;
+  .bars-icon {
+    margin-left: 50px;
   }
 
-  .bottom-picture p {
-    font-size: 70px;
+  .shopping-icon {
+    margin-right: 50px;
   }
+
+  .header-icons {
+    padding: 10px;
+  }
+
+  .shoppingcart-overlay {
+    top: 0;
+    bottom: 0;
+    left: 400px;
+    right: 0;
+  }
+
   footer {
     display: inline-block;
   }
@@ -285,50 +927,44 @@ footer img {
   .friends {
     text-align: center;
   }
-}
 
-@media (min-width: 875px) {
-  .intro h1 {
-    font-size: 70px;
-  }
-
-  .blue-jacket-container {
-    text-align: left;
-  }
-
-  .blue-jacket-container p,
-  .blue-jacket-container h3 {
-    margin-left: 90px;
-  }
-
-  .pic-slide {
-    flex-direction: row;
-  }
-
-  .fa-angle-left,
-  .fa-angle-right {
+  .cta a {
+    padding: 10px 0px;
     display: inline-block;
   }
-}
 
-@media (min-width: 1025px) {
-  header {
-    background-color: #fff;
+  .fa-envelope {
+    padding-left: 10px;
   }
 
-  nav {
-    display: inherit;
-    position: inherit;
-    z-index: inherit;
+  .shop-jackets-grid,
+  .about-text,
+  .contactus-content,
+  .jacket-specific-content {
+    width: 70%;
   }
 
-  nav li {
-    display: inline-block;
-    padding: 0px;
+  .shop-jackets-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    column-gap: 40px;
   }
 
-  .fa-bars {
-    display: none;
+  /* HOME PAGE STYLES */
+  .intro,
+  .our-story-img,
+  .introshop-img,
+  .bottom-picture {
+    height: 670px;
+  }
+
+  .intro-text,
+  .our-story {
+    padding: 100px 150px;
+  }
+
+  .best-selling h3 {
+    font-size: 30px;
   }
 
   .jackets {
@@ -339,17 +975,158 @@ footer img {
     width: 500px;
   }
 
-  .intro h1,
-  .bottom-picture p {
-    font-size: 90px;
+  .bottom-picture {
+    background-position-x: center;
+    background-position-y: bottom;
+    align-items: center;
+    text-align: center;
   }
 
-  .intro a {
+  .bottom-picture p {
+    color: #ff9f00;
+    font: 35px "DIN Alternate", sans-serif;
+    margin-top: 0px;
+  }
+
+  /* JACKET SPECIFIC */
+  .jacket-green,
+  .picslide1 {
+    height: 500px;
+  }
+}
+
+@media (min-width: 875px) {
+  /* BASE STYLES */
+  .fa-angle-left,
+  .fa-angle-right {
+    display: inline-block;
+  }
+
+  .shop-jackets-grid,
+  .about-text,
+  .contactus-content,
+  .jacket-specific-content {
+    width: 750px;
+  }
+
+  /* HOME PAGE STYLES */
+  .jackets {
+    height: 400px;
+  }
+
+  .blue-man {
+    width: 400px;
+  }
+
+  .blue-jacket-container {
     text-align: left;
   }
 
-  .newstext {
-    width: 980px;
+  .blue-jacket-container p,
+  .blue-jacket-container h4 {
+    margin-left: 50px;
+  }
+
+  .pic-slide {
+    flex-direction: row;
+    gap: 70px;
+  }
+
+  .circles {
+    display: none;
+  }
+}
+
+@media (min-width: 970px) {
+  .intro-button,
+  .our-story,
+  .intro-shop {
+    width: 930px;
+  }
+
+  .shop-jackets-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  /* BASE STYLES */
+  header {
+    background-color: #fff;
+    justify-content: center;
+  }
+
+  nav {
+    display: contents;
+  }
+
+  .menu {
+    margin: auto 10%;
+  }
+
+  nav li {
+    display: inline-block;
+    padding: 0px;
+  }
+
+  .bars-icon {
+    display: none;
+  }
+
+  .overlay0 {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    transition: 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1000;
+  }
+  .overlay0 input[type="text"] {
+    background: transparent;
+    border: none;
+    padding: 80px;
+  }
+
+  .overlay0 ::placeholder {
+    color: var(--bright-orange);
+    text-align: center;
+    font-size: 50px;
+    border-bottom: 4px solid var(--bright-orange);
+  }
+
+  .overlay0 p {
+    color: var(--white);
+    text-transform: none;
+  }
+
+  .overlay0 p:first-child {
+    display: initial;
+  }
+
+  .overlay0:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .search-content {
+    background: transparent;
+    position: relative;
+    transition: all 5s ease-in-out;
+    padding: 50px;
+  }
+
+  .search-content img,
+  .searchwords {
+    visibility: hidden;
   }
 
   footer {
@@ -360,5 +1137,125 @@ footer img {
 
   .footer-list {
     margin-left: 40px;
+  }
+
+  /* CTA BUTTON */
+  .cta a:hover + i {
+    opacity: 1;
+  }
+
+  .cta a + i {
+    opacity: 0;
+  }
+
+  .size-slideup {
+    visibility: hidden;
+  }
+
+  /* HOME PAGE STYLES */
+  .jackets {
+    height: 500px;
+  }
+
+  .blue-man {
+    width: 500px;
+  }
+
+  .newstext {
+    width: 980px;
+  }
+
+  .sizes-button {
+    visibility: visible;
+  }
+
+  .size-slideup {
+    visibility: hidden;
+  }
+
+  .jacket-specific .cta {
+    display: initial;
+  }
+
+  /* JACKET SPECIFC */
+
+  .jacket-green {
+    width: 400px;
+    height: auto;
+  }
+
+  .techpic1,
+  .technical > ul {
+    display: none;
+  }
+
+  .techpic2 {
+    display: initial;
+    width: 880px;
+    height: auto;
+  }
+
+  .jacket-specific-jacket {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+  }
+
+  .jacket-green {
+    height: 500px;
+    width: auto;
+  }
+
+  .colors-sizes-button {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin-left: 50px;
+  }
+
+  .sizes-button button {
+    margin-right: 10px;
+    padding: 5px 10px;
+  }
+
+  .colors-sizes-button h1,
+  .colors-sizes-button h2 {
+    display: initial;
+  }
+
+  .colors2 {
+    margin-top: initial;
+  }
+
+  .headinghide {
+    display: none;
+  }
+}
+
+@media (min-width: 1310px) {
+  .shoppingcart-overlay {
+    top: 0;
+    bottom: 0;
+    left: 70%;
+    right: 0;
+  }
+
+  .our-story-img,
+  .introshop-img {
+    width: 1310px;
+    height: 670px;
+    margin: auto;
+  }
+
+  .shop-jackets-grid,
+  /* .about-text, */
+  .jacket-specific-content {
+    width: 1248px;
+  }
+
+  .shop-jackets-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
   }
 }
