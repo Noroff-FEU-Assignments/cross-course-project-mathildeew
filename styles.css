@@ -664,7 +664,13 @@ JACKET SPECEFIC PAGE STYLING
 }
 
 .picslide1 {
-  height: 320px;
+  height: auto;
+  width: 100%;
+  display: inline;
+}
+
+.pic4 {
+  display: none;
 }
 
 .techpic1 {
@@ -989,9 +995,22 @@ footer img {
   }
 
   /* JACKET SPECIFIC */
-  .jacket-green,
-  .picslide1 {
+  .jacket-green {
     height: 500px;
+  }
+
+  .picslide-pics {
+    display: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pic1,
+  .pic4 {
+    width: 300px;
+    object-fit: cover;
+    display: initial;
   }
 }
 
@@ -1193,6 +1212,7 @@ footer img {
     display: initial;
     width: 880px;
     height: auto;
+    margin-top: 20px;
   }
 
   .jacket-specific-jacket {
@@ -1209,9 +1229,13 @@ footer img {
   .colors-sizes-button {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    row-gap: 20px;
     align-items: center;
     margin-left: 50px;
+  }
+
+  .description-details {
+    margin: 20px auto 40px;
   }
 
   .sizes-button button {
