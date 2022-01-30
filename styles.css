@@ -362,9 +362,6 @@ nav {
 /* --------------
 HOME PAGE STYLING
 ---------------*/
-
-/* PUSHING THE COMFORT ZONE PICTURE
-------------------------------------*/
 .intro h2 {
   margin-right: 10px;
 }
@@ -379,8 +376,6 @@ HOME PAGE STYLING
   color: var(--bright-orange);
 }
 
-/* PICTURE SLIDE
------------------*/
 .best-selling {
   background-color: var(--almost-white);
   text-transform: uppercase;
@@ -416,8 +411,6 @@ HOME PAGE STYLING
   display: none;
 }
 
-/* NEWS
----------- */
 .news {
   background-color: #e6e4df;
   text-align: center;
@@ -450,8 +443,6 @@ HOME PAGE STYLING
   text-transform: uppercase;
 }
 
-/* BOTTOM PICTURE STYLING
------------------------- */
 .bottom-picture {
   background: url("images/bottompicture.png") no-repeat; /* Needs adjustment on bigger screens*/
   height: 500px;
