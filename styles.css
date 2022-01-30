@@ -30,6 +30,7 @@ a {
   --light-grey: #939191;
   --white: #fff;
   --black: #000;
+  --DIN20: 20px "DIN Alternate", sans-serif;
 }
 
 h1 {
@@ -44,7 +45,7 @@ h2 {
 
 h3 {
   color: #5f6546;
-  font: 20px "DIN Alternate", sans-serif;
+  font: var(--DIN20);
 }
 
 h4,
@@ -58,17 +59,6 @@ h6 {
   font-size: 25px;
 }
 
-/* ICONS
------------------------------ */
-.header-icons {
-  height: auto;
-}
-
-.fas,
-.fab {
-  font-size: 35px;
-}
-
 /* BUTTONS
 ----------------------------- */
 .cta {
@@ -76,21 +66,20 @@ h6 {
   background: #fff;
   font: 17px "Source Sans Pro", sans-serif;
   font-weight: bold;
-  border: 1px solid #000;
-  text-align: center;
   text-transform: uppercase;
+  text-align: center;
+  border: 1px solid #000;
   padding: 5px 30px;
-  /* margin: 10px 30px 20px; */
 }
 
-.fa-envelope {
+.fa-envelope,
+.fa-shopping-basket {
   padding-left: 10px;
 }
 
 /* ANIMATION AND TRANSISTIONS 
 ----------------------------- */
 .hover-middle {
-  display: inline-block;
   position: relative;
   color: inherit;
 }
@@ -140,7 +129,7 @@ header {
 }
 
 nav li {
-  font: 20px "DIN Alternate";
+  font: var(--DIN20);
   display: block;
   margin-left: 20px;
 }
@@ -343,7 +332,7 @@ nav li,
   width: 95%;
 }
 
-/* BASE LAYOUT FOR SHOP, ABOUT, CONTACT, JACKET SPECIFIC 
+/* BASE LAYOUT FOR SHOP, ABOUT, CONTACT, JACKET SPECIFIC & FLEXBOX
 --------------------------*/
 .shop,
 .about,
@@ -650,11 +639,10 @@ JACKET SPECEFIC PAGE STYLING
 }
 
 .sizes-button > button {
+  color: #000;
+  font: 20px "Source Sans Pro", sans-serif;
   border: 1px solid black;
   padding: 10px;
-  color: #000;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 20px;
   background: #fff;
 }
 
@@ -802,19 +790,21 @@ hr {
 }
 
 /* ORDER COMPLETE BUTTON & POPUP */
-
 .cta-ordercomplete {
   transition: all 0.3s ease-out;
 }
 
 .overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.4);
-  transition: opacity 500ms;
+  transition: 500ms;
   visibility: hidden;
   opacity: 0;
 }
@@ -827,14 +817,14 @@ hr {
 .order-complete {
   background: #fff;
   height: 220px;
-  margin: 50% 5%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   justify-content: center;
   position: relative;
-  transition: all 5s ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 
 .order-complete h1,
@@ -882,6 +872,7 @@ footer img {
 }
 
 .fab {
+  font-size: 35px;
   padding: 10px;
 }
 
@@ -895,10 +886,8 @@ footer img {
 }
 
 @media (min-width: 750px) {
-  /* BASE STYLES */
   h1 {
     font-size: 40px;
-    /* margin-bottom: 20px; */
   }
 
   h2 {
@@ -947,7 +936,8 @@ footer img {
     display: inline-block;
   }
 
-  .fa-envelope {
+  .fa-envelope,
+  .fa-shopping-basket {
     padding-left: 10px;
   }
 
@@ -964,7 +954,6 @@ footer img {
     column-gap: 40px;
   }
 
-  /* HOME PAGE STYLES */
   .intro,
   .our-story-img,
   .introshop-img,
@@ -1002,7 +991,6 @@ footer img {
     margin-top: 0px;
   }
 
-  /* JACKET SPECIFIC */
   .jacket-green {
     height: 500px;
   }
@@ -1027,7 +1015,6 @@ footer img {
 }
 
 @media (min-width: 875px) {
-  /* BASE STYLES */
   .fa-angle-left,
   .fa-angle-right {
     display: inline-block;
@@ -1040,7 +1027,6 @@ footer img {
     width: 750px;
   }
 
-  /* HOME PAGE STYLES */
   .jackets {
     height: 400px;
   }
@@ -1090,7 +1076,6 @@ footer img {
 }
 
 @media (min-width: 1025px) {
-  /* BASE STYLES */
   header {
     background-color: #fff;
     justify-content: center;
@@ -1113,6 +1098,11 @@ footer img {
     display: none;
   }
 
+  .order-complete {
+    width: 70%;
+    margin: auto;
+  }
+
   .overlay0 {
     position: fixed;
     display: flex;
@@ -1132,7 +1122,7 @@ footer img {
   .overlay0 input[type="text"] {
     background: transparent;
     border: none;
-    padding: 80px;
+    padding: 20px 0px;
   }
 
   .overlay0 ::placeholder {
@@ -1140,6 +1130,7 @@ footer img {
     text-align: center;
     font-size: 50px;
     border-bottom: 4px solid var(--bright-orange);
+    border-bottom-width: thin;
   }
 
   .overlay0 p {
@@ -1163,6 +1154,10 @@ footer img {
     padding: 50px;
   }
 
+  .search-content input[type="text"] {
+    margin: auto;
+  }
+
   .search-content img,
   .searchwords {
     visibility: hidden;
@@ -1178,7 +1173,6 @@ footer img {
     margin-left: 40px;
   }
 
-  /* CTA BUTTON */
   .cta a:hover + i {
     opacity: 1;
   }
@@ -1191,7 +1185,6 @@ footer img {
     visibility: hidden;
   }
 
-  /* HOME PAGE STYLES */
   .jackets {
     height: 500px;
   }
@@ -1215,8 +1208,6 @@ footer img {
   .jacket-specific .cta {
     display: initial;
   }
-
-  /* JACKET SPECIFC */
 
   .jacket-green {
     width: 400px;
@@ -1287,10 +1278,7 @@ footer img {
 
 @media (min-width: 1310px) {
   .shoppingcart-overlay {
-    top: 0;
-    bottom: 0;
     left: 70%;
-    right: 0;
   }
 
   .our-story-img,
@@ -1301,7 +1289,6 @@ footer img {
   }
 
   .shop-jackets-grid,
-  /* .about-text, */
   .jacket-specific-content {
     width: 1248px;
   }
