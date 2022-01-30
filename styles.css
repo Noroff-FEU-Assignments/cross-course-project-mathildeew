@@ -344,7 +344,8 @@ nav li,
 .shop,
 .about,
 .contactus,
-.jacket-specific {
+.jacket-specific,
+.checkout-content {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -355,8 +356,10 @@ nav li,
 .shop-jackets-grid,
 .about-text,
 .contactus-content,
-.jacket-specific-content {
+.jacket-specific-content,
+.checkout-content80 {
   width: 80%;
+  min-height: calc(100vh - 80px);
 }
 
 /* --------------
@@ -740,11 +743,12 @@ JACKET SPECEFIC PAGE STYLING
 /* --------------
 CHECKOUT PAGE STYLING
 ---------------*/
-.checkout-content {
+.checkout-content80 {
   padding-top: 80px;
-  width: 100%;
+  margin-bottom: 80px;
   display: flex;
   flex-direction: column;
+  gap: 25px;
 }
 
 .checkout-content h1 {
@@ -767,7 +771,7 @@ CHECKOUT PAGE STYLING
 }
 
 hr {
-  margin: 20px 5%;
+  margin: auto 5%;
 }
 
 .quantity {
@@ -777,11 +781,11 @@ hr {
 }
 
 .lines {
+  text-align: right;
   display: flex;
   flex-direction: column;
   align-self: flex-end;
-  width: 50%;
-  border: 2px solid red;
+  margin: auto 10% 50px;
 }
 
 .lines p {
@@ -1012,6 +1016,10 @@ footer img {
     object-fit: cover;
     display: initial;
   }
+
+  .checkout-content img {
+    height: 200px;
+  }
 }
 
 @media (min-width: 875px) {
@@ -1066,6 +1074,14 @@ footer img {
   .shop-jackets-grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
+  }
+
+  .checkout-content img {
+    height: 260px;
+  }
+
+  .checkout-content80 {
+    width: 60%;
   }
 }
 
@@ -1254,6 +1270,14 @@ footer img {
 
   .headinghide {
     display: none;
+  }
+
+  .checkout-content80 {
+    width: 820px;
+  }
+
+  .checkout-content img {
+    height: 350px;
   }
 }
 
