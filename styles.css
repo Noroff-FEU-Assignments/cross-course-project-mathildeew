@@ -1,7 +1,7 @@
 /*-------------------
 BASE STYLE ELEMENTS 
 --------------------*/
-@import url("http://fonts.cdnfonts.com/css/din-alternate");
+@import url("https://fonts.cdnfonts.com/css/din-alternate");
 @import url("https://use.typekit.net/ykg8cea.css");
 
 html {
@@ -248,6 +248,7 @@ nav li,
 
 .item-text {
   margin-left: 50px;
+  text-transform: initial;
 }
 
 .item-text p:nth-child(4) {
@@ -284,6 +285,9 @@ nav li,
 .shoppingcart-content {
   margin-top: 50px;
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .cart-overlay-heading img:nth-child(1) {

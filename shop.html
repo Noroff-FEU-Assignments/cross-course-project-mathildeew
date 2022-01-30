@@ -24,9 +24,10 @@
       <div class="nav-icons">
         <a href="#search-popup"><img src="images/search-icon.png" class="search-icon header-icons" alt="Search icon" /></a>
         <div id="search-popup" class="overlay0">
+          <p>Hit enter when you want to search.</p>
           <div class="search-content">
             <a href="index.html"><img src="images/icon-cross.png" alt="" /></a>
-            <input type="text" placeholder="Search..." />
+            <input class="searchinput" type="text" placeholder="Search..." />
             <div class="searchwords">
               <p>Best Jacket</p>
               <p>Blue</p>
@@ -38,7 +39,45 @@
             </div>
           </div>
         </div>
-        <a href="#"><img src="images/shopping-cart-icon.png" class="shopping-icon header-icons" alt="Shopping Cart icon" /></a>
+        <a href="#shoppingcart-popup"><img src="images/shopping-cart-icon.png" class="shopping-icon header-icons" alt="Shopping Cart icon" /></a>
+        <div id="shoppingcart-popup" class="shoppingcart-overlay">
+          <div class="shoppingcart-content">
+            <div class="cart-overlay-heading">
+              <h5>My cart</h5>
+              <a href="#"><img src="images/icon-cross.png" alt="" /></a>
+            </div>
+            <hr />
+            <div class="item-1">
+              <div>
+                <img src="images/shop/jacket-blue.png" alt="The best jacket in color blue" />
+              </div>
+              <div class="item-text">
+                <p>The Best Jacket I</p>
+                <p>Size: Medium</p>
+                <p>Color: Dark blue</p>
+                <p>Remove</p>
+              </div>
+            </div>
+            <hr />
+            <div class="item-2">
+              <div>
+                <img src="images/shop/jacket-beige.png" alt="The best jacket in color sand" />
+              </div>
+              <div class="item-text">
+                <p>The Best Jacket I</p>
+                <p>Size: Medium</p>
+                <p>Color: Dark blue</p>
+                <p>Remove</p>
+              </div>
+            </div>
+            <hr />
+            <div class="overlay-subtotal">
+              <h6>Total:</h6>
+              <p>3500 kr</p>
+            </div>
+          </div>
+          <a href="checkout.html"><button class="cta">Proceed to checkout</button></a>
+        </div>
       </div>
     </header>
 
