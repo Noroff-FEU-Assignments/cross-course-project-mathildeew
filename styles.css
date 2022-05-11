@@ -582,6 +582,11 @@ textarea {
   height: 200px;
 }
 
+.form-error,
+.sent-message {
+  display: none;
+}
+
 /* --------------
 JACKET SPECEFIC PAGE STYLING
 ---------------*/
