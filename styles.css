@@ -584,7 +584,7 @@ textarea {
 
 .form-error,
 .sent-message {
-  display: none;
+  /* display: none; */
 }
 
 /* --------------
@@ -1166,6 +1166,7 @@ footer img {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    height: 180px;
   }
 
   .footer-list {
