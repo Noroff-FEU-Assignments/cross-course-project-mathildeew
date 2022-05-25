@@ -8,101 +8,52 @@
     <meta name="description" content="Shop our best selling jackets.." />
     <title>RAINYDAYS • Our Collection</title>
     <link rel="stylesheet" href="styles.css" />
-    <!-- Hotjar Tracking Code for https://goofy-mahavira-ac664f.netlify.app -->
-<script>
-  (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:2964493,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
   </head>
 
   <body>
     <header>
-      <label for="hamburger-menu"><img src="images/menu-icon.png" class="bars-icon header-icons" alt="" /></label>
-      <input type="checkbox" id="hamburger-menu" />
-      <a href="index.html" class="logo">Rainydays</a>
-      <nav>
-        <ul class="menu">
-          <li><a class="hover-middle" href="shop.html">Shop</a></li>
-          <li><a class="hover-middle" href="about.html">About</a></li>
-          <li><a class="hover-middle" href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="nav-icons">
-        <a href="#search-popup"><img src="images/search-icon.png" class="search-icon header-icons" alt="Search icon" /></a>
-        <div id="search-popup" class="overlay0">
-          <p>Hit enter when you want to search.</p>
-          <div class="search-content">
-            <a href="index.html"><img src="images/icon-cross.png" alt="" /></a>
-            <input class="searchinput" type="text" placeholder="Search..." />
-            <div class="searchwords">
-              <p>Best Jacket</p>
-              <p>Blue</p>
-              <p>Long Jacket</p>
-              <p>Short Jacket</p>
-              <p>Sand</p>
-              <p>Rainjacket</p>
-              <p>News</p>
-            </div>
-          </div>
-        </div>
-        <a href="#shoppingcart-popup"><img src="images/shopping-cart-icon.png" class="shopping-icon header-icons" alt="Shopping Cart icon" /></a>
-        <div id="shoppingcart-popup" class="shoppingcart-overlay">
-          <div class="shoppingcart-content">
-            <div class="cart-overlay-heading">
-              <h5>My cart</h5>
-              <a href="#"><img src="images/icon-cross.png" alt="" /></a>
-            </div>
-            <hr />
-            <div class="item-1">
-              <div>
-                <img src="images/shop/jacket-blue.png" alt="The best jacket in color blue" />
-              </div>
-              <div class="item-text">
-                <p>The Best Jacket I</p>
-                <p>Size: Medium</p>
-                <p>Color: Dark blue</p>
-                <p>Remove</p>
-              </div>
-            </div>
-            <hr />
-            <div class="item-2">
-              <div>
-                <img src="images/shop/jacket-beige.png" alt="The best jacket in color sand" />
-              </div>
-              <div class="item-text">
-                <p>The Best Jacket I</p>
-                <p>Size: Medium</p>
-                <p>Color: Dark blue</p>
-                <p>Remove</p>
-              </div>
-            </div>
-            <hr />
-            <div class="overlay-subtotal">
-              <h6>Total:</h6>
-              <p>3500 kr</p>
-            </div>
-          </div>
-          <a href="checkout.html"
-            ><button class="cta">Proceed to checkout<i class="fas fa-shopping-basket"></i></button
-          ></a>
-        </div>
+      <div class="hamburger-menu">
+        <span class="cross"></span>
+        <span class="cross"></span>
+        <span class="cross"></span>
+      </div>
+      <a href="index.html"><img class="full-logo" src="/images/logos/rainydays-full-logo.png" alt="Rainydays logo" /></a>
+      <span class="header-logo">Rainydays</span>
+      <div class="header-icons-right">
+        <ion-icon name="search-outline"></ion-icon>
+        <ion-icon name="cart-outline" id="shopping-cart-icon"></ion-icon>
       </div>
     </header>
 
-    <section class="introshop-img">
-      <div class="intro-shop">
-        <h1>Rainydays Jackets</h1>
-        <h2>Shop our best selling jackets</h2>
+    <nav id="nav">
+      <span class="nav-logo">Rainydays</span>
+      <ul class="menu">
+        <li><a href="shop.html" class="hover-middle">Shop</a></li>
+        <li><a href="about-us.html" class="hover-middle">About us</a></li>
+        <li><a href="contact-us.html" class="hover-middle">Contact</a></li>
+      </ul>
+      <div class="nav-icons-right" id="nav-icons">
+        <ion-icon name="search-outline"></ion-icon>
+        <ion-icon name="cart-outline" id="shopping-cart-icon"></ion-icon>
       </div>
-    </section>
+    </nav>
+
+  
 
     <main class="shop">
+      <section class="introshop">
+        <div class="introshop-img"></div>
+        <!-- <div class="intro-shop">
+          <h1>Rainydays Jackets</h1>
+          <h2>Shop our best selling jackets</h2>
+        </div> -->
+        <div class="about-shop">
+          <p>Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.</p>
+          <p>Rainydays - Pushing the Comfort Zone</p>
+        </div>
+      </section>
+
+
       <section class="shop-jackets-grid">
         <div class="best-jacket jacket-background">
           <div class="jacket-padding">
@@ -240,30 +191,8 @@
       </section>
     </main>
 
-    <footer>
-      <img class="footer-list" src="images/footerlogo.png" alt="Rainydays logo with mountains" />
-      <div class="footer-info">
-        <div class="info footer-list">
-          <h2>Info</h2>
-          <ul>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="about.html">About (our story)</a></li>
-          </ul>
-        </div>
-        <div class="footer-shop footer-list">
-          <h2>Shop</h2>
-          <ul>
-            <li><a href="shop.html">Shop all</a></li>
-          </ul>
-        </div>
-        <div class="friends footer-list">
-          <h2>Lets be friends</h2>
-          <div class="footer-icons">
-            <a href=""><i class="fab fa-facebook"></i></a>
-            <a href=""><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <script src="js/best-selling-slider.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 </html>

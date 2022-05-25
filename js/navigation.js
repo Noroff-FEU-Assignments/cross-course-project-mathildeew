@@ -19,9 +19,20 @@ const iconsRight = document.querySelector(".nav-icons-right");
 window.addEventListener("scroll", stickyNav);
 
 function stickyNav() {
-  
-
   navMenu.classList.toggle("sticky", window.scrollY > 115);
   logo.classList.toggle("sticky", window.scrollY > 115);
   iconsRight.classList.toggle("sticky", window.scrollY > 115);
+}
+
+// ---------- SHOPPING CART
+const cartIcon = document.querySelector("#shopping-cart-icon");
+const shoppingCart = document.querySelector(".shopping-cart");
+
+cartIcon.addEventListener("click", openShoppingCart);
+
+function openShoppingCart() {
+  shoppingCart.classList.toggle("active");
+  navMenu.classList.remove("active");
+  hamburgerMenu.classList.remove("active");
+
 }

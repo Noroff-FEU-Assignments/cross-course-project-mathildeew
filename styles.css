@@ -276,87 +276,24 @@ nav {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+*/
 
-.item-1,
-.item-2 {
-  display: flex;
-}
-
-.item-text {
-  margin-left: 50px;
-  text-transform: initial;
-}
-
-.item-text p:nth-child(4) {
-  text-decoration: underline;
-  margin-top: 10px;
-}
-
-.shoppingcart-overlay img {
+.shopping-cart img {
   height: 115px;
   width: auto;
 }
-
-.shoppingcart-overlay {
-  background: var(--white);
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  transition: 500ms;
-  visibility: hidden;
-  opacity: 0;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.shoppingcart-overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.shoppingcart-content {
-  margin-top: 50px;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.cart-overlay-heading img:nth-child(1) {
-  width: 30px;
-  height: auto;
-}
-
-.cart-overlay-heading {
-  display: flex;
-  justify-content: space-between;
-}
-
-.overlay-subtotal {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 50px;
-} */
 
 /* TOP PICTURE ON EVERY PAGE
 --------------------------*/
 .intro {
   background: url("images/angela-356V-ooP184-unsplash_resized.jpg") no-repeat;
 }
-.introshop-img {
-  background: url("images/johannes-andersson-8XQbEDaCbDM-unsplash_Downsized.jpg") no-repeat;
-}
+
 .our-story-img {
   background: url("images/johannes-andersson-8XQbEDaCbDM-unsplash_Downsized.jpg") no-repeat;
 }
 
 .intro,
-.introshop-img,
 .our-story-img {
   padding-top: 80px;
   background-size: cover;
@@ -619,159 +556,26 @@ HOME PAGE STYLING
 }
 .read-our-story a {
   font: 16px "Source Sans Pro", sans-serif;
-  color: var(--orange);
-  text-transform: uppercase;
-  border-bottom: 1px solid var(--orange);
-}
-
-/* News letter */
-
-.newsletter {
-  background-color: #fff;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.newsletter p {
-  /* color: #fff; */
-  text-align: center;
-}
-
-.newsletter form {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.newsletter input[type="text"] {
-  /* background: #000; */
-  border: 2px solid var(--almost-white);
-  height: 40px;
-}
-
-.newsletter input[type="text"]:focus {
-  outline: none;
-}
-
-.newsletter-email::placeholder {
-  color: #fff;
-}
-
-.newsletter button {
-  background-color: var(--almost-white);
-  border: 2px solid var(--almost-white);
-  height: 40px;
-  width: 100px;
-}
-/* 
-.intro h2 {
-  margin-right: 10px;
-}
-
-.text-arrow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.fa-long-arrow-alt-right {
   color: var(--bright-orange);
-}
-
-.best-selling {
-  background-color: var(--almost-white);
   text-transform: uppercase;
-  text-align: center;
-  padding: 20px 0px;
-}
-
-.best-selling h3 {
-  text-align: center;
-  letter-spacing: 1px;
-  margin: 10px auto;
-}
-
-.pic-slide {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-}
-
-.blue-man {
-  width: 300px;
-  object-fit: cover;
-}
-
-.jackets {
-  height: 300px;
-}
-
-.fa-angle-left,
-.fa-angle-right {
-  display: none;
-}
-
-.news {
-  background-color: #e6e4df;
-  text-align: center;
-  height: 500px;
-  width: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.newstext {
-  background-image: url("images/michael-dolejs-ksVsSchgwRc-unsplash-darkened-downsized.jpg");
-  background-position-x: left;
-  background-position-y: bottom;
-  height: 70%;
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.news h1 {
-  color: var(--bright-orange);
-  font-size: 40px;
-}
-
-.news p {
-  color: var(--white);
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
-.bottom-picture {
-  background: url("images/bottompicture.png") no-repeat; /* Needs adjustment on bigger screens
-  height: 500px;
-  width: auto;
-  background-size: cover;
-  background-position-x: left;
-  background-position-y: bottom;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.bottom-picture h1 {
-  background-color: rgba(0, 0, 0, 0.4);
-  color: var(--white);
-  font-size: 25px;
-  text-align: center;
-  padding: 30px;
+  border-bottom: 1px solid var(--bright-orange);
 }
 
 /* --------------
 SHOP PAGE STYLING
 ---------------*/
+.introshop-img {
+  background: url("images/shop/the-nix-company-4Hmj9gkyM6c-unsplash-downsized-3000.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+}
+
+.about-shop {
+  text-align: center;
+  background-color: var(--bright-orange);
+}
 
 /* JACKETS GRID STYLING ----------------*/
 .jacket-background {
@@ -1076,11 +880,30 @@ JACKET SPECEFIC PAGE STYLING
 }
 
 /* --------------
-CHECKOUT PAGE STYLING
+CHECKOUT PAGE & SHOPPING CART
 ---------------*/
-.checkout-content80 {
-  padding-top: 80px;
-  margin-bottom: 80px;
+.width {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.shopping-cart {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  right: -100%;
+  position: absolute;
+  z-index: 1000;
+  transition: right 0.5s ease-in;
+}
+
+.shopping-cart.active {
+  right: 0;
+}
+
+.checkout-content80,
+.width80 {
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -1113,8 +936,14 @@ hr {
   text-align: center;
 }
 
+.subtotal {
+  display: flex;
+  justify-content: space-between;
+}
 
-
+.subtotal h3 {
+  text-transform: uppercase;
+}
 
 /* ORDER COMPLETE BUTTON & POPUP */
 .cta-ordercomplete {
@@ -1167,6 +996,55 @@ hr {
 .order-complete .fas {
   font-size: 50px;
 }
+/* News letter */
+
+.newsletter {
+  background-color: #fff;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter h3 {
+  text-align: center;
+}
+
+.newsletter p {
+  /* color: #fff; */
+  text-align: center;
+}
+
+.newsletter form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.newsletter input[type="text"] {
+  /* background: #000; */
+  border: 2px solid var(--almost-white);
+  height: 40px;
+}
+
+.newsletter input[type="text"]:focus {
+  outline: none;
+}
+
+.newsletter-email::placeholder {
+  color: #fff;
+}
+
+.newsletter button {
+  color: #000;
+  font-size: 12px;
+  text-transform: uppercase;
+  background-color: var(--almost-white);
+  border: 2px solid var(--almost-white);
+  height: 40px;
+  width: 100px;
+}
 
 /* FOOTER STYLING
 ---------------  */
@@ -1178,14 +1056,8 @@ footer {
   align-items: center;
 }
 
-.footer-content {
-  /* display: flex; */
-  margin-top: 30px;
-  justify-content: space-evenly;
-}
-
-footer img {
-  height: 100px;
+footer h3 {
+  text-transform: uppercase;
 }
 
 footer a {
@@ -1210,7 +1082,7 @@ footer ion-icon {
 
   header {
     height: 70px;
-    z-index: 1000;
+    z-index: 998;
   }
 
   header ion-icon {
@@ -1265,15 +1137,16 @@ footer ion-icon {
 
   /* Footer */
   footer {
-    height: 450px;
-    flex-direction: column;
     text-align: center;
-  }
-
-  .footer-content {
+    height: 430px;
     flex-direction: column;
     justify-content: space-evenly;
   }
+
+  footer img {
+    height: 100px;
+  }
+
   /* INDEX ---*/
   /* Shop summer */
   .shop-summer {
