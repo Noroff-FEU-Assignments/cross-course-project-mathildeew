@@ -1,9 +1,27 @@
-const hamburger = document.querySelector(".hamburger-menu-icon");
-const navMenu = document.querySelector(".nav-menu");
+const navMenu = document.querySelector("#nav");
 
-hamburger.addEventListener("click", mobileMenu);
+// ----------  NAVIGATION BAR SMALL SCREEN
+const hamburgerMenu = document.querySelector(".hamburger-menu");
 
-function mobileMenu (){
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active")
+hamburgerMenu.addEventListener("click", mobileMenu);
+// hamburgerClose.addEventListener("click", closeMenu);
+
+function mobileMenu() {
+  navMenu.classList.toggle("active");
+  hamburgerMenu.classList.toggle("active");
+}
+
+// ---------- STICKY NAVIGATION BAR BIG SCREEN
+
+const logo = document.querySelector(".nav-logo");
+const iconsRight = document.querySelector(".nav-icons-right");
+
+window.addEventListener("scroll", stickyNav);
+
+function stickyNav() {
+  
+
+  navMenu.classList.toggle("sticky", window.scrollY > 115);
+  logo.classList.toggle("sticky", window.scrollY > 115);
+  iconsRight.classList.toggle("sticky", window.scrollY > 115);
 }

@@ -4,6 +4,15 @@ BASE STYLE ELEMENTS
 @import url("https://fonts.cdnfonts.com/css/din-alternate");
 @import url("https://use.typekit.net/ykg8cea.css");
 
+:root {
+  --bright-orange: #ff9f00;
+  --almost-white: #f2f3ef;
+  --light-grey: #939191;
+  --white: #fff;
+  --black: #000;
+  --DIN20: 20px "DIN Alternate", sans-serif;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -24,13 +33,8 @@ a {
   color: inherit;
 }
 
-:root {
-  --bright-orange: #ff9f00;
-  --almost-white: #f2f3ef;
-  --light-grey: #939191;
-  --white: #fff;
-  --black: #000;
-  --DIN20: 20px "DIN Alternate", sans-serif;
+li {
+  list-style: none;
 }
 
 h1 {
@@ -106,9 +110,49 @@ h6 {
   transform: scale(1.1);
 }
 
-/* NAVIGATION BAR STYLING
+/* NAVIGATION BAR & HEADER
 --------------------------*/
 header {
+  background-color: var(--orange);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  position: sticky;
+}
+
+.hamburger-menu,
+nav a,
+header a,
+.nav-logo,
+ion-icon {
+  padding: 5px;
+}
+
+.header-icons-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  background-color: #fff;
+  width: 100%;
+  font: var(--DIN20);
+  text-transform: uppercase;
+}
+
+.nav-logo,
+.header-logo {
+  font: 25px "DIN Condensed", sans-serif;
+  letter-spacing: 2.5px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px;
+}
+
+/* header {
   color: #000;
   background-color: #ff9f00;
   height: 70px;
@@ -298,7 +342,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
-}
+} */
 
 /* TOP PICTURE ON EVERY PAGE
 --------------------------*/
@@ -362,6 +406,30 @@ nav {
 /* --------------
 HOME PAGE STYLING
 ---------------*/
+.shop-summer {
+  background: url("/images/index/lucas-wesney-ZNz5UPRb2N8-unsplash-downsized-2650.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.shop-summer a {
+  margin-bottom: 15px;
+}
+
+.white-button-link {
+  color: #fff;
+  font: 20px "DIN Alternate", sans-serif;
+  text-transform: uppercase;
+  border: 2px solid white;
+  padding: 5px 10px;
+}
+
 .intro h2 {
   margin-right: 10px;
 }
@@ -862,10 +930,6 @@ footer a {
   line-height: 2;
 }
 
-footer li {
-  list-style: none;
-}
-
 .footer-list {
   margin-top: 30px;
 }
@@ -882,6 +946,184 @@ footer img {
 /*----------------
  MEDIA QUIERES 
 ------------------ */
+@media (max-width: 1024px) {
+  /* Navigation & Header */
+  .full-logo,
+  .nav-logo,
+  .nav-icons-right {
+    display: none;
+  }
+
+  header {
+    height: 70px;
+    z-index: 1000;
+  }
+
+  header ion-icon {
+    font-size: 35px;
+  }
+
+  .cross {
+    background: black;
+    display: block;
+    width: 35px;
+    height: 2px;
+    margin: 6px auto;
+    transition: all 0.3s ease-in;
+  }
+
+  .cross:nth-child(2) {
+    width: 25px;
+  }
+
+  .cross:nth-child(3) {
+    width: 15px;
+  }
+
+  .hamburger-menu.active .cross:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active .cross:nth-child(1) {
+    transform: translateY(8px) rotate(35deg);
+  }
+
+  .hamburger-menu.active .cross:nth-child(3) {
+    width: 35px;
+    transform: translateY(-8px) rotate(-35deg);
+  }
+
+  nav {
+    height: 260px;
+    top: -100%;
+    position: absolute;
+    z-index: 999;
+    transition: top 0.3s ease-in-out;
+  }
+
+  nav.active {
+    top: 70px;
+  }
+
+  nav li {
+    margin-top: 20px;
+  }
+}
+
+ @media (min-width: 1025px) {     /*BIGGER THAN IPAD PRO */
+  /* Navigation & Header */
+  .full-logo {
+    display: inline;
+  }
+  .header-logo,
+  .hamburger-close {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  header {
+    height: 180px;
+  }
+
+  .full-logo {
+    width: 300px;
+  }
+
+  .header-icons-right {
+    width: 120px;
+    justify-content: space-between;
+    display: none;
+  }
+
+  nav ion-icon {
+    font-size: 40px;
+  }
+
+  .content {
+    background-color: aqua;
+    width: 100%;
+    height: 2000px;
+  }
+
+  nav {
+    font: var(--DIN20);
+    text-transform: uppercase;
+    top: 180px;
+    width: 100vw;
+    height: 90px;
+    display: flex;
+    align-items: center;
+  }
+
+  nav ul {
+    margin: 0 auto;
+    width: auto;
+  }
+
+  nav li {
+    display: inline-block;
+    margin: 0 30px;
+  }
+
+  nav.sticky {
+    top: 0;
+    position: sticky;
+  }
+
+  .nav-logo {
+    display: inline-block;
+    font-size: 40px;
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+  }
+
+  .nav-icons-right {
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+  }
+
+  .nav-logo.sticky,
+  .nav-icons-right.sticky {
+    opacity: 1;
+  }
+
+  .hover-middle {
+    position: relative;
+    color: inherit;
+  }
+
+  .hover-middle:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2.5px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff9f00;
+    transform-origin: center;
+    transition: transform 0.25s ease-in-out;
+  }
+
+  .hover-middle:hover:after {
+    transform: scaleX(1);
+    transform-origin: center;
+  }
+  .blah {
+    background-color: #707070;
+    height: 500px;
+  }
+}
+
+/* 
 @media (max-width: 1025px) {
   .hover-middle:after {
     visibility: hidden;
@@ -1297,4 +1539,4 @@ footer img {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
-}
+} */
