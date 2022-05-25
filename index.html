@@ -115,7 +115,61 @@
       <section class="shop-summer">
         <a href="#" class="white-button-link">SHOP SUMMER 2022</a>
       </section>
+
+      <section class="best-selling">
+        <h2>Discover our best selling jackets</h2>
+        <div class="picture-slider-container">
+          <div class="picture-slider">
+            <div class="slide active">
+              <img src="images/index/best-selling-slider/jacket-blue.png" alt="The Best Jacket in color blue." />
+            </div>
+            <div class="slide">
+              <img src="images/index/best-selling-slider/jacket-green.png" alt="The Best Jacket in color green." />
+            </div>
+
+            <div class="slide">
+              <img src="images/index/best-selling-slider/jacket-grey.png" alt="The Best Jacket in color grey." />
+            </div>
+
+            <div id="button-prev" class="slider-button"></div>
+            <div id="button-next" class="slider-button"></div>
+            <div class="circles">
+              <div class="circle active"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="our-collection">
+      <div class="our-collection-content">
+        <a href="#" class="white-button-link">Our collection</a>
+      </div>
+      </section>
+
+      <section class="read-our-story">
+        <div class="read-our-story-content">
+          <span>Pushing the Comfort Zone</span>
+          <p>This is good text about this brand. And quality product. Good good expertise.</p>
+          <a href="#" class="hover-underline">Read our story</a>
+        </div>
+      </section>
     </main>
+
+    <section class="newsletter">
+      <h3>Keep up with our news</h3>
+      <p>Enjoy 10% off your first purchase and stay up to date on all Rainydays news.</p>
+
+      <form class="newsletter-email">
+        <div>
+          <input type="text" id="email" name="email" placeholder="Your email" />
+          <!-- <div class="form-error" id="email-error">Please enter a valid email address</div> -->
+        </div>
+        <button>Subscribe</button>
+      </form>
+      </section>
+    
 <!-- 
     <section class="intro">
       <div class="intro-button">
@@ -160,31 +214,30 @@
     </section> -->
 
     <footer>
-      <img class="footer-list" src="images/footerlogo.png" alt="Rainydays logo with mountains" />
-      <div class="footer-info">
-        <div class="info footer-list">
-          <h2>Info</h2>
-          <ul>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="about.html">About (our story)</a></li>
-          </ul>
-        </div>
-        <div class="footer-shop footer-list">
-          <h2>Shop</h2>
+      <img src="/images/logos/rainydays-full-logo.png" alt="Rainydays logo" />
+      <div class="footer-content">
+        <div>
+          <h3>Shop</h3>
           <ul>
             <li><a href="shop.html">Shop all</a></li>
           </ul>
         </div>
-        <div class="friends footer-list">
-          <h2>Lets be friends</h2>
-          <div class="footer-icons">
-            <a href=""><i class="fab fa-facebook"></i></a>
-            <a href=""><i class="fab fa-instagram"></i></a>
-          </div>
+        <div>
+          <h3>Info</h3>
+          <ul>
+            <li><a href="contact-us.html">Contact us</a></li>
+            <li><a href="about-us.html">About us</a></li>
+          </ul>
+        </div>
+        <div class="social-media">
+          <h3>Let's be friends</h3>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-icon name="logo-instagram"></ion-icon>
         </div>
       </div>
     </footer>
     <script src="js/navigation.js"></script>
+    <script src="js/best-selling-slider.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>

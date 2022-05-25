@@ -8,25 +8,9 @@
     <meta name="description" content="Check out." />
     <title>RAINYDAYS • CHECK OUT</title>
     <link rel="stylesheet" href="styles.css" />
-    <!-- Hotjar Tracking Code for https://goofy-mahavira-ac664f.netlify.app -->
-    <script>
-      (function (h, o, t, j, a, r) {
-        h.hj =
-          h.hj ||
-          function () {
-            (h.hj.q = h.hj.q || []).push(arguments);
-          };
-        h._hjSettings = { hjid: 2964493, hjsv: 6 };
-        a = o.getElementsByTagName("head")[0];
-        r = o.createElement("script");
-        r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-    </script>
   </head>
 
-  <body>
+  <!-- <body>
     <header>
       <label for="hamburger-menu"><img src="images/menu-icon.png" class="bars-icon header-icons" alt="" /></label>
       <input type="checkbox" id="hamburger-menu" />
@@ -98,12 +82,12 @@
           ></a>
         </div>
       </div>
-    </header>
+    </header> -->
 
     <main class="checkout-content">
       <div class="checkout-content80">
         <p><strong>Cart</strong>> Information > Shipping > Payment</p>
-        <h1>My cart</h1>
+        <h1>Your cart</h1>
         <hr />
         <div class="cart-item">
           <img src="images/shop/jacket-blue.png" alt="" />
@@ -111,8 +95,8 @@
             <p>The Best Jacket</p>
             <p>Color: Dark blue</p>
             <p>Size: Medium</p>
-            <p>- 1 +</p>
-            <p>1.500 kr</p>
+            <p class="quantity">- 1 +</p>
+            <p>1 500 NOK</p>
           </div>
         </div>
         <hr />
@@ -123,29 +107,20 @@
             <p>The Short Jacket</p>
             <p>Color: Sand</p>
             <p>Size: Medium</p>
-            <p>- 1 +</p>
-            <p>1.500 kr</p>
+            <p class="quantity">- 1 +</p>
+            <p>1 500 NOK</p>
           </div>
         </div>
         <hr />
 
-        <div class="lines">
-          <div class="line1">
-            <p>Order value</p>
-            <p>4.500 kr</p>
-          </div>
-          <div class="line2">
-            <p>Shipping</p>
-            <p>4.500 kr</p>
-          </div>
-          <div class="line3">
-            <p>Total</p>
-            <p>4.500 Kr</p>
-          </div>
+        <div class="subtotal">
+            <p>Subtotal</p>
+            <p>3 000 NOK</p>
+            <p>Shipping and taxes calculated at checkout</p>
         </div>
 
         <button class="cta cta-ordercomplete">
-          <a href="#ordercomplete-popup">Place order</a>
+          <a href="#ordercomplete-popup">Checkout</a>
           <i class="fas fa-shopping-basket"></i>
         </button>
       </div>

@@ -43,12 +43,11 @@ h1 {
 }
 
 h2 {
-  color: #ff9f00;
-  font: 25px "Source Sans Pro", sans-serif;
+  font: 20px "Source Sans Pro", sans-serif;
 }
 
 h3 {
-  color: #5f6546;
+  color: #000;
   font: var(--DIN20);
 }
 
@@ -384,7 +383,7 @@ nav {
 --------------------------*/
 .shop,
 .about,
-.contactus,
+.contact-us,
 .jacket-specific,
 .checkout-content {
   width: 100%;
@@ -406,12 +405,13 @@ nav {
 /* --------------
 HOME PAGE STYLING
 ---------------*/
+
+/* SHOP SUMMER  */
 .shop-summer {
   background: url("/images/index/lucas-wesney-ZNz5UPRb2N8-unsplash-downsized-2650.jpg") no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -430,6 +430,243 @@ HOME PAGE STYLING
   padding: 5px 10px;
 }
 
+/* BEST SELLING  */
+.best-selling {
+  width: 100%;
+  text-align: center;
+}
+
+.picture-slider-container {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
+.picture-slider {
+  background-color: #fff;
+  width: 100%;
+  height: 450px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10%;
+  opacity: 0;
+  transition: 1s;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 80%;
+  height: 100%;
+}
+
+.slider-button {
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  background-color: #fff;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+#button-prev {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+#button-next {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+#button-prev::after,
+#button-next::after {
+  content: "";
+  position: absolute;
+  border: solid #000;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 3px;
+  width: 30%;
+  height: 30%;
+}
+
+#button-next::after {
+  top: 50%;
+  right: 50%;
+  transform: translate(25%, -50%) rotate(-45deg);
+}
+
+#button-prev::after {
+  top: 50%;
+  right: 50%;
+  transform: translate(75%, -50%) rotate(135deg);
+}
+
+.circles {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.circle {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #000;
+  opacity: 1;
+  margin: 0 10px 0 10px;
+  cursor: pointer;
+}
+
+.circle.active {
+  background-color: var(--almost-white);
+  border: 1px var(--almost-white);
+}
+
+@media screen and (max-width: 640px) {
+  .slider-button {
+    height: 40px;
+    width: 40px;
+  }
+  .circle {
+    height: 12px;
+    width: 12px;
+  }
+}
+
+/* Our collection */
+.our-collection {
+  width: 95%;
+  height: 250px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-collection-content {
+  background: url("/images/index/the-nix-company-4Hmj9gkyM6c-unsplash-downsized-3000.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 250px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-collection a {
+  background-color: rgba(175, 175, 175, 0.612);
+}
+
+/* Read our story */
+.read-our-story {
+  background: url("/images/index/angela-356V-ooP184-unsplash_resized.jpg") no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.read-our-story-content {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 95%;
+  height: 150px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.read-our-story-content span {
+  color: #fff;
+  font: 25px "DIN Alternate", sans-serif;
+  margin-bottom: 5px;
+}
+
+.read-our-story p {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.read-our-story a {
+  font: 16px "Source Sans Pro", sans-serif;
+  color: var(--orange);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--orange);
+}
+
+/* News letter */
+
+.newsletter {
+  background-color: #fff;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter p {
+  /* color: #fff; */
+  text-align: center;
+}
+
+.newsletter form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.newsletter input[type="text"] {
+  /* background: #000; */
+  border: 2px solid var(--almost-white);
+  height: 40px;
+}
+
+.newsletter input[type="text"]:focus {
+  outline: none;
+}
+
+.newsletter-email::placeholder {
+  color: #fff;
+}
+
+.newsletter button {
+  background-color: var(--almost-white);
+  border: 2px solid var(--almost-white);
+  height: 40px;
+  width: 100px;
+}
+/* 
 .intro h2 {
   margin-right: 10px;
 }
@@ -512,7 +749,7 @@ HOME PAGE STYLING
 }
 
 .bottom-picture {
-  background: url("images/bottompicture.png") no-repeat; /* Needs adjustment on bigger screens*/
+  background: url("images/bottompicture.png") no-repeat; /* Needs adjustment on bigger screens
   height: 500px;
   width: auto;
   background-size: cover;
@@ -608,8 +845,29 @@ ABOUT PAGE STYLING
 /* --------------
 CONTACT PAGE STYLING
 ---------------*/
-.contactus {
-  padding-top: 120px;
+.arrow-container {
+  height: 100px;
+}
+.arrow-icon {
+  color: orange;
+  font-size: 40px;
+  animation: arrowUpDown 1.8s infinite;
+}
+
+@keyframes arrowUpDown {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 20px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+.contact-us {
+  margin: 40px auto;
 }
 
 .contact-info h1 {
@@ -635,9 +893,14 @@ textarea {
   color: var(--black);
   font: 15px "Source Sans Pro", sans-serif;
   border: 1px solid #707070;
-  margin: 15px auto;
+  margin: 10px auto;
   padding: 10px;
   width: 100%;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: 1px solid #000;
 }
 
 ::placeholder {
@@ -650,9 +913,22 @@ textarea {
   height: 200px;
 }
 
+.form-error {
+  font: 12px "Source Sans Pro", sans-serif;
+  font-style: italic;
+}
+
+.error-content {
+  height: 20px;
+}
+
+.sent-message {
+  text-align: center;
+}
+
 .form-error,
 .sent-message {
-  /* display: none; */
+  display: none;
 }
 
 /* --------------
@@ -814,15 +1090,13 @@ CHECKOUT PAGE STYLING
   color: #000;
 }
 
-.checkout-content img {
-  height: 115px;
-  width: auto;
-}
-
 .cart-item {
   display: flex;
   justify-content: space-around;
-  width: 80%;
+}
+
+.cart-item img {
+  height: 115px;
 }
 
 .cart-item p:nth-child(1) {
@@ -839,22 +1113,8 @@ hr {
   text-align: center;
 }
 
-.lines {
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  align-self: flex-end;
-  margin: auto 10% 50px;
-}
 
-.lines p {
-  display: inline-block;
-}
 
-.lines p:nth-child(1) {
-  font-weight: bold;
-  margin-right: 30px;
-}
 
 /* ORDER COMPLETE BUTTON & POPUP */
 .cta-ordercomplete {
@@ -911,36 +1171,30 @@ hr {
 /* FOOTER STYLING
 ---------------  */
 footer {
-  background-color: var(--almost-white);
-  color: var(--black);
-  text-align: center;
-  width: 100%;
-}
-
-footer h2 {
   color: #000;
-  font: 30px "DIN Alternate", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  background-color: var(--almost-white);
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
-footer a {
-  font: 18px "Source Sans Pro", sans-serif;
-  letter-spacing: 0.8px;
-  line-height: 2;
-}
-
-.footer-list {
+.footer-content {
+  /* display: flex; */
   margin-top: 30px;
+  justify-content: space-evenly;
 }
 
 footer img {
   height: 100px;
 }
 
-.fab {
-  font-size: 35px;
-  padding: 10px;
+footer a {
+  font: 16px "source-sans-pro", sans-serif;
+  padding: 5px;
+}
+
+footer ion-icon {
+  font-size: 40px;
 }
 
 /*----------------
@@ -1008,9 +1262,29 @@ footer img {
   nav li {
     margin-top: 20px;
   }
+
+  /* Footer */
+  footer {
+    height: 450px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  /* INDEX ---*/
+  /* Shop summer */
+  .shop-summer {
+    height: 400px;
+  }
+
+  /* Best selling */
 }
 
- @media (min-width: 1025px) {     /*BIGGER THAN IPAD PRO */
+@media (min-width: 1025px) {
+  /*BIGGER THAN IPAD PRO */
   /* Navigation & Header */
   .full-logo {
     display: inline;
@@ -1116,10 +1390,6 @@ footer img {
   .hover-middle:hover:after {
     transform: scaleX(1);
     transform-origin: center;
-  }
-  .blah {
-    background-color: #707070;
-    height: 500px;
   }
 }
 
