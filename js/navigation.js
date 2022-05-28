@@ -27,6 +27,8 @@ function stickyNav() {
 // ---------- SHOPPING CART
 const cartIcon = document.querySelector("#shopping-cart-icon");
 const shoppingCart = document.querySelector(".shopping-cart");
+const body = document.querySelector("body");
+
 
 cartIcon.addEventListener("click", openShoppingCart);
 
@@ -34,5 +36,5 @@ function openShoppingCart() {
   shoppingCart.classList.toggle("active");
   navMenu.classList.remove("active");
   hamburgerMenu.classList.remove("active");
-
+  body.style.overflow = "hidden";
 }
