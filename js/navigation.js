@@ -21,9 +21,9 @@ const iconsRight = document.querySelector(".nav-icons-right");
 window.addEventListener("scroll", stickyNav);
 
 function stickyNav() {
-  navMenu.classList.toggle("sticky", window.scrollY > 115);
-  logo.classList.toggle("sticky", window.scrollY > 115);
-  iconsRight.classList.toggle("sticky", window.scrollY > 115);
+  logo.classList.toggle("sticky", window.scrollY > 45);
+  iconsRight.classList.toggle("sticky", window.scrollY > 45);
+  navMenu.classList.toggle("sticky", window.scrollY > 180);
 }
 
 // ---------- SHOPPING CART

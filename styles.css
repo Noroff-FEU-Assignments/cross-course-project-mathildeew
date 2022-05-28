@@ -8,8 +8,6 @@ BASE STYLE ELEMENTS
   --bright-orange: #ff9f00;
   --almost-white: #f2f3ef;
   --light-grey: #939191;
-  --white: #fff;
-  --black: #000;
   --DIN20: 20px "DIN Alternate", sans-serif;
 }
 
@@ -38,12 +36,13 @@ li {
 }
 
 h1 {
-  color: #fff;
+  color: #000;
   font: 30px "DIN Alternate", sans-serif;
 }
 
 h2 {
   font: 20px "Source Sans Pro", sans-serif;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -76,36 +75,12 @@ h6 {
   padding: 5px 30px;
 }
 
-.fa-envelope,
-.fa-shopping-basket {
+.fa-envelope {
   padding-left: 10px;
 }
 
 /* ANIMATION AND TRANSISTIONS 
 ----------------------------- */
-.hover-middle {
-  position: relative;
-  color: inherit;
-}
-
-.hover-middle:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 3px;
-  bottom: 0;
-  left: 0;
-  background-color: #ff9f00;
-  transform-origin: center;
-  transition: transform 0.25s ease-in-out;
-}
-
-.hover-middle:hover:after {
-  transform: scaleX(1);
-  transform-origin: center;
-}
-
 .jacket-background:hover {
   transform: scale(1.1);
 }
@@ -214,12 +189,7 @@ header ion-icon {
   background: url("images/angela-356V-ooP184-unsplash_resized.jpg") no-repeat;
 }
 
-.our-story-img {
-  background: url("images/johannes-andersson-8XQbEDaCbDM-unsplash_Downsized.jpg") no-repeat;
-}
-
-.intro,
-.our-story-img {
+.intro {
   padding-top: 80px;
   background-size: cover;
   background-position-x: left;
@@ -234,8 +204,7 @@ header ion-icon {
 }
 
 .intro-button,
-.intro-shop,
-.our-story {
+.intro-shop {
   background-color: rgba(0, 0, 0, 0.4);
   padding: 40px 10px;
   width: 95%;
@@ -245,15 +214,19 @@ header ion-icon {
 --------------------------*/
 main {
   background-color: #fff;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.shop,
-.about,
-.contact-us,
+.max-width {
+  width: 90%;
+  max-width: 800px;
+}
+
+/* .shop, */
 .jacket-specific,
 .checkout-content {
   width: 100%;
@@ -263,20 +236,21 @@ main {
   justify-content: center;
 }
 
-.shop-jackets-grid,
-.about-text,
+/* .shop-jackets-grid,
 .contactus-content,
 .jacket-specific-content,
 .checkout-content80 {
-  width: 80%;
+  min-width: 80%;
   min-height: calc(100vh - 70px);
-}
+} */
 
 /* --------------
 HOME PAGE STYLING
 ---------------*/
+
 .shop-summer,
-.read-our-story {
+.read-our-story,
+.our-collection {
   margin-bottom: 30px;
 }
 
@@ -285,7 +259,10 @@ HOME PAGE STYLING
   background: url("/images/index/lucas-wesney-ZNz5UPRb2N8-unsplash-downsized-2650.jpg") no-repeat;
   background-position: center;
   background-size: cover;
+  object-fit: cover;
   width: 100%;
+  min-height: 500px;
+  padding-top: 62%;
   border-bottom: 4px solid var(--bright-orange);
   display: flex;
   flex-direction: column;
@@ -319,7 +296,6 @@ h2 {
 .picture-slider-container {
   width: 90%;
   background-image: linear-gradient(#fff, var(--almost-white));
-
   margin: auto;
   display: flex;
   align-items: center;
@@ -337,12 +313,10 @@ h2 {
 
 .slide {
   width: 100%;
-  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 2%;
   opacity: 0;
   transition: 1s;
 }
@@ -353,13 +327,12 @@ h2 {
 
 .slide img {
   width: 80%;
-  height: 100%;
 }
 
 .slider-button {
   position: absolute;
-  height: 70px;
-  width: 70px;
+  height: 45px;
+  width: 45px;
   background-color: var(--almost-white);
   border: 1px solid #000;
   cursor: pointer;
@@ -411,8 +384,8 @@ h2 {
 
 .circle {
   display: inline-block;
-  height: 20px;
-  width: 20px;
+  height: 10px;
+  width: 10px;
   border-radius: 50%;
   background-color: #000;
   opacity: 1;
@@ -425,21 +398,11 @@ h2 {
   border: 7px solid #000;
 }
 
-@media screen and (max-width: 640px) {
-  .slider-button {
-    height: 40px;
-    width: 40px;
-  }
-  .circle {
-    height: 12px;
-    width: 12px;
-  }
-}
-
 /* Our collection */
 .our-collection {
   width: 100%;
-  height: 340px;
+  min-height: 100px;
+
   background-color: var(--almost-white);
   display: flex;
   flex-direction: column;
@@ -451,9 +414,10 @@ h2 {
   background: url("/images/index/the-nix-company-4Hmj9gkyM6c-unsplash-downsized-3000.jpg") no-repeat;
   background-position: center;
   background-size: cover;
-  height: 250px;
   width: 95%;
-  margin: 0 auto;
+  height: 200px;
+  padding-top: 66%;
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -462,6 +426,7 @@ h2 {
 
 .our-collection a {
   background-color: rgba(175, 175, 175, 0.612);
+  margin-bottom: 50%;
 }
 
 /* Read our story */
@@ -469,8 +434,9 @@ h2 {
   background: url("/images/index/angela-356V-ooP184-unsplash_resized.jpg") no-repeat;
   background-size: cover;
   background-position: center top;
-  height: 350px;
   width: 100%;
+  height: 350px;
+  padding-top: 66%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -558,14 +524,15 @@ SHOP PAGE STYLING
 }
 
 .shop-jackets-grid h2 {
-  color: var(--black);
+  color: #000;
   font-size: 23px;
   letter-spacing: 0.5px;
 }
 
 /* --------------
-ABOUT PAGE STYLING
+ABOUT US
 ---------------*/
+
 .about-intro {
   font-size: 25px;
   text-align: center;
@@ -585,7 +552,9 @@ ABOUT PAGE STYLING
 
 .about img {
   width: 100%;
-  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+  /* height: auto; */
 }
 
 .column-text p:nth-child(6),
@@ -621,21 +590,17 @@ CONTACT PAGE STYLING
   }
 }
 
-.contact-us {
-  margin: 40px auto;
-}
-
-.contact-info h1 {
-  color: #000;
-  text-align: center;
-}
-
 .contact-info p {
   text-align: center;
 }
 
 .contact-info p:nth-child(3) {
   margin-bottom: 15px;
+}
+
+.form-container {
+  width: 100%;
+  margin-bottom: 50px;
 }
 
 form {
@@ -645,7 +610,7 @@ form {
 
 input[type="text"],
 textarea {
-  color: var(--black);
+  color: #000;
   font: 15px "Source Sans Pro", sans-serif;
   border: 1px solid #707070;
   margin: 10px auto;
@@ -659,7 +624,7 @@ textarea:focus {
 }
 
 ::placeholder {
-  color: var(--black);
+  color: rgba(0, 0, 0, 0.3);
   margin: 20px;
 }
 
@@ -1090,12 +1055,49 @@ footer ion-icon {
     height: fit-content;
   }
 
+  .best-selling {
+    height: 585px;
+  }
+
+  .picture-slider {
+    height: 512px;
+  }
+
+  #button-next {
+    right: 45px;
+  }
+
+  #button-prev {
+    left: 45px;
+  }
+
+  .circles {
+    bottom: 0%;
+  }
+
+  .our-collection-content {
+    height: 450px;
+  }
+
+  .read-our-story {
+    height: 500px;
+  }
+
+  .read-our-story-content {
+    width: 80%;
+    height: 210px;
+  }
+
   .introshop-img {
     height: 450px;
   }
 
   .shop-jackets-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  /* About us */
+  .about {
+    width: 80%;
   }
 }
 
@@ -1117,14 +1119,11 @@ footer ion-icon {
 
   /* INDEX ---*/
   /* Shop summer */
-  .shop-summer {
-    height: 400px;
-  }
 
   /* Best selling */
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1090px) {
   /*BIGGER THAN IPAD PRO */
   /* Navigation & Header */
   .full-logo {
