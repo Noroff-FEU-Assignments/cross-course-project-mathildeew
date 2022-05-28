@@ -2,6 +2,7 @@ const navMenu = document.querySelector("#nav");
 
 // ----------  NAVIGATION BAR SMALL SCREEN
 const hamburgerMenu = document.querySelector(".hamburger-menu");
+const body = document.querySelector("body");
 
 hamburgerMenu.addEventListener("click", mobileMenu);
 // hamburgerClose.addEventListener("click", closeMenu);
@@ -9,6 +10,7 @@ hamburgerMenu.addEventListener("click", mobileMenu);
 function mobileMenu() {
   navMenu.classList.toggle("active");
   hamburgerMenu.classList.toggle("active");
+  // body.style.overflow = "hidden";
 }
 
 // ---------- STICKY NAVIGATION BAR BIG SCREEN
@@ -27,8 +29,7 @@ function stickyNav() {
 // ---------- SHOPPING CART
 const cartIcon = document.querySelector("#shopping-cart-icon");
 const shoppingCart = document.querySelector(".shopping-cart");
-const body = document.querySelector("body");
-
+const close = document.querySelector(".close-button");
 
 cartIcon.addEventListener("click", openShoppingCart);
 
@@ -37,4 +38,11 @@ function openShoppingCart() {
   navMenu.classList.remove("active");
   hamburgerMenu.classList.remove("active");
   body.style.overflow = "hidden";
+}
+
+close.addEventListener("click", closeShoppingCart);
+
+function closeShoppingCart() {
+  shoppingCart.classList.remove("active");
+  body.style.overflow = "visible";
 }

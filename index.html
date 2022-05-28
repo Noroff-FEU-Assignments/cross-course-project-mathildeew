@@ -8,11 +8,10 @@
     <meta name="description" content="The official Rainydays shop. Explore our wide collection of rain coats." />
     <title>RAINYDAYS • RAIN COATS FOR ALL OCCASIONS</title>
     <link rel="stylesheet" href="styles.css" />
-
   </head>
 
-  <!-- <body>
-  
+  <body>
+    <!-- 
       <div class="nav-icons">
         <a href="#search-popup"><img src="images/search-icon.png" class="search-icon header-icons" alt="Search icon" /></a>
         <div id="search-popup" class="overlay0">
@@ -34,7 +33,6 @@
         
     </header> -->
 
-
     <header>
       <div class="hamburger-menu">
         <span class="cross"></span>
@@ -54,7 +52,7 @@
       <ul class="menu">
         <li><a href="shop.html" class="hover-middle">Shop</a></li>
         <li><a href="about-us.html" class="hover-middle">About us</a></li>
-        <li><a href="contact-us.html" class="hover-middle">Contact</a></li>
+        <li><a href="contact-us.html" class="hover-middle">Contact us</a></li>
       </ul>
       <div class="nav-icons-right" id="nav-icons">
         <ion-icon name="search-outline"></ion-icon>
@@ -63,8 +61,13 @@
     </nav>
 
     <div class="shopping-cart" id="shopping-cart">
-      <div class="width">
-        <p>Your cart</p>
+      <div class="shopping-cart-content">
+        <h2>Your cart</h2>
+        <div class="close-button">
+          <span class="close"></span>
+          <span class="close"></span>
+        </div>
+
         <div class="cart-item">
           <img src="images/shop/jacket-blue.png" alt="" />
           <div>
@@ -90,15 +93,15 @@
         <hr />
 
         <div class="subtotal">
-            <h3>Subtotal</h3>
-            <p>3 000 NOK</p>
+          <h3>Subtotal</h3>
+          <p>3 000 NOK</p>
         </div>
-            <p>Shipping and taxes calculated at checkout</p>
-            <button class="cta cta-ordercomplete">
-              <a href="#ordercomplete-popup">Go to cart</a>
-            </button>
+        <p>Shipping and taxes calculated at checkout</p>
+        <button class="cta cta-ordercomplete">
+          <a href="checkout.html">Go to cart</a>
+        </button>
+      </div>
     </div>
-  </div>
 
     <main>
       <section class="shop-summer">
@@ -132,13 +135,13 @@
       </section>
 
       <section class="our-collection">
-      <div class="our-collection-content">
-        <a href="#" class="white-button-link">Our collection</a>
-      </div>
+        <div class="our-collection-content">
+          <a href="#" class="white-button-link">Our collection</a>
+        </div>
       </section>
 
       <section class="read-our-story">
-        <div class="read-our-story-content">
+        <div class="read-our-story-content width">
           <span>Pushing the Comfort Zone</span>
           <p>This is good text about this brand. And quality product. Good good expertise.</p>
           <a href="#" class="hover-underline">Read our story</a>
@@ -148,21 +151,21 @@
 
     <section class="newsletter">
       <div class="width">
-      <h3>Keep up with our news</h3>
-      <p>Enjoy 10% off your first purchase and stay up to date on all Rainydays news.</p>
-      <form class="newsletter-email">
-        <div>
-          <input type="text" id="email" name="email" placeholder="Your email" />
-          <!-- <div class="form-error" id="email-error">Please enter a valid email address</div> -->
-        </div>
-        <button>Subscribe</button>
-      </form>
-
-    </div>
-      </section>
+        <h3>Keep up with our news</h3>
+        <p>Enjoy 10% off your first purchase and stay up to date on all Rainydays news.</p>
+        <form class="newsletter-email">
+          <div>
+            <input type="text" id="email" name="email" placeholder="Your email" />
+            <!-- <div class="form-error" id="email-error">Please enter a valid email address</div> -->
+          </div>
+          <button>Subscribe</button>
+        </form>
+      </div>
+    </section>
 
     <footer>
       <img src="/images/logos/rainydays-full-logo.png" alt="Rainydays logo" />
+      <div class="footer-text">
         <div>
           <h3>Shop</h3>
           <ul>
@@ -172,14 +175,15 @@
         <div>
           <h3>Info</h3>
           <ul>
-            <li><a href="contact-us.html">Contact us</a></li>
             <li><a href="about-us.html">About us</a></li>
+            <li><a href="contact-us.html">Contact us</a></li>
           </ul>
         </div>
         <div class="social-media">
           <h3>Let's be friends</h3>
           <ion-icon name="logo-facebook"></ion-icon>
           <ion-icon name="logo-instagram"></ion-icon>
+        </div>
       </div>
     </footer>
 
