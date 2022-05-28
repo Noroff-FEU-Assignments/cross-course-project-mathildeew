@@ -226,7 +226,6 @@ main {
   max-width: 800px;
 }
 
-/* .shop, */
 .jacket-specific,
 .checkout-content {
   width: 100%;
@@ -482,17 +481,19 @@ SHOP PAGE STYLING
   background: url("images/shop/the-nix-company-4Hmj9gkyM6c-unsplash-downsized-3000.jpg") no-repeat;
   background-size: cover;
   background-position: center;
+  padding-top: 66%;
   width: 100%;
-  height: 250px;
 }
 
 .about-shop {
   text-align: center;
+  min-height: 260px;
+  /* max-height: 350px; */
   background-color: var(--bright-orange);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .about-shop span {
