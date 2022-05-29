@@ -1,6 +1,5 @@
-const navMenu = document.querySelector("#nav");
-
 // ----------  NAVIGATION BAR SMALL SCREEN
+const navMenu = document.querySelector("#nav");
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const body = document.querySelector("body");
 
