@@ -11,26 +11,65 @@
   </head>
 
   <body>
+    <p>Cart > <strong>Customer information</strong> ></p>
     <main class="customer-information">
       <section class="customer-information-form">
         <section class="form-container">
-          <form id="contact-form">
+          <form id="customer-form">
             <div>
               <label for="email"><p>Email</p></label>
-              <input type="text" id="email" name="email" class="error" />
+              <input type="text" id="email" name="email" />
               <div class="error-content"><p class="form-error" id="email-error">Please enter a valid email address</p></div>
             </div>
 
             <div>
-              <label for="name"><p>Name</p></label>
-              <input type="text" id="name" name="name" />
-              <div class="error-content"><p class="form-error" id="name-error">Please enter your name</p></div>
+              <label for="tel"><p>Phone</p></label>
+              <input type="text" id="tel" name="tel" />
+              <div class="error-content"><p class="form-error" id="tel-error">Please enter a valid phone number</p></div>
+            </div>
+
+            <div class="form-same-line">
+              <div>
+                <label for="fname"><p>Name</p></label>
+                <input type="text" id="fname" name="fname" />
+                <div class="error-content"><p class="form-error" id="name-error">Please enter your first name</p></div>
+              </div>
+              <div>
+                <label for="lname"><p>Etternavn</p></label>
+                <input type="text" id="lname" name="lname" />
+                <div class="error-content"><p class="form-error" id="lname-error">Please enter your last name</p></div>
+              </div>
             </div>
 
             <div>
-              <label for="tel"><p>Phone</p></label>
-              <input type="text" id="tel" name="tel" class="error" />
-              <div class="error-content"><p class="form-error" id="tel-error">Please enter a valid phone number</p></div>
+              <label for="address"><p>Address</p></label>
+              <input type="text" id="address" name="address" />
+              <div class="error-content"><p class="form-error" id="address-error">Please enter your address</p></div>
+            </div>
+
+            <div class="form-same-line">
+              <div>
+                <label for="city"><p>City</p></label>
+                <input type="text" id="name" name="name" />
+                <div class="error-content"><p class="form-error" id="city-error">Please enter your city</p></div>
+              </div>
+              <div>
+                <label for="name"><p>Postal code</p></label>
+                <input type="text" id="name" name="name" />
+                <div class="error-content"><p class="form-error" id="postal-error">Please enter your postal code</p></div>
+              </div>
+            </div>
+
+            <div>
+              <label for="country"><p>Country</p></label>
+              <select name="country" id="country">
+                <option value="Denmark">Denmark</option>
+                <option value="Finland">Finland</option>
+                <option value="Greenland">Greenland</option>
+                <option value="Norway">Norway</option>
+                <option value="Sweden">Sweden</option>
+              </select>
+              <div class="error-content"><p class="form-error" id="country-error">Please select a country.</p></div>
             </div>
           </form>
         </section>
