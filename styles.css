@@ -714,7 +714,8 @@ JACKET SPECEFIC
 
 .collapse,
 .technical-info,
-.jacket-section {
+.jacket-section,
+.slideshow-container {
   margin-bottom: 30px;
 }
 
@@ -784,7 +785,7 @@ JACKET SPECEFIC
 
 .collapse1,
 .collapse2 {
-  min-width: 85vw;
+  min-width: 40vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -928,6 +929,51 @@ JACKET SPECEFIC
 
 .choose-size.active {
   bottom: 10%;
+}
+
+/* SLIDER---------------------- */
+.slideshow-container {
+  max-width: 1000px;
+  height: 420px;
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.slide1 {
+  background: url("/images/jacket-page/slider/eugene-chystiakov-klxOKUgaXyU-unsplash-downsized-1200.jpg") no-repeat bottom center;
+}
+.slide2 {
+  background: url("/images/jacket-page/slider/nathan-dumlao-ySKhDjEgzUs-unsplash-downsized-1000.jpg") no-repeat bottom center;
+}
+.slide3 {
+  background: url("/images/jacket-page/slider/philip-myrtorp-nFWWljQN-w0-unsplash-downsized-2300.jpg") no-repeat right center;
+}
+.slide4 {
+  background: url("/images/jacket-page/slider/zach-castillo-Lss2BdwBKho-unsplash-downsized-1600.jpg") no-repeat bottom center;
+}
+
+.slider-img {
+  display: none;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #000;
 }
 
 /* --------------

@@ -49,7 +49,7 @@ function closeShoppingCart() {
   body.style.overflow = "visible";
 }
 
-// ---------- Search
+// ---------- SEARCH
 const searchIcon = document.querySelector("#search-icon");
 const searchBar = document.querySelector(".search-bar");
 const closeIcon = document.querySelector(".search-close");
