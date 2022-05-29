@@ -42,7 +42,7 @@
       <a href="index.html"><img class="full-logo" src="/images/logos/rainydays-full-logo.png" alt="Rainydays logo" /></a>
       <span class="header-logo">Rainydays</span>
       <div class="header-icons-right">
-        <ion-icon name="search-outline"></ion-icon>
+        <ion-icon name="search-outline" id="search-icon"></ion-icon>
         <ion-icon name="cart-outline" id="shopping-cart-icon"></ion-icon>
       </div>
     </header>
@@ -55,7 +55,7 @@
         <li><a href="contact-us.html" class="hover-middle">Contact us</a></li>
       </ul>
       <div class="nav-icons-right" id="nav-icons">
-        <ion-icon name="search-outline"></ion-icon>
+        <ion-icon name="search-outline" id="search-icon"></ion-icon>
         <ion-icon name="cart-outline" id="shopping-cart-icon"></ion-icon>
       </div>
     </nav>
@@ -67,7 +67,6 @@
           <span class="close"></span>
           <span class="close"></span>
         </div>
-
         <div class="cart-item">
           <img src="images/shop/jacket-blue.png" alt="" />
           <div>
@@ -79,7 +78,6 @@
           </div>
         </div>
         <hr />
-
         <div class="cart-item">
           <img src="images/shop/jacket-beige.png" alt="" />
           <div>
@@ -91,7 +89,6 @@
           </div>
         </div>
         <hr />
-
         <div class="subtotal">
           <h3>Subtotal</h3>
           <p>3 000 NOK</p>
@@ -102,12 +99,21 @@
         </button>
       </div>
     </div>
+    <div class="overlay"></div>
+
+    <div class="search-bar" id="search-bar">
+      <input type="text" placeholder="Hit enter when you want to search..." />
+      <div class="search-close">
+        <span class="close"></span>
+        <span class="close"></span>
+      </div>
+    </div>
 
     <main>
       <section class="shop-summer">
         <a href="#" class="white-button-link">SHOP SUMMER 2022</a>
       </section>
-      
+
       <section class="best-selling">
         <h2>Discover our best selling jackets</h2>
         <div class="picture-slider-container">
@@ -133,7 +139,6 @@
           </div>
         </div>
       </section>
-      
 
       <section class="our-collection">
         <div class="our-collection-content">

@@ -29,6 +29,7 @@ function stickyNav() {
 const cartIcon = document.querySelector("#shopping-cart-icon");
 const shoppingCart = document.querySelector(".shopping-cart");
 const close = document.querySelector(".close-button");
+const overlay = document.querySelector(".overlay");
 
 cartIcon.addEventListener("click", openShoppingCart);
 
@@ -37,11 +38,34 @@ function openShoppingCart() {
   navMenu.classList.remove("active");
   hamburgerMenu.classList.remove("active");
   body.style.overflow = "hidden";
+  overlay.classList.toggle("active");
 }
 
 close.addEventListener("click", closeShoppingCart);
 
 function closeShoppingCart() {
   shoppingCart.classList.remove("active");
+  overlay.classList.remove("active");
+  body.style.overflow = "visible";
+}
+
+// ---------- Search
+const searchIcon = document.querySelector("#search-icon");
+const searchBar = document.querySelector(".search-bar");
+const closeIcon = document.querySelector(".search-close");
+
+searchIcon.addEventListener("click", openSearch);
+
+function openSearch() {
+  searchBar.classList.toggle("active");
+  overlay.classList.toggle("active");
+  body.style.overflow = "hidden";
+}
+
+closeIcon.addEventListener("click", closeSearch);
+
+function closeSearch() {
+  searchBar.classList.remove("active");
+  overlay.classList.remove("active");
   body.style.overflow = "visible";
 }
