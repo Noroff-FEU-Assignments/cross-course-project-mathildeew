@@ -153,6 +153,10 @@ nav li {
   margin-top: 20px;
 }
 
+.menu {
+  margin-left: 15px;
+}
+
 .nav-logo,
 .header-logo {
   font: 25px "DIN Condensed", sans-serif;
@@ -211,6 +215,7 @@ header ion-icon {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  z-index: 900;
 }
 
 .search-bar.active {
