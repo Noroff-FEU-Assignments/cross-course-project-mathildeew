@@ -1,6 +1,5 @@
-/*-------------------
-BASE STYLE ELEMENTS 
---------------------*/
+/* GLOBAL ELEMENTS
+----------------------------------------------*/
 @import url("https://fonts.cdnfonts.com/css/din-alternate");
 @import url("https://use.typekit.net/ykg8cea.css");
 
@@ -24,6 +23,15 @@ html {
 * {
   margin: 0;
   padding: 0;
+}
+
+main {
+  background-color: #fff;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 a {
@@ -62,6 +70,8 @@ h6 {
   font-size: 25px;
 }
 
+/* OVERLAY, BUTTONS
+----------------------------------------------*/
 .overlay {
   background-color: #000;
   opacity: 0;
@@ -76,15 +86,12 @@ h6 {
 }
 
 .overlay.active {
-  /* display: block; */
   visibility: visible;
   opacity: 0.7;
   z-index: 900;
   transition: all 0.2s ease-in-out;
 }
 
-/* BUTTONS
------------------------------ */
 .cta {
   color: #000;
   background: #fff;
@@ -96,44 +103,8 @@ h6 {
   padding: 5px 30px;
 }
 
-.fa-envelope {
-  padding-left: 10px;
-}
-
-/* ANIMATION AND TRANSISTIONS 
------------------------------ */
-.jacket-background:hover {
-  transform: scale(1.1);
-}
-
-/* NAVIGATION BAR & HEADER
---------------------------*/
-.search-bar {
-  width: 100%;
-  top: -60px;
-  position: absolute;
-  background-color: #fff;
-  transition: top 0.3s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.search-bar.active {
-  top: 60px;
-  transition: top 0.3s ease-in-out;
-  z-index: 1000;
-}
-
-.search-close {
-  display: block;
-  width: 30%;
-  height: 30px;
-  height: 2px;
-  margin: 6px auto;
-  transition: all 0.3s ease-in;
-}
-
+/* NAVIGATION BAR, HEADER, SEARCH & CART
+----------------------------------------------*/
 header {
   background-color: #fff;
   width: 100%;
@@ -230,794 +201,34 @@ header ion-icon {
   transform: translateY(-8px) rotate(-35deg);
 }
 
-/* TOP PICTURE ON EVERY PAGE
---------------------------*/
-.intro {
-  background: url("images/angela-356V-ooP184-unsplash_resized.jpg") no-repeat;
-}
-
-.intro {
-  padding-top: 80px;
-  background-size: cover;
-  background-position-x: left;
-  background-position-y: top;
-  height: 500px;
+/* SEARCH POP UP ----------------*/
+.search-bar {
   width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.intro-button {
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 40px 10px;
-  width: 95%;
-}
-
-/* BASE LAYOUT FOR SHOP, ABOUT, CONTACT, JACKET SPECIFIC & FLEXBOX
---------------------------*/
-main {
+  top: -60px;
+  position: absolute;
   background-color: #fff;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.max-width {
-  width: 90%;
-  max-width: 800px;
-}
-
-/* .shop-jackets-grid,
-.contactus-content,
-.jacket-specific-content,
-.checkout-content80 {
-  min-width: 80%;
-  min-height: calc(100vh - 70px);
-} */
-
-/* --------------
-HOME PAGE STYLING
----------------*/
-
-.shop-summer,
-.read-our-story,
-.our-collection {
-  margin-bottom: 30px;
-}
-
-/* SHOP SUMMER  */
-.shop-summer {
-  background: url("/images/index/lucas-wesney-ZNz5UPRb2N8-unsplash-downsized-2650.jpg") no-repeat;
-  background-position: center;
-  background-size: cover;
-  object-fit: cover;
-  width: 100%;
-  min-height: 500px;
-  padding-top: 62%;
-  border-bottom: 4px solid var(--bright-orange);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.shop-summer a {
-  margin-bottom: 15px;
-}
-
-.white-button-link {
-  color: #fff;
-  font: 20px "DIN Alternate", sans-serif;
-  text-transform: uppercase;
-  border: 2px solid white;
-  padding: 5px 10px;
-}
-
-/* BEST SELLING  */
-h2 {
-  text-transform: uppercase;
-}
-
-.best-selling {
-  width: 100%;
-  text-align: center;
-  background-image: linear-gradient(#fff, var(--almost-white));
-}
-
-.picture-slider-container {
-  width: 90%;
-  background-image: linear-gradient(#fff, var(--almost-white));
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.picture-slider {
-  background-image: linear-gradient(#fff, var(--almost-white));
-  width: 100%;
-  height: 430px;
-  display: block;
-  position: relative;
-  overflow: hidden;
-}
-
-.slide {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  opacity: 0;
-  transition: 1s;
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-.slide img {
-  width: 80%;
-}
-
-.slider-button {
-  position: absolute;
-  height: 45px;
-  width: 45px;
-  background-color: var(--almost-white);
-  border: 1px solid #000;
-  cursor: pointer;
-}
-
-#button-prev {
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-}
-
-#button-next {
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-}
-
-#button-prev::after,
-#button-next::after {
-  content: "";
-  position: absolute;
-  border: solid #000;
-  border-width: 0 4px 4px 0;
-  display: inline-block;
-  padding: 3px;
-  width: 30%;
-  height: 30%;
-}
-
-#button-next::after {
-  top: 50%;
-  right: 50%;
-  transform: translate(25%, -50%) rotate(-45deg);
-}
-
-#button-prev::after {
-  top: 50%;
-  right: 50%;
-  transform: translate(75%, -50%) rotate(135deg);
-}
-
-.circles {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-}
-
-.circle {
-  display: inline-block;
-  height: 10px;
-  width: 10px;
-  border-radius: 50%;
-  background-color: #000;
-  opacity: 1;
-  margin: 0 10px 0 10px;
-  cursor: pointer;
-}
-
-.circle.active {
-  background-color: #000;
-  border: 7px solid #000;
-}
-
-/* Our collection */
-.our-collection {
-  width: 100%;
-  min-height: 100px;
-
-  background-color: var(--almost-white);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.our-collection-content {
-  background: url("/images/index/the-nix-company-4Hmj9gkyM6c-unsplash-downsized-3000.jpg") no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 95%;
-  height: 200px;
-  padding-top: 66%;
-  margin: 20px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.our-collection a {
-  background-color: rgba(175, 175, 175, 0.612);
-  margin-bottom: 50%;
-}
-
-/* Read our story */
-.read-our-story {
-  background: url("/images/index/angela-356V-ooP184-unsplash_resized.jpg") no-repeat;
-  background-size: cover;
-  background-position: center top;
-  width: 100%;
-  height: 350px;
-  padding-top: 66%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.read-our-story-content {
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.4);
-  height: 150px;
-  margin-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.read-our-story-content span {
-  color: #fff;
-  font: 25px "DIN Alternate", sans-serif;
-  margin-bottom: 5px;
-}
-
-.read-our-story p {
-  color: #fff;
-  margin-bottom: 20px;
-}
-.read-our-story a {
-  font: 16px "Source Sans Pro", sans-serif;
-  color: var(--bright-orange);
-  text-transform: uppercase;
-  border-bottom: 1px solid var(--bright-orange);
-}
-
-/* --------------
-SHOP PAGE STYLING
----------------*/
-.shop {
-  background-color: var(--almost-white);
-  max-width: 1300px;
-}
-
-.introshop {
-  background: url("images/shop/the-nix-company-4Hmj9gkyM6c-unsplash-downsized-3000.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 500px;
-  /* padding-top: 66%; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  place-items: flex-end;
-}
-
-.about-shop {
-  text-align: center;
-  width: 95%;
-  max-width: 800px;
-  height: 250px;
-  background-color: rgba(255, 159, 0, 0.5);
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.about-shop span {
-  font: 18px "DIN Alternate";
-  margin: 15px auto;
-}
-
-/* JACKETS GRID STYLING ----------------*/
-.jacket-background {
-  transition: all 0.1s ease-in-out;
-}
-
-.jacket-padding {
-  padding: 10px;
-}
-
-.shop-jackets-grid {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  grid-gap: 40px;
-  margin: 20px auto;
-}
-
-.shop-jackets-text {
-  font-family: "DIN Alternate", sans-serif;
-  line-height: 25px;
-  margin-top: 15px;
-}
-
-.shop-jackets-grid h2 {
-  color: #000;
-  font-size: 23px;
-  letter-spacing: 0.5px;
-}
-
-/* --------------
-ABOUT US
----------------*/
-
-.about-intro {
-  font-size: 25px;
-  text-align: center;
-  line-height: 25px;
-  margin-top: 20px;
-}
-
-.about p {
-  margin-bottom: 15px;
-}
-
-.column-text {
-  font-size: 15px;
-  line-height: 20px;
-  text-align: left;
-}
-
-.about img {
-  width: 100%;
-  max-height: 600px;
-  object-fit: contain;
-  /* height: auto; */
-}
-
-.column-text p:nth-child(6),
-.column-text p:nth-child(10) {
-  font-size: 25px;
-  font-weight: 100;
-  text-align: center;
-  line-height: 30px;
-  margin: 30px auto;
-}
-
-/* --------------
-CONTACT PAGE STYLING
----------------*/
-.arrow-container {
-  height: 100px;
-}
-.arrow-icon {
-  color: orange;
-  font-size: 40px;
-  animation: arrowUpDown 1.8s infinite;
-}
-
-@keyframes arrowUpDown {
-  0% {
-    margin-top: 0;
-  }
-  50% {
-    margin-top: 20px;
-  }
-  100% {
-    margin-top: 0;
-  }
-}
-
-.contact-info p {
-  text-align: center;
-}
-
-.contact-info p:nth-child(3) {
-  margin-bottom: 15px;
-}
-
-.form-container {
-  width: 100%;
-  margin-bottom: 50px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-input[type="text"],
-textarea {
-  color: #000;
-  font: 15px "Source Sans Pro", sans-serif;
-  border: 1px solid #707070;
-  margin: 10px auto;
-  padding: 10px;
-  width: 100%;
-}
-
-input[type="text"]:focus,
-textarea:focus {
-  outline: 1px solid #000;
-}
-
-::placeholder {
-  color: rgba(0, 0, 0, 0.3);
-  margin: 20px;
-}
-
-textarea {
-  resize: none;
-  height: 200px;
-}
-
-.form-error {
-  font: 12px "Source Sans Pro", sans-serif;
-  font-style: italic;
-}
-
-.error-content {
-  height: 20px;
-}
-
-.sent-message {
-  text-align: center;
-}
-
-.form-error,
-.sent-message {
-  display: none;
-}
-
-/* --------------
-JACKET SPECEFIC
----------------*/
-.heading-right,
-.choose-size-big,
-.section-right button {
-  display: none;
-}
-
-.collapse,
-.technical-info,
-.jacket-section,
-.slider-dots {
-  margin-bottom: 30px;
-}
-
-.heading-center {
-  margin-bottom: 20px;
-}
-
-.jacket-section {
-  text-align: center;
-  max-height: 540px;
-  display: flex;
-  flex-direction: column;
-}
-
-.jacket-section img {
-  width: 100%;
-  min-height: 200px;
-  object-fit: contain;
-}
-
-.choose-color {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.color-picker {
-  display: flex;
-  align-items: center;
-}
-
-.colors {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  margin-right: 10px;
-  margin-bottom: 20px;
-  display: block;
-}
-
-.colors:nth-child(1) {
-  background: #efd09e;
-}
-.colors:nth-child(2) {
-  background: #145052;
-}
-.colors:nth-child(3) {
-  background: #ff9f00;
-}
-.colors:nth-child(4) {
-  background: #000;
-}
-.colors:nth-child(5) {
-  background: #053d7e;
-}
-
-.colors.active {
-  border: 3px solid #000;
-  width: 25px;
-  height: 25px;
-}
-
-.collapse {
-  width: 100%;
-  max-width: 800px;
-}
-
-.collapse1,
-.collapse2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.jacket-specific hr {
-  width: 100%;
-  background: #000;
-  height: 2px;
-  border: none;
-  max-width: 800px;
-  margin: 0 0 15px 0;
-}
-
-.collapse-content1,
-.collapse-content2 {
-  /* overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.4s ease-out; */
-  /* display: none; */
-  max-height: 0;
-  display: none;
-}
-
-.collapse-content1.active,
-.collapse-content2.active {
-  display: block;
-  max-height: fit-content;
-}
-
-.open-arrow {
-  background: #000;
-  display: block;
-  width: 17px;
-  height: 2px;
-  margin: 6px auto;
-}
-
-.open-arrow:nth-child(1) {
-  transform: rotate(45deg);
-}
-
-.open-arrow:nth-child(2) {
-  transform: translateX(11px) translateY(-8px) rotate(-45deg);
-}
-
-.technical-info {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.technical-info img {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.technical-info-text-container {
-  width: 100%;
-  height: fit-content;
-}
-
-.technical-info-text {
-  font-size: 20px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  display: block;
-}
-
-.technical-info-text:nth-child(1) .dot {
-  background-color: #8d9594;
-}
-.technical-info-text:nth-child(2) .dot {
-  background-color: #10989d;
-}
-.technical-info-text:nth-child(3) .dot {
-  background-color: #ff9f00;
-}
-.technical-info-text:nth-child(4) .dot {
-  background-color: #efd09e;
-}
-.technical-info-text:nth-child(5) .dot {
-  background-color: #cb513a;
-}
-.technical-info-text:nth-child(6) .dot {
-  background-color: #053d7e;
-}
-
-.size-addCart {
-  width: 100%;
-  height: 60px;
-  position: fixed;
-  background: #fff;
-  border-top: 4px solid var(--bright-orange);
-  bottom: 0;
+  transition: top 0.3s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.search-bar.active {
+  top: 60px;
+  transition: top 0.3s ease-in-out;
   z-index: 1000;
 }
 
-.size-addCart button {
-  font: "Source Sans Pro";
-  text-transform: uppercase;
-  background: #fff;
-  border: 2px solid #000;
-  margin: 5px 10px;
-  padding: 10px;
-}
-
-.choose-size {
-  width: 100%;
-  background: #fff;
-  position: fixed;
-  bottom: -35%;
-  transition: bottom 0.3s ease-in-out;
-}
-
-.choose-size > * {
-  padding: 10px;
-}
-
-.size-button {
-  transition: border 0.3s ease-in-out;
-}
-
-.size-button.active {
-  border: 2px solid #ff9f00;
-}
-
-.choose-size.active {
-  bottom: 10%;
-}
-
-/* SLIDER---------------------- */
-.slideshow-container {
-  max-width: 1000px;
-  height: 420px;
-  width: 100%;
-  position: relative;
-  margin: auto;
-}
-
-.slide1 {
-  background: url("/images/jacket-page/slider/eugene-chystiakov-klxOKUgaXyU-unsplash-downsized-1200.jpg") no-repeat bottom center;
-}
-.slide2 {
-  background: url("/images/jacket-page/slider/nathan-dumlao-ySKhDjEgzUs-unsplash-downsized-1000.jpg") no-repeat bottom center;
-}
-.slide3 {
-  background: url("/images/jacket-page/slider/philip-myrtorp-nFWWljQN-w0-unsplash-downsized-2300.jpg") no-repeat right center;
-}
-.slide4 {
-  background: url("/images/jacket-page/slider/zach-castillo-Lss2BdwBKho-unsplash-downsized-1600.jpg") no-repeat bottom center;
-}
-
-.slider-img {
-  display: none;
-  background-size: cover;
-  height: 400px;
-  width: 100%;
-}
-
-.slider-dot {
-  cursor: pointer;
-  height: 10px;
-  width: 10px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.slider-dot.active,
-.slider-dot:hover {
-  background-color: #000;
-}
-
-/* --------------
-CHECKOUT PAGE
----------------*/
-.checkout {
+.search-close {
   display: block;
+  width: 30%;
+  height: 30px;
+  height: 2px;
+  margin: 6px auto;
+  transition: all 0.3s ease-in;
 }
 
-.checkout-content {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-bottom: 30px;
-}
-
-.checkout-cart-item {
-  display: flex;
-  justify-content: space-around;
-}
-
-.checkout-cart-item p:nth-child(1) {
-  font-weight: bold;
-}
-
-p.remove {
-  text-decoration: underline;
-}
-
-.checkout-cart-item img {
-  height: 65px;
-}
-
-#send-order-form input[type="number"] {
-  color: #000;
-  font: 15px "Source Sans Pro", sans-serif;
-  border: 1px solid #707070;
-  margin: 10px auto;
-  padding: 10px;
-  width: 100%;
-}
-
-.order-success {
-  width: 100%;
-  text-align: center;
-  display: none;
-}
-
-/* --------------
-SHOPPING CART
----------------*/
+/* SHOPPING CART POP UP ----------------*/
 .shopping-cart {
   background-color: #fff;
   width: 100%;
@@ -1104,10 +315,741 @@ hr {
   margin: 0 auto;
 }
 
-/* CUSTOMER INFORMATION */
+/* BASE LAYOUT 6 FLEX
+----------------------------------------------*/
+
+.max-width {
+  width: 90%;
+  max-width: 800px;
+}
+
+/* HOME PAGE 
+----------------------------------------------*/
+
+.shop-summer,
+.read-our-story,
+.our-collection {
+  margin-bottom: 30px;
+}
+
+/* SHOP SUMMER ----------------*/
+.shop-summer {
+  background: url("/images/index/lucas-wesney-ZNz5UPRb2N8-unsplash-downsized-2650.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-height: 500px;
+  padding-top: 62%;
+  border-bottom: 4px solid var(--bright-orange);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.shop-summer a {
+  margin-bottom: 15px;
+}
+
+.white-button-link {
+  color: #fff;
+  font: 20px "DIN Alternate", sans-serif;
+  text-transform: uppercase;
+  border: 2px solid white;
+  padding: 5px 10px;
+}
+
+/* BEST SELLING ----------------*/
+h2 {
+  text-transform: uppercase;
+}
+
+.best-selling {
+  width: 100%;
+  text-align: center;
+  background-image: linear-gradient(#fff, var(--almost-white));
+}
+
+.picture-slider-container {
+  width: 90%;
+  background-image: linear-gradient(#fff, var(--almost-white));
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.picture-slider {
+  background-image: linear-gradient(#fff, var(--almost-white));
+  width: 100%;
+  height: 430px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  opacity: 0;
+  transition: 1s;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 220px;
+}
+
+.slider-button {
+  position: absolute;
+  height: 45px;
+  width: 45px;
+  background-color: var(--almost-white);
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+#button-prev {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+#button-next {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+#button-prev::after,
+#button-next::after {
+  content: "";
+  position: absolute;
+  border: solid #000;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 3px;
+  width: 30%;
+  height: 30%;
+}
+
+#button-next::after {
+  top: 50%;
+  right: 50%;
+  transform: translate(25%, -50%) rotate(-45deg);
+}
+
+#button-prev::after {
+  top: 50%;
+  right: 50%;
+  transform: translate(75%, -50%) rotate(135deg);
+}
+
+.circles {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.circle {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #000;
+  opacity: 1;
+  margin: 0 10px 0 10px;
+  cursor: pointer;
+}
+
+.circle.active {
+  background-color: #000;
+  border: 7px solid #000;
+}
+
+/* OUR COLLECTION ----------------*/
+.our-collection {
+  width: 100%;
+  min-height: 300px;
+  background-color: var(--almost-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.our-collection-content {
+  background: url("/images/index/the-nix-company-4Hmj9gkyM6c-unsplash-downsized-3000.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 95%;
+  max-width: 900px;
+  min-height: 250px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-collection a {
+  background-color: rgba(175, 175, 175, 0.612);
+  padding: 10px;
+}
+
+/* READ OUR STORY ----------------*/
+.read-our-story {
+  background: url("/images/index/angela-356V-ooP184-unsplash_resized.jpg") no-repeat;
+  background-size: cover;
+  background-position: center top;
+  width: 100%;
+  min-height: 350px;
+  max-height: 768px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.read-our-story-content {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 150px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.read-our-story-content span {
+  color: #fff;
+  font: 25px "DIN Alternate", sans-serif;
+  margin-bottom: 5px;
+}
+
+.read-our-story p {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.read-our-story a {
+  font: 16px "Source Sans Pro", sans-serif;
+  color: var(--bright-orange);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--bright-orange);
+}
+
+/* SHOP PAGE STYLING
+----------------------------------------------*/
+.shop {
+  background-color: var(--almost-white);
+  max-width: 1300px;
+}
+
+.introshop {
+  background: url("images/shop/the-nix-company-4Hmj9gkyM6c-unsplash-downsized-3000.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 500px;
+  /* padding-top: 66%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  place-items: flex-end;
+}
+
+.about-shop {
+  text-align: center;
+  width: 95%;
+  max-width: 800px;
+  height: 250px;
+  background-color: rgba(255, 159, 0, 0.5);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-shop span {
+  font: 18px "DIN Alternate";
+  margin: 15px auto;
+}
+
+/* JACKET GRID ----------------*/
+.jacket-background {
+  transition: all 0.1s ease-in-out;
+}
+
+.jacket-background:hover {
+  transform: scale(1.1);
+}
+
+.jacket-padding {
+  padding: 10px;
+}
+
+.shop-jackets-grid {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 40px;
+  margin: 20px auto;
+}
+
+.shop-jackets-text {
+  font-family: "DIN Alternate", sans-serif;
+  line-height: 25px;
+  margin-top: 15px;
+}
+
+.shop-jackets-grid h2 {
+  color: #000;
+  font-size: 23px;
+  letter-spacing: 0.5px;
+}
+
+/* ABOUT US
+----------------------------------------------*/
+.about-intro {
+  font-size: 25px;
+  text-align: center;
+  line-height: 25px;
+  margin-top: 20px;
+}
+
+.about p {
+  margin-bottom: 15px;
+}
+
+.column-text {
+  font-size: 15px;
+  line-height: 20px;
+  text-align: left;
+}
+
+.about img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: contain;
+  /* height: auto; */
+}
+
+.column-text p:nth-child(6),
+.column-text p:nth-child(10) {
+  font-size: 25px;
+  font-weight: 100;
+  text-align: center;
+  line-height: 30px;
+  margin: 30px auto;
+}
+
+/* CONTACT PAGE STYLING
+----------------------------------------------*/
+.arrow-container {
+  height: 100px;
+}
+.arrow-icon {
+  color: orange;
+  font-size: 40px;
+  animation: arrowUpDown 1.8s infinite;
+}
+
+@keyframes arrowUpDown {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 20px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+.contact-info p {
+  text-align: center;
+}
+
+.contact-info p:nth-child(3) {
+  margin-bottom: 15px;
+}
+
+/* CONTACT FORM ----------------*/
+.form-container {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+textarea {
+  color: #000;
+  font: 15px "Source Sans Pro", sans-serif;
+  border: 1px solid #707070;
+  margin: 10px auto;
+  padding: 10px;
+  width: 100%;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: 1px solid #000;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  margin: 20px;
+}
+
+textarea {
+  resize: none;
+  height: 200px;
+}
+
+.form-error {
+  font: 12px "Source Sans Pro", sans-serif;
+  font-style: italic;
+}
+
+.error-content {
+  height: 20px;
+}
+
+.sent-message {
+  text-align: center;
+}
+
+.form-error,
+.sent-message {
+  display: none;
+}
+
+/* JACKET SPECEFIC
+----------------------------------------------*/
+.heading-right,
+.choose-size-big,
+.section-right button {
+  display: none;
+}
+
+.collapse,
+.technical-info,
+.jacket-section,
+.slider-dots {
+  margin-bottom: 30px;
+}
+
+.heading-center {
+  margin-bottom: 20px;
+}
+
+.jacket-section {
+  text-align: center;
+  max-height: 540px;
+  display: flex;
+  flex-direction: column;
+}
+
+.jacket-section img {
+  width: 100%;
+  min-height: 200px;
+  object-fit: contain;
+}
+
+.choose-color {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-picker {
+  display: flex;
+  align-items: center;
+}
+
+.colors {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.colors:nth-child(1) {
+  background: #efd09e;
+}
+.colors:nth-child(2) {
+  background: #145052;
+}
+.colors:nth-child(3) {
+  background: #ff9f00;
+}
+.colors:nth-child(4) {
+  background: #000;
+}
+.colors:nth-child(5) {
+  background: #053d7e;
+}
+
+.colors.active {
+  border: 3px solid #000;
+  width: 25px;
+  height: 25px;
+}
+
+/* SIZE & ADD TO CART ----------------*/
+.size-addCart {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  background: #fff;
+  border-top: 4px solid var(--bright-orange);
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 1000;
+}
+
+.size-addCart button {
+  font: "Source Sans Pro";
+  text-transform: uppercase;
+  background: #fff;
+  border: 2px solid #000;
+  margin: 5px 10px;
+  padding: 10px;
+}
+
+.choose-size {
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  bottom: -35%;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.choose-size > * {
+  padding: 10px;
+}
+
+.size-button {
+  transition: border 0.3s ease-in-out;
+}
+
+.size-button.active {
+  border: 2px solid #ff9f00;
+}
+
+.choose-size.active {
+  bottom: 10%;
+}
+
+/* COLLAPSIBLE ----------------*/
+.collapse {
+  width: 100%;
+  max-width: 800px;
+}
+
+.collapse1,
+.collapse2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.jacket-specific hr {
+  width: 100%;
+  background: #000;
+  height: 2px;
+  border: none;
+  max-width: 800px;
+  margin: 0 0 15px 0;
+}
+
+.collapse-content1,
+.collapse-content2 {
+  max-height: 0;
+  display: none;
+}
+
+.collapse-content1.active,
+.collapse-content2.active {
+  display: block;
+  max-height: fit-content;
+}
+
+.open-arrow {
+  background: #000;
+  display: block;
+  width: 17px;
+  height: 2px;
+  margin: 6px auto;
+}
+
+.open-arrow:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.open-arrow:nth-child(2) {
+  transform: translateX(11px) translateY(-8px) rotate(-45deg);
+}
+
+/* PICTURE SLIDER ----------------*/
+.slideshow-container {
+  max-width: 1000px;
+  height: 420px;
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.slide1 {
+  background: url("/images/jacket-page/slider/eugene-chystiakov-klxOKUgaXyU-unsplash-downsized-1200.jpg") no-repeat bottom center;
+}
+.slide2 {
+  background: url("/images/jacket-page/slider/nathan-dumlao-ySKhDjEgzUs-unsplash-downsized-1000.jpg") no-repeat bottom center;
+}
+.slide3 {
+  background: url("/images/jacket-page/slider/philip-myrtorp-nFWWljQN-w0-unsplash-downsized-2300.jpg") no-repeat right center;
+}
+.slide4 {
+  background: url("/images/jacket-page/slider/zach-castillo-Lss2BdwBKho-unsplash-downsized-1600.jpg") no-repeat bottom center;
+}
+
+.slider-img {
+  display: none;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+}
+
+.slider-dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.slider-dot.active,
+.slider-dot:hover {
+  background-color: #000;
+}
+
+/* TECHNICAL ----------------*/
+.technical-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.technical-info img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.technical-info-text-container {
+  width: 100%;
+  height: fit-content;
+}
+
+.technical-info-text {
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.technical-info-text:nth-child(1) .dot {
+  background-color: #8d9594;
+}
+.technical-info-text:nth-child(2) .dot {
+  background-color: #10989d;
+}
+.technical-info-text:nth-child(3) .dot {
+  background-color: #ff9f00;
+}
+.technical-info-text:nth-child(4) .dot {
+  background-color: #efd09e;
+}
+.technical-info-text:nth-child(5) .dot {
+  background-color: #cb513a;
+}
+.technical-info-text:nth-child(6) .dot {
+  background-color: #053d7e;
+}
+
+/* CHECKOUT PAGE
+----------------------------------------------*/
+.order-success {
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+.checkout {
+  display: block;
+}
+
+.checkout-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.checkout-cart-item {
+  display: flex;
+  justify-content: space-around;
+}
+
+.checkout-cart-item p:nth-child(1) {
+  font-weight: bold;
+}
+
+p.remove {
+  text-decoration: underline;
+}
+
+.checkout-cart-item img {
+  height: 65px;
+}
+
 .customer-information {
   width: 100%;
 }
+
+/* CUSTOMER INFORMATION ----------------*/
 
 .customer-information-form {
   width: 95%;
@@ -1134,39 +1076,19 @@ select {
   margin-bottom: 5px;
 }
 
-/* ORDER COMPLETE BUTTON & POPUP */
-.cta-ordercomplete {
-  transition: all 0.3s ease-out;
+#send-order-form input[type="number"] {
+  color: #000;
+  font: 15px "Source Sans Pro", sans-serif;
+  border: 1px solid #707070;
+  margin: 10px auto;
+  padding: 10px;
+  width: 100%;
 }
 
-.order-complete {
-  background: #fff;
-  height: 220px;
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  position: relative;
-  transition: all 500ms ease-in-out;
-}
+/* FOOTER STYLING
+----------------------------------------------*/
 
-.order-complete h1,
-.order-complete i {
-  color: #ff9f00;
-}
-
-.order-complete a {
-  font-family: "Source Sans Pro", sans-serif;
-  margin-top: 50px;
-}
-
-.order-complete .fas {
-  font-size: 50px;
-}
-/* News letter */
-
+/* NEWSLETTER ----------------*/
 .newsletter {
   background-color: #fff;
   height: 150px;
@@ -1214,8 +1136,7 @@ select {
   width: 100px;
 }
 
-/* FOOTER STYLING
----------------  */
+/* FOOTER ----------------*/
 footer {
   color: #000;
   background-color: var(--almost-white);
@@ -1223,8 +1144,8 @@ footer {
   height: 430px;
   text-align: center;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
 }
 
@@ -1252,9 +1173,8 @@ footer ion-icon {
   justify-content: space-evenly;
 }
 
-/*----------------
- MEDIA QUIERES 
------------------- */
+/* MEDIA QUIERES 
+----------------------------------------------*/
 @media (min-width: 625px) {
   .technical-info {
     display: flex;
@@ -1304,12 +1224,25 @@ footer ion-icon {
     height: fit-content;
   }
 
+  .our-collection {
+    height: 500px;
+  }
+
+  .our-collection-content {
+    width: 90%;
+    height: 400px;
+  }
+
   .best-selling {
     height: 585px;
   }
 
   .picture-slider {
     height: 512px;
+  }
+
+  .slide img {
+    width: 330px;
   }
 
   #button-next {
@@ -1324,17 +1257,12 @@ footer ion-icon {
     bottom: 0%;
   }
 
-  .our-collection-content {
-    height: 450px;
-  }
-
   .read-our-story {
     height: 500px;
   }
 
   .read-our-story-content {
     width: 80%;
-    height: 210px;
   }
 
   /* .introshop-img {
@@ -1364,12 +1292,6 @@ footer ion-icon {
   .width {
     width: 95%;
   }
-  /* Navigation & Header */
-
-  /* INDEX ---*/
-  /* Shop summer */
-
-  /* Best selling */
 }
 
 @media (min-width: 1090px) {
