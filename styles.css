@@ -271,13 +271,6 @@ main {
   width: 90%;
   max-width: 800px;
 }
-.checkout-content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
 /* .shop-jackets-grid,
 .contactus-content,
@@ -715,7 +708,7 @@ JACKET SPECEFIC
 .collapse,
 .technical-info,
 .jacket-section,
-.slideshow-container {
+.slider-dots {
   margin-bottom: 30px;
 }
 
@@ -780,12 +773,12 @@ JACKET SPECEFIC
 }
 
 .collapse {
+  width: 100%;
   max-width: 800px;
 }
 
 .collapse1,
 .collapse2 {
-  min-width: 40vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -960,10 +953,10 @@ JACKET SPECEFIC
   width: 100%;
 }
 
-.dot {
+.slider-dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 10px;
+  width: 10px;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
@@ -971,13 +964,59 @@ JACKET SPECEFIC
   transition: background-color 0.6s ease;
 }
 
-.active,
-.dot:hover {
+.slider-dot.active,
+.slider-dot:hover {
   background-color: #000;
 }
 
 /* --------------
-CHECKOUT PAGE & SHOPPING CART
+CHECKOUT PAGE
+---------------*/
+.checkout {
+  display: block;
+}
+
+.checkout-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.checkout-cart-item {
+  display: flex;
+  justify-content: space-around;
+}
+
+.checkout-cart-item p:nth-child(1) {
+  font-weight: bold;
+}
+
+p.remove {
+  text-decoration: underline;
+}
+
+.checkout-cart-item img {
+  height: 65px;
+}
+
+#send-order-form input[type="number"] {
+  color: #000;
+  font: 15px "Source Sans Pro", sans-serif;
+  border: 1px solid #707070;
+  margin: 10px auto;
+  padding: 10px;
+  width: 100%;
+}
+
+.order-success {
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+/* --------------
+SHOPPING CART
 ---------------*/
 .shopping-cart {
   background-color: #fff;
@@ -1024,15 +1063,10 @@ CHECKOUT PAGE & SHOPPING CART
   transform: translateY(-8px) rotate(-35deg);
 }
 
-.checkout-content80,
 .shopping-cart-content {
   display: flex;
   flex-direction: column;
   gap: 25px;
-}
-
-.checkout-content h1 {
-  color: #000;
 }
 
 .cart-item {

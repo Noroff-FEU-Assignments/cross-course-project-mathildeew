@@ -11,48 +11,125 @@
   </head>
 
   <body>
-    <main class="checkout-content">
-      <div class="checkout-content80">
+    <div class="order-success">
+      <h2>Order successful!</h2>
+      <p>Thank you so much for your order.</p>
+      <p>You'll recieve an email once your order is dispatched.</p>
+      <a href="index.html">To home page</a>
+    </div>
+    
+    <main class="checkout max-width">
+      <p>Cart ><strong> Customer information </strong> > Payment</p>
+      <div class="checkout-content">
         <h1>Your cart</h1>
         <hr />
-        <div class="cart-item">
+        <div class="checkout-cart-item">
           <img src="images/shop/jacket-blue.png" alt="" />
           <div>
             <p>The Best Jacket</p>
-            <p>Color: Dark blue</p>
-            <p>Size: Medium</p>
-            <p class="quantity">- 1 +</p>
-            <p>1 500 NOK</p>
+            <p>Medium / Dark blue</p>
+            <p class="remove">Remove</p>
           </div>
+          <p>1 500 NOK</p>
         </div>
         <hr />
 
-        <div class="cart-item">
+        <div class="checkout-cart-item">
           <img src="images/shop/jacket-beige.png" alt="" />
           <div>
             <p>The Short Jacket</p>
-            <p>Color: Sand</p>
-            <p>Size: Medium</p>
-            <p class="quantity">- 1 +</p>
-            <p>1 500 NOK</p>
+            <p>Medium / Sand</p>
+            <p class="remove">Remove</p>
           </div>
+          <p>1 500 NOK</p>
         </div>
         <hr />
 
         <div class="subtotal">
-          <h3>Subtotal</h3>
-          <p>3 000 NOK</p>
+          <div>
+            <p>Total</p>
+            <p>Shipping</p>
+            <h3>Subtotal</h3>
+          </div>
+          <div>
+            <p>3 000 NOK</p>
+            <p>INCLUDED</p>
+            <h3>3 000 NOK</h3>
+          </div>
         </div>
-        <p>Shipping and taxes calculated at checkout</p>
 
-        <button class="cta cta-ordercomplete">
+        <!-- SHOW ITEMS POP UP???
+          <button class="cta cta-ordercomplete">
           <a href="customer-information.html">Continue</a>
           <i class="fas fa-shopping-basket"></i>
-        </button>
+        </button> -->
       </div>
+
+      <section class="customer-information-form">
+        <div class="form-container">
+          <h1>Information</h1>
+          <form id="send-order-form">
+            <div>
+              <label for="email"><p>Email</p></label>
+              <input type="text" id="email" name="email" />
+              <div class="error-content"><p class="form-error" id="email-error">Please enter a valid email address</p></div>
+            </div>
+
+            <div>
+              <label for="tel"><p>Phone</p></label>
+              <input type="number" id="tel" name="tel" />
+              <div class="error-content"><p class="form-error" id="tel-error">Please enter a valid phone number</p></div>
+            </div>
+
+            <div class="form-same-line">
+              <div>
+                <label for="fname"><p>Name</p></label>
+                <input type="text" id="fname" name="fname" />
+                <div class="error-content"><p class="form-error" id="fname-error">Please enter your first name</p></div>
+              </div>
+              <div>
+                <label for="lname"><p>Etternavn</p></label>
+                <input type="text" id="lname" name="lname" />
+                <div class="error-content"><p class="form-error" id="lname-error">Please enter your last name</p></div>
+              </div>
+            </div>
+
+            <div>
+              <label for="address"><p>Address</p></label>
+              <input type="text" id="address" name="address" />
+              <div class="error-content"><p class="form-error" id="address-error">Please enter your address</p></div>
+            </div>
+
+            <div class="form-same-line">
+              <div>
+                <label for="city"><p>City</p></label>
+                <input type="text" id="city" name="city" />
+                <div class="error-content"><p class="form-error" id="city-error">Please enter your city</p></div>
+              </div>
+              <div>
+                <label for="zip"><p>Postal code</p></label>
+                <input type="number" id="zip" name="zip" />
+                <div class="error-content"><p class="form-error" id="zip-error">Please enter your postal code</p></div>
+              </div>
+            </div>
+
+            <div>
+              <label for="country"><p>Country</p></label>
+              <select name="country" id="country">
+                <option value="Norway">Norway</option>
+                <option value="Denmark">Denmark</option>
+                <option value="Finland">Finland</option>
+                <option value="Greenland">Greenland</option>
+                <option value="Sweden">Sweden</option>
+              </select>
+              <!-- <div class="error-content"><p class="form-error" id="country-error">Please select a country.</p></div>-->
+            </div>
+
+            <button class="cta">Place order<i class="far fa-envelope"></i></button>
+          </form>
+        </div>
+      </section>
     </main>
-
-    
-
+    <script src="/js/sendOrder.js"></script>
   </body>
 </html>

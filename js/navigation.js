@@ -26,14 +26,25 @@ function stickyNav() {
 }
 
 // ---------- SHOPPING CART
-const cartIcon = document.querySelector("#shopping-cart-icon");
+const cartIcon = document.querySelector("#shopping-cart-icon-small");
+const cartIconBig = document.querySelector("#shopping-cart-icon-big");
 const shoppingCart = document.querySelector(".shopping-cart");
+
 const close = document.querySelector(".close-button");
 const overlay = document.querySelector(".overlay");
 
 cartIcon.addEventListener("click", openShoppingCart);
+cartIconBig.addEventListener("click", openShoppingCartBig);
 
 function openShoppingCart() {
+  shoppingCart.classList.toggle("active");
+  navMenu.classList.remove("active");
+  hamburgerMenu.classList.remove("active");
+  body.style.overflow = "hidden";
+  overlay.classList.toggle("active");
+}
+
+function openShoppingCartBig() {
   shoppingCart.classList.toggle("active");
   navMenu.classList.remove("active");
   hamburgerMenu.classList.remove("active");
@@ -50,13 +61,21 @@ function closeShoppingCart() {
 }
 
 // ---------- SEARCH
-const searchIcon = document.querySelector("#search-icon");
+const searchIcon = document.querySelector("#search-icon-small");
+const searchIconBig = document.querySelector("#search-icon-big");
 const searchBar = document.querySelector(".search-bar");
 const closeIcon = document.querySelector(".search-close");
 
 searchIcon.addEventListener("click", openSearch);
+searchIconBig.addEventListener("click", openSearchBig);
 
 function openSearch() {
+  searchBar.classList.toggle("active");
+  overlay.classList.toggle("active");
+  body.style.overflow = "hidden";
+}
+
+function openSearchBig() {
   searchBar.classList.toggle("active");
   overlay.classList.toggle("active");
   body.style.overflow = "hidden";
