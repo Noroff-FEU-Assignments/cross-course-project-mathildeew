@@ -49,7 +49,7 @@ h1 {
 }
 
 h2 {
-  font: 20px "Source Sans Pro", sans-serif;
+  font: 25px "DIN Alternate", sans-serif;
   text-transform: uppercase;
 }
 
@@ -68,6 +68,10 @@ h5,
 h6 {
   font-family: "DIN Alternate", sans-serif;
   font-size: 25px;
+}
+
+p {
+  line-height: 1.5;
 }
 
 /* OVERLAY, BUTTONS
