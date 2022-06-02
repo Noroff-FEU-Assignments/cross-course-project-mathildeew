@@ -1,7 +1,5 @@
 var slideIndex = 1;
-
 var myTimer;
-
 var slideshowContainer;
 
 window.addEventListener("load", function () {
@@ -10,17 +8,12 @@ window.addEventListener("load", function () {
     plusSlides(1);
   }, 4000);
 
-  //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
   slideshowContainer = document.getElementsByClassName("slideshow-inner")[0];
-
-  //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
-  // slideshowContainer = document.getElementsByClassName('jacket-specific-slider')[0];
 
   slideshowContainer.addEventListener("mouseenter", pause);
   slideshowContainer.addEventListener("mouseleave", resume);
 });
 
-// NEXT AND PREVIOUS CONTROL
 function plusSlides(n) {
   clearInterval(myTimer);
   if (n < 0) {
@@ -28,8 +21,6 @@ function plusSlides(n) {
   } else {
     showSlides((slideIndex += 1));
   }
-
-  //COMMENT OUT THE LINES BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
 
   if (n === -1) {
     myTimer = setInterval(function () {
@@ -42,7 +33,6 @@ function plusSlides(n) {
   }
 }
 
-//Controls the current slide and resets interval if needed
 function currentSlide(n) {
   clearInterval(myTimer);
   myTimer = setInterval(function () {
