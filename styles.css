@@ -7,11 +7,12 @@
   --bright-orange: #ff9f00;
   --almost-white: #f2f3ef;
   --light-grey: #939191;
-  --DIN20: 20px "DIN Alternate", sans-serif;
+  --DIN20: 2rem "DIN Alternate", sans-serif;
 }
 
 html {
   box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 *,
@@ -45,11 +46,11 @@ li {
 
 h1 {
   color: #000;
-  font: 30px "DIN Alternate", sans-serif;
+  font: 3rem "DIN Alternate", sans-serif;
 }
 
 h2 {
-  font: 25px "DIN Alternate", sans-serif;
+  font: 2.5rem "DIN Alternate", sans-serif;
   text-transform: uppercase;
 }
 
@@ -60,14 +61,15 @@ h3 {
 }
 
 h4,
-p {
-  font-family: "Source Sans Pro", sans-serif;
+p,
+label {
+  font: 1.6rem "Source Sans Pro", sans-serif;
 }
 
 h5,
 h6 {
   font-family: "DIN Alternate", sans-serif;
-  font-size: 25px;
+  font-size: 2.5rem;
 }
 
 p {
@@ -76,30 +78,11 @@ p {
 
 /* OVERLAY, BUTTONS
 ----------------------------------------------*/
-.overlay {
-  background-color: #000;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  visibility: hidden;
-  transition: all 0.2s ease-in-out;
-}
-
-.overlay.active {
-  visibility: visible;
-  opacity: 0.7;
-  z-index: 900;
-  transition: all 0.2s ease-in-out;
-}
 
 .cta {
   color: #000;
   background: #fff;
-  font: 17px "Source Sans Pro", sans-serif;
+  font: 1.7rem "Source Sans Pro", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
@@ -114,7 +97,7 @@ header {
   width: 100%;
   height: 70px;
   position: absolute;
-  z-index: 999;
+  z-index: 998;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -143,7 +126,7 @@ nav {
   height: 260px;
   top: -100%;
   position: absolute;
-  z-index: 998;
+  /* z-index: 998; */
   transition: top 0.3s ease-in-out;
 }
 
@@ -163,7 +146,7 @@ nav li {
 
 .nav-logo,
 .header-logo {
-  font: 25px "DIN Condensed", sans-serif;
+  font: 2.5rem "DIN Condensed", sans-serif;
   letter-spacing: 2.5px;
   text-align: center;
   text-transform: uppercase;
@@ -176,7 +159,7 @@ nav li {
 }
 
 header ion-icon {
-  font-size: 35px;
+  font-size: 3.5rem;
 }
 
 .cross {
@@ -209,7 +192,25 @@ header ion-icon {
   transform: translateY(-8px) rotate(-35deg);
 }
 
-/* SEARCH POP UP ----------------*/
+/* SEARCH BAR & SHOPPING CART ----------------*/
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  z-index: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
 .search-bar {
   width: 100%;
   top: -60px;
@@ -219,13 +220,14 @@ header ion-icon {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  z-index: 900;
+  /* z-index: 996; */
 }
 
 .search-bar.active {
+  position: fixed;
   top: 60px;
   transition: top 0.3s ease-in-out;
-  z-index: 1000;
+  z-index: 997;
 }
 
 .search-close {
@@ -237,7 +239,6 @@ header ion-icon {
   transition: all 0.3s ease-in;
 }
 
-/* SHOPPING CART POP UP ----------------*/
 .shopping-cart {
   background-color: #fff;
   width: 100%;
@@ -254,8 +255,17 @@ header ion-icon {
   margin-top: 20px;
 }
 
+.shopping-cart h2 {
+  text-align: center;
+}
+
 .cart-item img {
   height: 115px;
+}
+
+.shopping-cart .cta {
+  width: 95%;
+  margin: 0 auto;
 }
 
 .shopping-cart.active {
@@ -362,7 +372,7 @@ hr {
 
 .white-button-link {
   color: #fff;
-  font: 20px "DIN Alternate", sans-serif;
+  font: 2rem "DIN Alternate", sans-serif;
   text-transform: uppercase;
   border: 2px solid white;
   padding: 5px 10px;
@@ -542,7 +552,7 @@ h2 {
 
 .read-our-story-content span {
   color: #fff;
-  font: 25px "DIN Alternate", sans-serif;
+  font: 2.5rem "DIN Alternate", sans-serif;
   margin-bottom: 5px;
 }
 
@@ -551,7 +561,7 @@ h2 {
   margin-bottom: 20px;
 }
 .read-our-story a {
-  font: 16px "Source Sans Pro", sans-serif;
+  font: 1.6rem "Source Sans Pro", sans-serif;
   color: var(--bright-orange);
   text-transform: uppercase;
   border-bottom: 1px solid var(--bright-orange);
@@ -590,7 +600,7 @@ h2 {
 }
 
 .about-shop span {
-  font: 18px "DIN Alternate";
+  font: 1.8rem "DIN Alternate";
   margin: 15px auto;
 }
 
@@ -623,14 +633,14 @@ h2 {
 
 .shop-jackets-grid h2 {
   color: #000;
-  font-size: 23px;
+  font-size: 2.3rem;
   letter-spacing: 0.5px;
 }
 
 /* ABOUT US
 ----------------------------------------------*/
 .about-intro {
-  font-size: 25px;
+  font-size: 2.5rem;
   text-align: center;
   line-height: 25px;
   margin-top: 20px;
@@ -641,7 +651,7 @@ h2 {
 }
 
 .column-text {
-  font-size: 15px;
+  font-size: 1.5rem;
   line-height: 20px;
   text-align: left;
 }
@@ -655,7 +665,7 @@ h2 {
 
 .column-text p:nth-child(6),
 .column-text p:nth-child(10) {
-  font-size: 25px;
+  font-size: 2.5rem;
   font-weight: 100;
   text-align: center;
   line-height: 30px;
@@ -669,7 +679,7 @@ h2 {
 }
 .arrow-icon {
   color: orange;
-  font-size: 40px;
+  font-size: 4rem;
   animation: arrowUpDown 1.8s infinite;
 }
 
@@ -707,7 +717,7 @@ form {
 input[type="text"],
 textarea {
   color: #000;
-  font: 15px "Source Sans Pro", sans-serif;
+  font: 1.5rem "Source Sans Pro", sans-serif;
   border: 1px solid #707070;
   margin: 10px auto;
   padding: 10px;
@@ -730,7 +740,7 @@ textarea {
 }
 
 .form-error {
-  font: 12px "Source Sans Pro", sans-serif;
+  font: 1.2rem "Source Sans Pro", sans-serif;
   font-style: italic;
 }
 
@@ -983,7 +993,7 @@ textarea {
 }
 
 .technical-info-text {
-  font-size: 20px;
+  font-size: 2rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -1024,6 +1034,11 @@ textarea {
   width: 100%;
   text-align: center;
   display: none;
+}
+
+.collapsible-checkout-content {
+  width: 55%;
+  margin: 0 auto;
 }
 
 .checkout {
@@ -1087,7 +1102,7 @@ select {
 
 #send-order-form input[type="number"] {
   color: #000;
-  font: 15px "Source Sans Pro", sans-serif;
+  font: 1.5rem "Source Sans Pro", sans-serif;
   border: 1px solid #707070;
   margin: 10px auto;
   padding: 10px;
@@ -1137,7 +1152,7 @@ select {
 
 .newsletter button {
   color: #000;
-  font-size: 12px;
+  font-size: 1.2rem;
   text-transform: uppercase;
   background-color: var(--almost-white);
   border: 2px solid var(--almost-white);
@@ -1167,12 +1182,12 @@ footer h3 {
 }
 
 footer a {
-  font: 16px "source-sans-pro", sans-serif;
+  font: 1.6rem "source-sans-pro", sans-serif;
   padding: 5px;
 }
 
 footer ion-icon {
-  font-size: 40px;
+  font-size: 4rem;
 }
 
 .footer-text {
@@ -1201,7 +1216,7 @@ footer ion-icon {
   }
 
   .technical-info-text {
-    font-size: 16px;
+    font-size: 1.6rem;
     margin-left: 20px;
   }
 
@@ -1336,18 +1351,13 @@ footer ion-icon {
     font-size: 40px;
   }
 
-  .content {
-    background-color: aqua;
-    width: 100%;
-    height: 2000px;
-  }
-
-  nav {
+  #nav {
     font: var(--DIN20);
     text-transform: uppercase;
     top: 180px;
     width: 100vw;
     height: 90px;
+    position: absolute;
     display: flex;
     align-items: center;
   }
@@ -1362,14 +1372,9 @@ footer ion-icon {
     margin: 0 30px;
   }
 
-  nav.sticky {
-    top: 0;
-    position: sticky;
-  }
-
   .nav-logo {
     display: inline-block;
-    font-size: 40px;
+    font-size: 4rem;
     margin: 0 auto;
     opacity: 0;
     transition: opacity 0.2s ease-in;
@@ -1384,9 +1389,19 @@ footer ion-icon {
     transition: opacity 0.2s ease-in;
   }
 
+  #nav.sticky {
+    top: 0;
+    position: fixed;
+    transition: top 0s ease-in;
+  }
+
   .nav-logo.sticky,
   .nav-icons-right.sticky {
     opacity: 1;
+  }
+
+  .search-bar.active {
+    top: 90px;
   }
 
   .hover-middle {
@@ -1472,7 +1487,7 @@ footer ion-icon {
   .size {
     width: 60px;
     height: 35px;
-    font: 16px "Source Sans Pro";
+    font: 1.6rem "Source Sans Pro";
     margin-right: 15px;
     display: block;
     background: #fff;
@@ -1483,7 +1498,7 @@ footer ion-icon {
   }
 
   .section-right button {
-    font: 16px "Source Sans Pro";
+    font: 1.6rem "Source Sans Pro";
     text-transform: uppercase;
     background: #fff;
     height: 50px;

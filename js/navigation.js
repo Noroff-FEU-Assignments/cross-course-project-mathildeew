@@ -1,15 +1,19 @@
 // ----------  NAVIGATION BAR SMALL SCREEN
 const navMenu = document.querySelector("#nav");
 const hamburgerMenu = document.querySelector(".hamburger-menu");
+const hamburgerMenuClose = document.querySelector("hamburger-menu active");
+
 const body = document.querySelector("body");
 
 hamburgerMenu.addEventListener("click", mobileMenu);
-// hamburgerClose.addEventListener("click", closeMenu);
 
 function mobileMenu() {
-  navMenu.classList.toggle("active");
   hamburgerMenu.classList.toggle("active");
-  // body.style.overflow = "hidden";
+  if (navMenu.classList.toggle("active")) {
+    body.style.overflow = "hidden";
+  } else {
+    body.style.overflow = "visible";
+  }
 }
 
 // ---------- STICKY NAVIGATION BAR BIG SCREEN
@@ -42,6 +46,8 @@ function openShoppingCart() {
   hamburgerMenu.classList.remove("active");
   body.style.overflow = "hidden";
   overlay.classList.toggle("active");
+  overlay.style.zIndex = "999"
+
 }
 
 function openShoppingCartBig() {
@@ -58,6 +64,8 @@ function closeShoppingCart() {
   shoppingCart.classList.remove("active");
   overlay.classList.remove("active");
   body.style.overflow = "visible";
+  overlay.style.zIndex = "0"
+
 }
 
 // ---------- SEARCH
