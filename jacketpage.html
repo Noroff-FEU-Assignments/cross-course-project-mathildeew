@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://kit.fontawesome.com/428d654b67.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,6 +10,83 @@
   </head>
 
   <body>
+    <section class="navigation-header">
+      <header>
+        <div class="hamburger-menu">
+          <span class="cross"></span>
+          <span class="cross"></span>
+          <span class="cross"></span>
+        </div>
+        <a href="index.html"><img class="full-logo" src="/images/logos/rainydays-full-logo.png" alt="Rainydays logo" /></a>
+        <span class="header-logo">Rainydays</span>
+        <div class="header-icons-right">
+          <ion-icon name="search-outline" id="search-icon-small"></ion-icon>
+          <ion-icon name="cart-outline" id="shopping-cart-icon-small"></ion-icon>
+        </div>
+      </header>
+
+      <nav id="nav">
+        <span class="nav-logo">Rainydays</span>
+        <ul class="menu">
+          <li><a href="shop.html" class="hover-middle">Shop</a></li>
+          <li><a href="about-us.html" class="hover-middle">About us</a></li>
+          <li><a href="contact-us.html" class="hover-middle">Contact us</a></li>
+        </ul>
+        <div class="nav-icons-right" id="nav-icons">
+          <ion-icon name="search-outline" id="search-icon-big"></ion-icon>
+          <ion-icon name="cart-outline" id="shopping-cart-icon-big"></ion-icon>
+        </div>
+      </nav>
+
+      <div class="shopping-cart" id="shopping-cart">
+        <div class="shopping-cart-content">
+          <h2>Your cart</h2>
+          <div class="close-button">
+            <span class="close"></span>
+            <span class="close"></span>
+          </div>
+          <div class="cart-item">
+            <img src="images/shop/jacket-blue.png" alt="" />
+            <div>
+              <p>The Best Jacket</p>
+              <p>Color: Dark blue</p>
+              <p>Size: Medium</p>
+              <p class="quantity">- 1 +</p>
+              <p>1 500 NOK</p>
+            </div>
+          </div>
+          <hr />
+          <div class="cart-item">
+            <img src="images/shop/jacket-beige.png" alt="" />
+            <div>
+              <p>The Short Jacket</p>
+              <p>Color: Sand</p>
+              <p>Size: Medium</p>
+              <p class="quantity">- 1 +</p>
+              <p>1 500 NOK</p>
+            </div>
+          </div>
+          <hr />
+          <div class="subtotal">
+            <h3>Subtotal</h3>
+            <p>3 000 NOK</p>
+          </div>
+          <p>Shipping and taxes calculated at checkout</p>
+          <a href="checkout.html" class="cta">Go to cart</a>
+        </div>
+      </div>
+
+      <div class="search-bar" id="search-bar">
+        <input type="text" placeholder="Hit enter when you want to search..." />
+        <div class="search-close">
+          <span class="close"></span>
+          <span class="close"></span>
+        </div>
+      </div>
+
+      <div class="overlay"></div>
+    </section>
+
     <main class="jacket-specific max-width">
       <section class="jacket-specific-1090">
         <section class="jacket-section">
@@ -141,7 +217,10 @@
       <p>L</p>
       <p>XL</p>
     </div>
+    <script src="/js/navigation.js"></script>
     <script src="/js/collapsibleInfo.js"></script>
     <script src="/js/jacketSpecificSlider.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 </html>

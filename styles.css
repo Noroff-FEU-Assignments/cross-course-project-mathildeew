@@ -605,17 +605,17 @@ h2 {
 }
 
 /* JACKET GRID ----------------*/
-.jacket-background {
+/* .jacket-background {
   transition: all 0.1s ease-in-out;
 }
 
 .jacket-background:hover {
   transform: scale(1.1);
-}
+} */
 
-.jacket-padding {
+/* .jacket-padding {
   padding: 10px;
-}
+} */
 
 .shop-jackets-grid {
   display: grid;
