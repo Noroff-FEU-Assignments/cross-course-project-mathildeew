@@ -25,3 +25,4 @@ function chooseSizeOpen() {
   chooseSizeMenu.classList.toggle("active");
   chooseSize.classList.toggle("active");
 }
+

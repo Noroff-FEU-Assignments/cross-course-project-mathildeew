@@ -18,7 +18,7 @@
           <span class="cross"></span>
         </div>
         <a href="index.html"><img class="full-logo" src="/images/logos/rainydays-full-logo.png" alt="Rainydays logo" /></a>
-        <span class="header-logo">Rainydays</span>
+        <a href="index.html" class="header-logo">Rainydays</a>
         <div class="header-icons-right">
           <ion-icon name="search-outline" id="search-icon-small"></ion-icon>
           <ion-icon name="cart-outline" id="shopping-cart-icon-small"></ion-icon>
@@ -26,7 +26,7 @@
       </header>
 
       <nav id="nav">
-        <span class="nav-logo">Rainydays</span>
+        <a href="index.html" class="nav-logo">Rainydays</a>
         <ul class="menu">
           <li><a href="shop.html" class="hover-middle">Shop</a></li>
           <li><a href="about-us.html" class="hover-middle">About us</a></li>
@@ -45,34 +45,8 @@
             <span class="close"></span>
             <span class="close"></span>
           </div>
-          <div class="cart-item">
-            <img src="images/shop/jacket-blue.png" alt="" />
-            <div>
-              <p>The Best Jacket</p>
-              <p>Color: Dark blue</p>
-              <p>Size: Medium</p>
-              <p class="quantity">- 1 +</p>
-              <p>1 500 NOK</p>
-            </div>
-          </div>
-          <hr />
-          <div class="cart-item">
-            <img src="images/shop/jacket-beige.png" alt="" />
-            <div>
-              <p>The Short Jacket</p>
-              <p>Color: Sand</p>
-              <p>Size: Medium</p>
-              <p class="quantity">- 1 +</p>
-              <p>1 500 NOK</p>
-            </div>
-          </div>
-          <hr />
-          <div class="subtotal">
-            <h3>Subtotal</h3>
-            <p>3 000 NOK</p>
-          </div>
-          <p>Shipping and taxes calculated at checkout</p>
-          <a href="checkout.html" class="cta">Go to cart</a>
+          <div class="cart-items-container"></div>
+          <div class="subtotal-container"></div>
         </div>
       </div>
 
@@ -88,7 +62,7 @@
     </section>
 
     <main class="jacket-specific max-width">
-      <section class="jacket-specific-1090">
+      <section class="jacket-specific-1090 margin-top">
         <section class="jacket-section">
           <div class="heading-center">
             <h1>The Best Jacket</h1>
@@ -122,7 +96,7 @@
               <span class="size">XL</span>
             </div>
           </div>
-          <button>Add to cart</button>
+          <button class="cta">Add to cart</button>
         </section>
       </section>
 
@@ -154,23 +128,14 @@
       </section>
 
       <section class="slideshow-container">
-        <div class="slideshow-inner">
-          <div class="slider-img slide1"></div>
+        <div class="slide1"></div>
 
-          <div class="slider-img slide2"></div>
-
-          <div class="slider-img slide3"></div>
-
-          <div class="slider-img slide4"></div>
+        <div class="circles">
+          <span class="circle active"></span>
+          <span class="circle"></span>
+          <span class="circle"></span>
         </div>
       </section>
-
-      <div class="slider-dots">
-        <span class="slider-dot"></span>
-        <span class="slider-dot"></span>
-        <span class="slider-dot"></span>
-        <span class="slider-dot"></span>
-      </div>
 
       <h2>Technical information</h2>
       <section class="technical-info">
@@ -204,6 +169,50 @@
       </section>
     </main>
 
+    <section class="newsletter">
+      <div class="width">
+        <div class="hide-subscribe">
+          <h3>Keep up with our news</h3>
+          <p>Enjoy 10% off your first purchase and stay up to date on all Rainydays news.</p>
+          <form class="newsletter-email" id="newsletter-email">
+            <div>
+              <input type="text" id="email" name="email" placeholder="Your email" />
+              <div class="form-error" id="email-error">Please enter a valid email address</div>
+            </div>
+            <button>Subscribe</button>
+          </form>
+        </div>
+        <div class="subscribed-message">
+          <h2>Subscribed!</h2>
+          <p>You'll recieve an email from us shortly.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <img src="/images/logos/rainydays-full-logo.png" alt="Rainydays logo" />
+      <div class="footer-text">
+        <div>
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="shop.html">Shop all</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Info</h3>
+          <ul>
+            <li><a href="about-us.html">About us</a></li>
+            <li><a href="contact-us.html">Contact us</a></li>
+          </ul>
+        </div>
+        <div class="social-media">
+          <h3>Let's be friends</h3>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-icon name="logo-instagram"></ion-icon>
+        </div>
+      </div>
+    </footer>
+
     <section class="size-addCart">
       <button class="size-button">Choose size</button>
       <button class="addCart-button">Add to cart</button>
@@ -218,8 +227,7 @@
       <p>XL</p>
     </div>
     <script src="/js/navigation.js"></script>
-    <script src="/js/collapsibleInfo.js"></script>
-    <script src="/js/jacketSpecificSlider.js"></script>
+    <script src="/js/collapsibles.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>

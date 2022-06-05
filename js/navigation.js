@@ -33,6 +33,7 @@ function stickyNav() {
 const cartIcon = document.querySelector("#shopping-cart-icon-small");
 const cartIconBig = document.querySelector("#shopping-cart-icon-big");
 const shoppingCart = document.querySelector(".shopping-cart");
+const slider = document.querySelector(".picture-slider");
 
 const close = document.querySelector(".close-button");
 const overlay = document.querySelector(".overlay");
@@ -46,8 +47,7 @@ function openShoppingCart() {
   hamburgerMenu.classList.remove("active");
   body.style.overflow = "hidden";
   overlay.classList.toggle("active");
-  overlay.style.zIndex = "999"
-
+  slider.style.zIndex = "-1";
 }
 
 function openShoppingCartBig() {
@@ -56,6 +56,8 @@ function openShoppingCartBig() {
   hamburgerMenu.classList.remove("active");
   body.style.overflow = "hidden";
   overlay.classList.toggle("active");
+  slider.style.zIndex = "-1";
+  navMenu.style.zIndex = "0";
 }
 
 close.addEventListener("click", closeShoppingCart);
@@ -64,8 +66,8 @@ function closeShoppingCart() {
   shoppingCart.classList.remove("active");
   overlay.classList.remove("active");
   body.style.overflow = "visible";
-  overlay.style.zIndex = "0"
-
+  slider.style.zIndex = "0";
+  navMenu.style.zIndex = "10";
 }
 
 // ---------- SEARCH
@@ -81,12 +83,14 @@ function openSearch() {
   searchBar.classList.toggle("active");
   overlay.classList.toggle("active");
   body.style.overflow = "hidden";
+  slider.style.zIndex = "-1";
 }
 
 function openSearchBig() {
   searchBar.classList.toggle("active");
   overlay.classList.toggle("active");
   body.style.overflow = "hidden";
+  slider.style.zIndex = "-1";
 }
 
 closeIcon.addEventListener("click", closeSearch);
@@ -95,4 +99,5 @@ function closeSearch() {
   searchBar.classList.remove("active");
   overlay.classList.remove("active");
   body.style.overflow = "visible";
+  slider.style.zIndex = "0";
 }
