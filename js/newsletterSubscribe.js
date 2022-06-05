@@ -1,3 +1,4 @@
+
 const newsletterSubscribe = document.querySelector("#newsletter-email");
 const errorMessage = document.querySelector("#email-error-newsletter");
 const hideSubscribe = document.querySelector(".hide-subscribe");
@@ -28,3 +29,5 @@ function validateEmail(email) {
   const patternMatches = regEx.test(email);
   return patternMatches;
 }
+
+

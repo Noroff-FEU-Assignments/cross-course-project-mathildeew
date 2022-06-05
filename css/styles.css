@@ -664,7 +664,6 @@ h2 {
   font-size: 2.5rem;
   font-weight: 100;
   text-align: center;
-  line-height: 30px;
   margin: 30px auto;
 }
 
@@ -1020,6 +1019,11 @@ textarea {
 
 /* CHECKOUT PAGE
 ----------------------------------------------*/
+.checkout-header {
+  text-align: center;
+  margin: 20px auto;
+}
+
 .order-success {
   width: 100%;
   text-align: center;
@@ -1028,6 +1032,7 @@ textarea {
 
 .checkout {
   display: block;
+  padding-top: 30px;
 }
 
 .checkout-content {

@@ -51,15 +51,15 @@ function checkLength(value, len) {
   }
 }
 
-function validateTel(tel) {
-  const regEx = /^[4|9]\d{7}$/;
-  const patternMatches = regEx.test(tel);
-  return patternMatches;
-}
-
 function validateEmail(email) {
   const regEx = /\S+@\S+\.\S+/;
   const patternMatches = regEx.test(email);
+  return patternMatches;
+}
+
+function validateTel(tel) {
+  const regEx = /^[4|9]\d{7}$/;
+  const patternMatches = regEx.test(tel);
   return patternMatches;
 }
 
@@ -71,3 +71,5 @@ function sendForm(event) {
     sentMessage.style.display = "none";
   }
 }
+
+
