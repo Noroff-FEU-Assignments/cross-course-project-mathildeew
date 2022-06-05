@@ -575,7 +575,7 @@ h2 {
 }
 
 .introshop {
-  background: url("images/shop/the-nix-company-4Hmj9gkyM6c-unsplash-downsized-3000.jpg") no-repeat;
+  background: url("/images/shop/the-nix-company-4Hmj9gkyM6c-unsplash-downsized-3000.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -1516,6 +1516,7 @@ footer ion-icon {
 
 @media (min-width: 1300px) {
   .shop-jackets-grid {
+    grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(4, 1fr);
   }
 }

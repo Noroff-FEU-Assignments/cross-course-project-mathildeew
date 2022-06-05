@@ -52,7 +52,7 @@ function checkLength(value, len) {
 }
 
 function validateTel(tel) {
-  const regEx = /^(\+47?)[4|9]\d{7}$/;
+  const regEx = /^[4|9]\d{7}$/;
   const patternMatches = regEx.test(tel);
   return patternMatches;
 }
