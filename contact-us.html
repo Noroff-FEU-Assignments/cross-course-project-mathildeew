@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- <script src="https://kit.fontawesome.com/428d654b67.js" crossorigin="anonymous"></script> -->
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Explore our selection of rain coats. The coats will keep you company in all types of wheater and occasions. Dispatch within short time, 5-year product warranty and free returns." />
-    <title>RAINYDAYS • Our Collection</title>
+    <meta name="description" content="Contact the Head Office of Rainydays. Don't hesitate to contact us by phone, sending us an email or use the contact form." />
+    <title>RAINYDAYS • CONTACT US</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
@@ -61,16 +63,57 @@
       <div class="overlay"></div>
     </section>
 
-    <main class="shop">
-      <section class="introshop margin-top">
-        <div class="about-shop">
-          <h1>Shop Rainydays Jackets</h1>
-          <p>Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters. Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm.</p>
-          <span>Rainydays - Pushing the Comfort Zone</span>
-        </div>
-      </section>
+    <main class="contact-us">
+      <div class="max-width">
+        <section class="contactus-info margin-top">
+          <div class="contact-info">
+            <h1>Head office</h1>
+            <p>P: 987 65 432</p>
+            <p>E: hello@rainydays.com</p>
+            <p>Rainy Road 11</p>
+            <p>1100 Oslo</p>
+            <p>Norway</p>
+          </div>
+        </section>
 
-      <section class="shop-jackets-grid"></section>
+        <div class="arrow-container"><ion-icon name="arrow-down-outline" class="arrow-icon"></ion-icon></div>
+
+        <div class="sent-message">
+          <p>Your message has been sent!</p>
+          <p>We will get in touch with you soon. Have a great day!</p>
+        </div>
+
+        <section class="form-container">
+          <form id="contact-form">
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" />
+              <div class="error-content"><p class="form-error" id="name-error">Please enter your name</p></div>
+            </div>
+
+            <div>
+              <label for="tel">Phone</label>
+              <input type="text" id="tel" name="tel" class="error" />
+              <div class="error-content"><p class="form-error" id="tel-error">Please enter a valid phone number</p></div>
+            </div>
+
+            <div>
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" class="error" />
+              <div class="error-content"><p class="form-error" id="email-error">Please enter a valid email address</p></div>
+            </div>
+
+            <div>
+              <label for="message">Your message</label>
+
+              <textarea id="message" name="message" class="error"></textarea>
+              <div class="error-content"><p class="form-error" id="message-error">Please enter a message with at least 10 characters</p></div>
+            </div>
+
+            <button class="cta send-message">Send message</button>
+          </form>
+        </section>
+      </div>
     </main>
 
     <section class="newsletter">
@@ -118,7 +161,7 @@
     </footer>
 
     <script src="/js/navigation.js"></script>
-    <script src="/js/shoppingCart.js" type="module"></script>
+    <script src="js/contactForm.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
