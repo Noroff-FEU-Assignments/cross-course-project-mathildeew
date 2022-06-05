@@ -6,28 +6,54 @@ let cartArray = [];
 productArray.forEach(function (product) {
   jacketContainer.innerHTML += `
     <div class="jacket">
-        <div class="jacket-padding">
-        <a href="jacketpage.html"> <img src="${product.image}"alt="${product.name}"><a/>
-            <div class="shop-jackets-text">
-            <h2>${product.name}</h2>
-            <p>${product.price} NOK</p>
-            </div>
-        </div>
+        <img src="${product.image}"alt="${product.name}">
+        <h2>${product.name}</h2>
+        <p>${product.price} NOK</p>
         <button class="cta" data-product="${product.id}">Add to cart</button>
-    </div>
-    `;
+        </div>
+  `;
 });
 
 const buttons = document.querySelectorAll("button");
+const cartContainer = document.querySelector(".cart-items-container");
+const subtotal = document.querySelector(".subtotal-container");
+
 buttons.forEach(function (button) {
   button.onclick = function (event) {
     const itemToAdd = productArray.find((item) => item.id === event.target.dataset.product);
     cartArray.push(itemToAdd);
-    console.log(cartArray);
-    // showCart(cartArray);
+    showCart(cartArray);
     localStorage.setItem("cartList", JSON.stringify(cartArray));
   };
 });
+
+function showCart(cartItems) {
+  cartContainer.innerHTML = "";
+  let total = 0;
+  cartItems.forEach(function (cartElement) {
+    total += cartElement.price;
+    cartContainer.innerHTML += `
+    <div class="cart-item">
+        <img src="${cartElement.image}" alt="${cartElement.name}" />
+        <div>
+            <p>${cartElement.name}</p>
+            <p>Color: ${cartElement.color}</p>
+            <p>Size: ${cartElement.size}</p>
+            <p>Price: ${cartElement.price}</p>
+        </div>
+    </div>
+    <hr/>
+    `;
+  });
+  subtotal.innerHTML = `
+          <div class="subtotal">
+              <h3>Subtotal:</h3>
+              <p>${total}</p>
+          </div>
+          <p>Shipping and taxes calculated at checkout</p>
+          <a href="checkout.html" class="cta">Go to cart</a>
+      `;
+}
 
 // --------------------------------------------------------------------------------------------------------------------
 

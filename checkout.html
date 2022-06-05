@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://kit.fontawesome.com/428d654b67.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,40 +22,9 @@
       <div class="checkout-content">
         <h1>Your cart</h1>
         <hr />
-        <div class="checkout-cart-item">
-          <img src="images/shop/jacket-blue.png" alt="" />
-          <div>
-            <p>The Best Jacket</p>
-            <p>Medium / Dark blue</p>
-            <p class="remove">Remove</p>
-          </div>
-          <p>1 500 NOK</p>
-        </div>
-        <hr />
-
-        <div class="checkout-cart-item">
-          <img src="images/shop/jacket-beige.png" alt="" />
-          <div>
-            <p>The Short Jacket</p>
-            <p>Medium / Sand</p>
-            <p class="remove">Remove</p>
-          </div>
-          <p>1 500 NOK</p>
-        </div>
-        <hr />
-
-        <div class="subtotal">
-          <div>
-            <p>Total</p>
-            <p>Shipping</p>
-            <h3>Subtotal</h3>
-          </div>
-          <div>
-            <p>3 000 NOK</p>
-            <p>INCLUDED</p>
-            <h3>3 000 NOK</h3>
-          </div>
-        </div>
+        <div class="checkout-cart"></div>
+        <div class="checkout-cart-item"></div>
+        <div class="subtotal"></div>
 
         <!-- SHOW ITEMS POP UP???
           <button class="cta cta-ordercomplete">
@@ -130,6 +98,7 @@
         </div>
       </section>
     </main>
+    <script src="/js/cart.js" type="module"></script>
     <script src="/js/sendOrder.js"></script>
   </body>
 </html>
