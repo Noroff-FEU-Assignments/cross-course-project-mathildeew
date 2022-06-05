@@ -640,7 +640,6 @@ h2 {
 .about-intro {
   font-size: 2.5rem;
   text-align: center;
-  line-height: 25px;
   margin-top: 20px;
 }
 
@@ -650,7 +649,6 @@ h2 {
 
 .column-text {
   font-size: 1.5rem;
-  line-height: 20px;
   text-align: left;
 }
 
