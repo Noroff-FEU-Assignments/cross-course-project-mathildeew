@@ -1,5 +1,5 @@
 const newsletterSubscribe = document.querySelector("#newsletter-email");
-const errorMessage = document.querySelector("#email-error");
+const errorMessage = document.querySelector("#email-error-newsletter");
 const hideSubscribe = document.querySelector(".hide-subscribe");
 const subscribedMessage = document.querySelector(".subscribed-message");
 
