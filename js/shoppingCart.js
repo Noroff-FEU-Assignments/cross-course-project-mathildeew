@@ -1,3 +1,30 @@
+const baseUrl = "https://flower-power.site/wp-json/wc/store/products";
+
+const jacketContainer = document.querySelector(".shop-jackets-grid")
+
+async function getProducts(url){
+  const response = await fetch(url);
+  const products = await response.json();
+  console.log(products);
+
+  products.forEach(function(product){
+jacketContainer.innerHTML += `
+    <div class="jacket">
+        <a href="jacketpage.html?id=${product.id}">
+        <img src="${product.images[0].src}" alt="${product.name}"></a>
+        <h2>${product.name}</h2>
+        <p>${product.prices.price} NOK</p>
+        <button class="cta" data-product="${product.id}">Add to cart</button>
+    </div>
+  `;
+  })
+}
+
+getProducts(baseUrl);
+
+
+/*   Delivery from June
+
 import { productArray } from "./constants/productList.js";
 
 const jacketContainer = document.querySelector(".shop-jackets-grid");
@@ -58,3 +85,5 @@ function addToCart(cartItems) {
           <a href="checkout.html" class="cta">Go to cart</a>
       `;
 }
+
+*/ 
