@@ -376,7 +376,8 @@ hr {
 
 /* SHOP SUMMER ----------------*/
 .shop-summer {
-  background: url("/images/index/lucas-wesney-ZNz5UPRb2N8-unsplash-downsized-2650.jpg") no-repeat;
+  background: url("/images/index/lucas-wesney-ZNz5UPRb2N8-unsplash-downsized-2650.jpg")
+    no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -508,7 +509,8 @@ h2 {
 }
 
 .our-collection-content {
-  background: url("/images/index/the-nix-company-4Hmj9gkyM6c-unsplash-downsized-3000.jpg") no-repeat;
+  background: url("/images/index/the-nix-company-4Hmj9gkyM6c-unsplash-downsized-3000.jpg")
+    no-repeat;
   background-position: center;
   background-size: cover;
   width: 95%;
@@ -528,7 +530,8 @@ h2 {
 
 /* READ OUR STORY ----------------*/
 .read-our-story {
-  background: url("/images/index/angela-356V-ooP184-unsplash_resized.jpg") no-repeat;
+  background: url("/images/index/angela-356V-ooP184-unsplash_resized.jpg")
+    no-repeat;
   background-size: cover;
   background-position: center top;
   width: 100%;
@@ -575,7 +578,8 @@ h2 {
 }
 
 .introshop {
-  background: url("/images/shop/the-nix-company-4Hmj9gkyM6c-unsplash-downsized-3000.jpg") no-repeat;
+  background: url("/images/shop/the-nix-company-4Hmj9gkyM6c-unsplash-downsized-3000.jpg")
+    no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -946,7 +950,8 @@ textarea {
 }
 
 .slide1 {
-  background: url("/images/jacket-page/slider/eugene-chystiakov-klxOKUgaXyU-unsplash-downsized-1200.jpg") no-repeat bottom center;
+  background: url("/images/jacket-page/slider/eugene-chystiakov-klxOKUgaXyU-unsplash-downsized-1200.jpg")
+    no-repeat bottom center;
   background-size: cover;
   height: 400px;
   width: 100%;
@@ -967,7 +972,8 @@ textarea {
 }
 
 .technical-image {
-  background: url("/images/jacket-page/technical-picture.png") no-repeat center center;
+  background: url("/images/jacket-page/technical-picture.png") no-repeat center
+    center;
   background-size: contain;
   width: 100%;
   max-width: 500px;
